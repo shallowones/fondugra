@@ -17,10 +17,11 @@ $boolHomePage = ($CurDir == '/');
 
 $arPage = [
     'CSS' => [
-        //SITE_TEMPLATE_PATH . '/flat-ui/css/vendor/bootstrap/css/bootstrap.min.css',
+        SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.css',
     ],
     'JS' => [
-        //SITE_TEMPLATE_PATH . '/js/vendor/jquery/jquery-3.2.1.min.js',
+        '//code.jquery.com/jquery-3.2.1.min.js',
+        SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.js',
     ]
 ];
 foreach ($arPage['CSS'] as $arCSS) {

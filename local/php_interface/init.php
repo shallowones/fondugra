@@ -13,18 +13,25 @@
  * @param int $die
  */
 
+/*Автоматическое подключение классов*/
+\Bitrix\Main\Loader::registerAutoLoadClasses(null, array(
+    'UW\Services'           => '/local/libs/services.php',
+));
+
 function gG($var, $mode = 0, $str = 'Var', $die = 0)
 {
-    switch($mode){
+    switch ($mode) {
         case 0:
             echo "<pre>";
             echo "######### {$str} ##########<br/>";
             print_r($var);
             echo "</pre>";
-            if($die) die();
+            if ($die) {
+                die();
+            }
             break;
         case 2:
-            $handle = fopen($_SERVER["DOCUMENT_ROOT"]."/upload/debug.txt", "a+");
+            $handle = fopen($_SERVER["DOCUMENT_ROOT"] . "/upload/debug.txt", "a+");
             fwrite($handle, "######### {$str} ##########\n");
             fwrite($handle, (string)$var);
             fwrite($handle, "\n\n\n");
@@ -32,5 +39,4 @@ function gG($var, $mode = 0, $str = 'Var', $die = 0)
             fclose($handle);
             break;
     }
-
 }
