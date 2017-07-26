@@ -36,17 +36,18 @@ $this->setFrameMode(true);
                             style="float:left"
                     /></a>
             <? endif ?>
-            <? if ($arParams["DISPLAY_DATE"] != "N" && $arItem["DISPLAY_ACTIVE_FROM"]): ?>
-                <span class="news-date-time"><? echo $arItem["DISPLAY_ACTIVE_FROM"] ?></span>
-            <? endif ?>
             <? if ($arParams["DISPLAY_NAME"] != "N" && $arItem["NAME"]): ?>
                 <a href="<? echo $arItem["DETAIL_PAGE_URL"] ?>"><b><? echo $arItem["NAME"] ?></b></a><br/>
             <? endif; ?>
-            <? if ($arParams["DISPLAY_PREVIEW_TEXT"] != "N" && $arItem["PREVIEW_TEXT"]): ?>
-                <? echo $arItem["PREVIEW_TEXT"]; ?>
-            <? else: ?>
-                <? echo TruncateText(strip_tags($arItem['FIELDS']["DETAIL_TEXT"]), 200); ?>
+            <br>
+            <? if (!empty($arItem['PROPERTIES']['date_from']['VALUE'])): ?>
+                <?= $arItem['day_from'] ?> <?= $arItem['month_from'] ?>
             <? endif; ?>
+            <? if (!empty($arItem['PROPERTIES']['date_to']['VALUE'])): ?>
+                -
+                <?= $arItem['day_to'] ?> <?= $arItem['month_to'] ?>
+            <? endif; ?>
+            <br>
             <? if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arItem["PREVIEW_PICTURE"])): ?>
                 <div style="clear:both"></div>
             <? endif ?>

@@ -23,7 +23,7 @@ if (intval($noPhoto) < 1) {
     Option::set('main', 'noPhoto', $noPhoto);
 }
 
-foreach ($arResult["ITEMS"] as $key => $arItem) {
+foreach ($arResult["ITEMS"] as $key => &$arItem) {
     if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arItem['PREVIEW_PICTURE'])) {
         $fileID = $arItem['PREVIEW_PICTURE']['ID'];
     } else {
@@ -36,8 +36,18 @@ foreach ($arResult["ITEMS"] as $key => $arItem) {
         false
     );
     if ($file['src']) {
-        $arResult["ITEMS"][$key]['PREVIEW_PICTURE']['SRC'] = $file['src'];
+        $arItem['PREVIEW_PICTURE']['SRC'] = $file['src'];
     }
 
-    $arResult["ITEMS"][$key]['DISPLAY_ACTIVE_FROM'] = ToLower($arItem["DISPLAY_ACTIVE_FROM"]);
+    if (!empty($arItem['PROPERTIES']['date_from']['VALUE'])) {
+        $mDateFrom = MakeTimeStamp($arItem['PROPERTIES']['date_from']['VALUE']);
+        $arItem['day_from'] = date('d', $mDateFrom);
+        $arItem['month_from'] = ToUpper(FormatDate('F', $mDateFrom));
+    }
+
+    if (!empty($arItem['PROPERTIES']['date_to']['VALUE'])) {
+        $mDateTo = MakeTimeStamp($arItem['PROPERTIES']['date_to']['VALUE']);
+        $arItem['day_to'] = date('d', $mDateTo);
+        $arItem['month_to'] = ToUpper(FormatDate('F', $mDateTo));
+    }
 }
