@@ -40,3 +40,6 @@ function gG($var, $mode = 0, $str = 'Var', $die = 0)
             break;
     }
 }
+
+// отписка от рассылки
+AddEventHandler("subscribe", "BeforePostingSendMail", array("UW\\Services", "BeforePostingSendMailHandler"));
