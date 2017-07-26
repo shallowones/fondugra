@@ -47,7 +47,7 @@
         <div class="s-col">
             <label for="rubric">Рубрики: <span class="req">*</span></label>
             <? foreach ($arResult["RUBRIC_LIST"] as $arRubric): ?>
-                <input type="checkbox" name="subscribe-rubric[]" value="<? //=$arRubric['ID']?>"
+                <input type="checkbox" name="subscribe-rubric[]" value="<?= $arRubric['ID']?>"
                     <? if (in_array($arRubric['ID'], $arResult["'subscribe-rubric"])) {
                         echo 'checked';
                     } ?>
