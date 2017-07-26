@@ -1,0 +1,7 @@
+/.vagrant
+/.idea
+/bitrix
+/upload
+/local/vendor
+/Vagrantfile
+/composer.json
