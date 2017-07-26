@@ -12,5 +12,10 @@ div.news-list img.preview_picture
 }
 
 .news-item {
+	margin-bottom: 10px;
+}
 
+.news-important {
+	border: 2px solid red;
+	padding: 7px;
 }
