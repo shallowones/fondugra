@@ -40,6 +40,26 @@ foreach ($arPage['JS'] as $arJS) {
 
 <body>
     <div class="bx-panel"><? $APPLICATION->ShowPanel() ?></div>
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:menu",
+        "catalog_horizontal",
+        array(
+            "ALLOW_MULTI_SELECT" => "N",
+            "CHILD_MENU_TYPE" => "left",
+            "DELAY" => "N",
+            "MAX_LEVEL" => "1",
+            "MENU_CACHE_GET_VARS" => array(
+            ),
+            "MENU_CACHE_TIME" => "3600",
+            "MENU_CACHE_TYPE" => "N",
+            "MENU_CACHE_USE_GROUPS" => "Y",
+            "ROOT_MENU_TYPE" => "top",
+            "USE_EXT" => "N",
+            "COMPONENT_TEMPLATE" => "catalog_horizontal",
+            "MENU_THEME" => "black"
+        ),
+        false
+    );?>
     <? if (!$boolHomePage): ?>
         <? $APPLICATION->IncludeComponent(
             "bitrix:breadcrumb",
