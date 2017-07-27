@@ -1,6 +1,12 @@
 <?
 $arUrlRewrite = array(
 	array(
+		"CONDITION" => "#^/support-measures/#",
+		"RULE" => "",
+		"ID" => "bitrix:news",
+		"PATH" => "/support-measures/index.php",
+	),
+	array(
 		"CONDITION" => "#^/events/#",
 		"RULE" => "",
 		"ID" => "bitrix:news",
