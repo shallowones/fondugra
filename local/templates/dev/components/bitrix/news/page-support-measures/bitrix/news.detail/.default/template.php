@@ -43,7 +43,7 @@ $this->setFrameMode(true);
     </table>
     <br>
     <? if ($arResult['organization']): ?>
-        <b>Ответственный исполнитель государственной программы</b>
+        <b>Ответственный исполнитель государственной программы</b><br>
         <?= $arResult['organization']['name'] ?><br>
         <? if ($arResult['organization']['link']): ?>
             <i>Сайт:</i> <?= $arResult['organization']['link'] ?><br>
