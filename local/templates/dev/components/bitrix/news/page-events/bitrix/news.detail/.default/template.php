@@ -15,25 +15,29 @@
 $this->setFrameMode(true);
 ?>
 <div class="news-detail">
-    <? if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arResult["DETAIL_PICTURE"])): ?>
-        <img
-                class="detail_picture"
-                border="0"
-                src="<?= $arResult["DETAIL_PICTURE"]["SRC"] ?>"
-                alt="<?= $arResult["DETAIL_PICTURE"]["ALT"] ?>"
-                title="<?= $arResult["DETAIL_PICTURE"]["TITLE"] ?>"
-        />
-    <? endif ?>
-    <? if ($arParams["DISPLAY_DATE"] != "N" && $arResult["DISPLAY_ACTIVE_FROM"]): ?>
-        <span class="news-date-time"><?= $arResult["DISPLAY_ACTIVE_FROM"] ?></span>
+    <? if (!empty($arResult['PROPERTIES']['date_from']['VALUE'])): ?>
+        <?= $arResult['day_from'] ?> <?= $arResult['month_from'] ?>
     <? endif; ?>
-    <? if (strlen($arResult["DETAIL_TEXT"]) > 0): ?>
-        <? echo $arResult["DETAIL_TEXT"]; ?>
-    <? endif ?>
+    <? if (!empty($arResult['PROPERTIES']['date_to']['VALUE'])): ?>
+        -
+        <?= $arResult['day_to'] ?> <?= $arResult['month_to'] ?>
+    <? endif; ?>
+    <br>
     <div style="clear:both"></div>
     <br/>
-    <? foreach ($arResult['DISPLAY_PROPERTIES']['photos']['FILE_VALUE'] as $arFile): ?>
-        <div class="photo-item"><a data-fancybox="gallery" href="<?= $arFile['BIG'] ?>"><img
-                        src="<?= $arFile['SMALL'] ?>"></a></div>
-    <? endforeach; ?>
+    <? if (isset($arResult['DISPLAY_PROPERTIES']['photos']['FILE_VALUE'])): ?>
+        <? foreach ($arResult['DISPLAY_PROPERTIES']['photos']['FILE_VALUE'] as $arFile): ?>
+            <div class="photo-item"><a data-fancybox="gallery" href="<?= $arFile['BIG'] ?>"><img
+                            src="<?= $arFile['SMALL'] ?>"></a></div>
+        <? endforeach; ?>
+    <? endif; ?>
+    <? if (isset($arResult['VIDEO'])): ?>
+        <div style="clear:both"></div>
+        <? foreach ($arResult['VIDEO'] as $code): ?>
+            <div class="photo-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $code ?>"
+                        frameborder="0" allowfullscreen></iframe>
+            </div>
+        <? endforeach; ?>
+    <? endif; ?>
 </div>

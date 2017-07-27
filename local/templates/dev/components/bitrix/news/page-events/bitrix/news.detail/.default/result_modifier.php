@@ -11,19 +11,17 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     die();
 }
 
-if ($arResult["DISPLAY_PICTURE"] != "N" && is_array($arResult['DETAIL_PICTURE'])) {
-    $file = CFile::ResizeImageGet(
-        $arResult['DETAIL_PICTURE']['ID'],
-        array('width' => 350, 'height' => 210),
-        BX_RESIZE_IMAGE_EXACT,
-        false
-    );
-    if ($file['src']) {
-        $arResult['DETAIL_PICTURE']['SRC'] = $file['src'];
-    }
+if (!empty($arResult['PROPERTIES']['date_from']['VALUE'])) {
+    $mDateFrom = MakeTimeStamp($arResult['PROPERTIES']['date_from']['VALUE']);
+    $arResult['day_from'] = date('d', $mDateFrom);
+    $arResult['month_from'] = ToUpper(FormatDate('F', $mDateFrom));
 }
 
-$arResult['DISPLAY_ACTIVE_FROM'] = ToLower($arResult["DISPLAY_ACTIVE_FROM"]);
+if (!empty($arResult['PROPERTIES']['date_to']['VALUE'])) {
+    $mDateTo = MakeTimeStamp($arResult['PROPERTIES']['date_to']['VALUE']);
+    $arResult['day_to'] = date('d', $mDateTo);
+    $arResult['month_to'] = ToUpper(FormatDate('F', $mDateTo));
+}
 
 if (isset($arResult['DISPLAY_PROPERTIES']['photos']['FILE_VALUE']['SRC'])) {
     $fileValue = $arResult['DISPLAY_PROPERTIES']['photos']['FILE_VALUE'];
@@ -31,23 +29,34 @@ if (isset($arResult['DISPLAY_PROPERTIES']['photos']['FILE_VALUE']['SRC'])) {
     $arResult['DISPLAY_PROPERTIES']['photos']['FILE_VALUE'][] = $fileValue;
 }
 
-foreach ($arResult['DISPLAY_PROPERTIES']['photos']['FILE_VALUE'] as $key => $arFile) {
-    $file = CFile::ResizeImageGet(
-        $arFile['ID'],
-        array('width' => 238, 'height' => 158),
-        BX_RESIZE_IMAGE_EXACT,
-        false
-    );
-    if ($file['src']) {
-        $arResult['DISPLAY_PROPERTIES']['photos']['FILE_VALUE'][$key]['SMALL'] = $file['src'];
+if (isset($arResult['DISPLAY_PROPERTIES']['photos']['FILE_VALUE'])) {
+    foreach ($arResult['DISPLAY_PROPERTIES']['photos']['FILE_VALUE'] as $key => $arFile) {
+        $file = CFile::ResizeImageGet(
+            $arFile['ID'],
+            array('width' => 238, 'height' => 158),
+            BX_RESIZE_IMAGE_EXACT,
+            false
+        );
+        if ($file['src']) {
+            $arResult['DISPLAY_PROPERTIES']['photos']['FILE_VALUE'][$key]['SMALL'] = $file['src'];
+        }
+        $file = CFile::ResizeImageGet(
+            $arFile['ID'],
+            array('width' => 1024, 'height' => 768),
+            BX_RESIZE_IMAGE_PROPORTIONAL_ALT,
+            false
+        );
+        if ($file['src']) {
+            $arResult['DISPLAY_PROPERTIES']['photos']['FILE_VALUE'][$key]['BIG'] = $file['src'];
+        }
     }
-    $file = CFile::ResizeImageGet(
-        $arFile['ID'],
-        array('width' => 1024, 'height' => 768),
-        BX_RESIZE_IMAGE_EXACT,
-        false
-    );
-    if ($file['src']) {
-        $arResult['DISPLAY_PROPERTIES']['photos']['FILE_VALUE'][$key]['BIG'] = $file['src'];
+}
+
+if (isset($arResult['DISPLAY_PROPERTIES']['links_youtube']['VALUE'])) {
+    foreach ($arResult['DISPLAY_PROPERTIES']['links_youtube']['VALUE'] as $key => $link) {
+        $arResult['VIDEO'][$key] = explode('v=', $link)[1];
+        if (stripos($arResult['VIDEO'][$key], '&') !== false) {
+            $arResult['VIDEO'][$key] = explode('&', $arResult['VIDEO'][$key])[0];
+        }
     }
 }
