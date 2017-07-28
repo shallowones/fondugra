@@ -43,3 +43,6 @@ function gG($var, $mode = 0, $str = 'Var', $die = 0)
 
 // отписка от рассылки
 AddEventHandler("subscribe", "BeforePostingSendMail", array("UW\\Services", "BeforePostingSendMailHandler"));
+
+AddEventHandler("iblock", "OnBeforeIBlockElementAdd",   array("UW\\Services", "replaceName"));
+AddEventHandler("iblock", "OnBeforeIBlockElementUpdate",   array("UW\\Services", "replaceName"));

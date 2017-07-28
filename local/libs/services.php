@@ -32,12 +32,31 @@ class Services
         return $arFields;
     }
 
-    public static function FBytes($bytes, $precision = 2) {
+    /**
+     * @param $bytes
+     * @param int $precision
+     * @return string
+     */
+    public static function FBytes($bytes, $precision = 2)
+    {
         $units = array('байт', 'кб', 'мб', 'гб', 'тб');
         $bytes = max($bytes, 0);
-        $pow = floor(($bytes?log($bytes):0)/log(1024));
-        $pow = min($pow, count($units)-1);
+        $pow = floor(($bytes ? log($bytes) : 0) / log(1024));
+        $pow = min($pow, count($units) - 1);
         $bytes /= pow(1024, $pow);
-        return round($bytes, $precision).' '.$units[$pow];
+        return round($bytes, $precision) . ' ' . $units[$pow];
+    }
+
+    /**
+     * @param $arFields
+     */
+    public static function replaceName(&$arFields)
+    {
+        \Bitrix\Main\Loader::includeModule('iblock');
+
+        $arInfoBlock = \CIBlock::GetList([], ['CODE' => 'links'], false)->GetNext();
+        if (intvaL($arFields["IBLOCK_ID"]) === intval($arInfoBlock['ID'])) {
+            $arFields["NAME"] = TruncateText(strip_tags($arFields["PREVIEW_TEXT"]), 254);
+        }
     }
 }
