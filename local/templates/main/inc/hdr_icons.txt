@@ -1,0 +1,6 @@
+<nav class="head-nav">
+    <a class="head-nav__link head-nav__link_search" href="#"></a>
+    <a class="head-nav__link head-nav__link_map" href="#"></a>
+    <a class="head-nav__link head-nav__link_eye" href="#"></a>
+    <a class="head-nav__link head-nav__link_print" href="#"></a>
+</nav>
