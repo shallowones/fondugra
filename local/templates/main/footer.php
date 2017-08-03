@@ -89,7 +89,11 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                         Array(),
                         Array("MODE" => "text")
                     ); ?>
-                    <a class="link" href="#"><b>Задать вопрос</b></a>
+                    <? $APPLICATION->IncludeFile(
+                        SITE_TEMPLATE_PATH . "/inc/hdr_ask_question.txt",
+                        Array(),
+                        Array("MODE" => "text")
+                    ); ?>
                 </div>
                 <div class="head-info__item">
                     <? $APPLICATION->IncludeFile(
