@@ -22,10 +22,13 @@ $page = [
     'addCss' => [
         SITE_TEMPLATE_PATH . '/dist/fonts/bundle.css',
         SITE_TEMPLATE_PATH . '/dist/css/' . $manifest['main.css'],
+        SITE_TEMPLATE_PATH . '/dist/js/vendor/slick/slick.css',
         SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.css',
     ],
     'addJs' => [
-        SITE_TEMPLATE_PATH . '/dist/js/vendor/' . $manifest['jquery.js'],
+        SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.js',
+        SITE_TEMPLATE_PATH . '/dist/js/vendor/slick/slick.js',
+        SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['main.js'],
         SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.js',
     ]
 ];
@@ -114,7 +117,18 @@ foreach ($page as $method => $params) {
         <h1><? $APPLICATION->ShowTitle() ?></h1>
     <? endif; ?>
     <? if ($boolHomePage): ?>
-        <section class="slider">big black slider</section>
+        <section class="slider-wrapper">
+            <div class="slider-fixed">
+                <div class="slider-fixed__body">
+                    <div>Специализированная организация по привлечению<br>инвестиций и <b>работе с инвесторами</b></div>
+                </div>
+            </div>
+            <div class="slider main-slider" data-slick="{&quot;dots&quot;: true}">
+                <div><br><br><br><br>your content 1</div>
+                <div><br><br><br><br>your content 2</div>
+                <div><br><br><br><br>your content 3</div>
+            </div>
+        </section>
         <? $APPLICATION->IncludeComponent("bitrix:news.list", "main-icons", Array(
             "ACTIVE_DATE_FORMAT" => "j F Y",    // Формат показа даты
             "ADD_SECTIONS_CHAIN" => "N",    // Включать раздел в цепочку навигации

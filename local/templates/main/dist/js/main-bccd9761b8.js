@@ -1,0 +1,1 @@
+"use strict";!function(t){t(function(){t(".slider").slick(),t("#to-top").click(function(c){c.preventDefault(),t("html, body").animate({scrollTop:0},"fast")})})}(jQuery);

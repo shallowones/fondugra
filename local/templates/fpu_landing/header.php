@@ -24,9 +24,12 @@ $page = [
     'addCss' => [
         $pathTplMain . '/dist/fonts/bundle.css',
         $pathTplMain . '/dist/css/' . $manifest['main.css'],
+        $pathTplMain . '/dist/js/vendor/slick/slick.css',
     ],
     'addJs' => [
-        $pathTplMain . '/dist/js/vendor/' . $manifest['jquery.js'],
+        $pathTplMain . '/dist/js/vendor/jquery.js',
+        $pathTplMain . '/dist/js/vendor/slick/slick.js',
+        $pathTplMain . '/dist/js/' . $manifest['main.js'],
         $pathTplMain . '/dist/js/vendor/' . $manifest['scrollmagic.js'],
         $pathTplMain . '/dist/js/' . $manifest['animation.js']
     ]
