@@ -1,29 +1,8 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"О регионе", 
-		"/about-region/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"О фонде", 
 		"/about-fund/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Новости", 
-		"/news/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Мероприятия", 
-		"/events/", 
 		Array(), 
 		Array(), 
 		"" 
@@ -43,22 +22,29 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Закупки", 
-		"/procurement/", 
+		"Информационные ресурсы", 
+		"/info-resources/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Документы", 
-		"/documents/", 
+		"Новости", 
+		"/news/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Контакты", 
-		"/contacts/", 
+		"Мероприятия", 
+		"/events/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Инвестиционный совет", 
+		"/investsovet/", 
 		Array(), 
 		Array(), 
 		"" 
