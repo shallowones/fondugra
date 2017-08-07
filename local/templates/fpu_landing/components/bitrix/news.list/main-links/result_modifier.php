@@ -44,3 +44,5 @@ foreach ($arResult["ITEMS"] as $key => $arItem) {
 
     $arResult["ITEMS"][$key]['link'] = $link;
 }
+
+$arResult["ITEMS"] = array_chunk($arResult["ITEMS"], 3);

@@ -30,7 +30,7 @@ $page = [
         $pathTplMain . '/dist/js/vendor/jquery.js',
         $pathTplMain . '/dist/js/vendor/slick/slick.js',
         $pathTplMain . '/dist/js/' . $manifest['main.js'],
-        $pathTplMain . '/dist/js/vendor/' . $manifest['scrollmagic.js'],
+        $pathTplMain . '/dist/js/vendor/scrollmagic.js',
         $pathTplMain . '/dist/js/' . $manifest['animation.js']
     ]
 ];
@@ -46,7 +46,7 @@ foreach ($page as $method => $params) {
     <? $APPLICATION->ShowHead() ?>
 </head>
 <!-- класс .loading только для страницы frpu, чтобы показать лоадер-->
-<body class="loading">
+<body>
 <div class="loading-overlay loading-overlay_visible"></div>
 <div class="bx-panel"><? $APPLICATION->ShowPanel() ?></div>
 <div class="page">

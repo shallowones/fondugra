@@ -111,7 +111,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 </div>
             </div>
         </div>
-        <div class="to-top"><a class="to-top__link" href="#">наверх</a></div>
+        <div class="to-top"><a class="to-top__link" id="to-top" href="#">наверх</a></div>
     </div>
 </footer>
 </div>
