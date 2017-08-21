@@ -46,3 +46,24 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Intro Regular Caps';
+  src: url('intro/Intro-Regular-Caps.woff2') format('woff2'), url('intro/Intro-Regular-Caps.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Intro Bold';
+  src: url('intro/Intro-Bold.woff2') format('woff2'), url('intro/Intro-Bold.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Intro Black Alt';
+  src: url('intro/Intro-Black-Alt.woff2') format('woff2'), url('intro/Intro-Black-Alt.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}

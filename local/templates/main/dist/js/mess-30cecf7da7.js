@@ -1,0 +1,1 @@
+"use strict";!function(i){i(function(){var s=i(".mess.valid");i(".js-mess-close").on("click",function(){s.animate({opacity:0},300).slideUp(300)})})}(jQuery);

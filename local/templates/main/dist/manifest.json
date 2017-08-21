@@ -1,5 +1,12 @@
 {
-  "animation.js": "animation-31097ae03c.js",
-  "main.css": "main-23af9022ab.css",
-  "main.js": "main-bccd9761b8.js"
+  "animateNumbers.js": "animateNumbers-2d6717d200.js",
+  "animation.js": "animation-5cdb964208.js",
+  "calendar.js": "calendar-d01a5b9cbb.js",
+  "langSelect.js": "langSelect-9375edc776.js",
+  "main.css": "main-4ddb211070.css",
+  "main.js": "main-242da912ce.js",
+  "map.js": "map-d3ecf7db15.js",
+  "menu.js": "menu-974f7f6030.js",
+  "mess.js": "mess-30cecf7da7.js",
+  "submenu.js": "submenu-8f6aadb889.js"
 }
