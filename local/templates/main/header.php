@@ -30,6 +30,7 @@ if (
 $page = [
     'addCss' => [
         SITE_TEMPLATE_PATH . '/dist/fonts/bundle.css',
+        SITE_TEMPLATE_PATH . '/js/vendor/jquery.selectmenu/jquery-selectmenu.css',
         SITE_TEMPLATE_PATH . '/dist/css/' . $manifest['main.css'],
         SITE_TEMPLATE_PATH . '/dist/js/vendor/slick/slick.css',
         SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.css',
@@ -37,7 +38,9 @@ $page = [
     'addJs' => [
         SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.js',
         SITE_TEMPLATE_PATH . '/dist/js/vendor/slick/slick.js',
+        SITE_TEMPLATE_PATH . '/js/vendor/jquery.selectmenu/jquery-selectmenu.js',
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['main.js'],
+        SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['submenu.js'],
         SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.js',
     ]
 ];
@@ -93,37 +96,31 @@ foreach ($page as $method => $params) {
             </div>
         </div>
     </header>
-    <section class="navigation">
-        <div class="container">
-            <? $APPLICATION->IncludeComponent("bitrix:menu", "top-menu", Array(
-                "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
-                "CHILD_MENU_TYPE" => "left",    // Тип меню для остальных уровней
-                "DELAY" => "N",    // Откладывать выполнение шаблона меню
-                "MAX_LEVEL" => "1",    // Уровень вложенности меню
-                "MENU_CACHE_GET_VARS" => "",    // Значимые переменные запроса
-                "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
-                "MENU_CACHE_TYPE" => "N",    // Тип кеширования
-                "MENU_CACHE_USE_GROUPS" => "Y",    // Учитывать права доступа
-                "ROOT_MENU_TYPE" => "top",    // Тип меню для первого уровня
-                "USE_EXT" => "N",    // Подключать файлы с именами вида .тип_меню.menu_ext.php
-                "COMPONENT_TEMPLATE" => "catalog_horizontal",
-                "MENU_THEME" => "black",    // Тема меню
-            ),
-                false
-            ); ?>
-        </div>
-    </section>
+    <? $APPLICATION->IncludeComponent("bitrix:menu", "top-menu", Array(
+        "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
+        "CHILD_MENU_TYPE" => "right",    // Тип меню для остальных уровней
+        "DELAY" => "N",    // Откладывать выполнение шаблона меню
+        "MAX_LEVEL" => "2",    // Уровень вложенности меню
+        "MENU_CACHE_GET_VARS" => "",    // Значимые переменные запроса
+        "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
+        "MENU_CACHE_TYPE" => "N",    // Тип кеширования
+        "MENU_CACHE_USE_GROUPS" => "Y",    // Учитывать права доступа
+        "ROOT_MENU_TYPE" => "top",    // Тип меню для первого уровня
+        "USE_EXT" => "N",    // Подключать файлы с именами вида .тип_меню.menu_ext.php
+        "COMPONENT_TEMPLATE" => "catalog_horizontal",
+        "MENU_THEME" => "black",    // Тема меню
+    ),
+        false
+    ); ?>
     <? if (!$boolHomePage): ?>
     <div class="container inner-detail">
-        <? $APPLICATION->IncludeComponent(
-            "bitrix:breadcrumb",
-            "",
-            Array(
-                "PATH" => "",
-                "SITE_ID" => "s1",
-                "START_FROM" => "0"
-            )
-        ); ?>
+        <? $APPLICATION->IncludeComponent("bitrix:breadcrumb", "nav", Array(
+	"PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+		"SITE_ID" => "s1",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+		"START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
+	),
+	false
+); ?>
         <h1 class="h1"><? $APPLICATION->ShowTitle() ?></h1>
         <? if ($bool2Col): ?>
         <section class="inner">

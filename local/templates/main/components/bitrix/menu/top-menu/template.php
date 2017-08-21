@@ -12,13 +12,37 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-?>
-<? if (count($arResult) > 0): ?>
-    <nav class="nav">
-        <? foreach ($arResult as $item): ?>
-            <? if ($item['DEPTH_LEVEL'] === 1): ?>
-                <a class="link nav__link" href="<?= $item['LINK'] ?>"><?= $item['TEXT'] ?></a>
-            <? endif; ?>
-        <? endforeach; ?>
-    </nav>
+$subs = [];
+if (count($arResult) > 0): ?>
+    <section class="navigation">
+        <div class="container">
+            <nav class="nav js-menu">
+                <? foreach ($arResult as $keyItem => $item): ?>
+                    <? if ($item["IS_PARENT"]):
+                        $subs[] = '#sub-' . $keyItem; ?>
+                        <span class="link nav__link" data-submenu="#sub-<?= $keyItem ?>"><?= $item['TEXT'] ?></span>
+                    <? else: ?>
+                        <a class="link nav__link" href="<?= $item['LINK'] ?>"><?= $item['TEXT'] ?></a>
+                    <? endif; ?>
+                <? endforeach; ?>
+            </nav>
+        </div>
+    </section>
+    <? if (count($subs) > 0): ?>
+        <section class="nav-sub">
+            <div class="container js-submenu">
+                <? foreach ($arResult as $keyItem => $item): ?>
+                    <? if ($item["IS_PARENT"]): ?>
+                        <div class="seacher" id="sub-<?= $keyItem ?>">
+                            <div class="submenu">
+                                <? foreach ($item['CHILDREN'] as $keySubItem => $subItem): ?>
+                                    <a class="link nav__link" href="<?= $subItem['LINK'] ?>"><?= $subItem['TEXT'] ?></a>
+                                <? endforeach; ?>
+                            </div>
+                        </div>
+                    <? endif; ?>
+                <? endforeach; ?>
+            </div>
+        </section>
+    <? endif; ?>
 <? endif; ?>

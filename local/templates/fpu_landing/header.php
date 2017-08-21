@@ -23,13 +23,16 @@ $manifest = json_decode(file_get_contents(Application::getDocumentRoot() . $path
 $page = [
     'addCss' => [
         $pathTplMain . '/dist/fonts/bundle.css',
+        $pathTplMain . '/js/vendor/jquery.selectmenu/jquery-selectmenu.css',
         $pathTplMain . '/dist/css/' . $manifest['main.css'],
         $pathTplMain . '/dist/js/vendor/slick/slick.css',
     ],
     'addJs' => [
         $pathTplMain . '/dist/js/vendor/jquery.js',
         $pathTplMain . '/dist/js/vendor/slick/slick.js',
+        $pathTplMain . '/js/vendor/jquery.selectmenu/jquery-selectmenu.js',
         $pathTplMain . '/dist/js/' . $manifest['main.js'],
+        $pathTplMain . '/dist/js/' . $manifest['submenu.js'],
         $pathTplMain . '/dist/js/vendor/scrollmagic.js',
         $pathTplMain . '/dist/js/' . $manifest['animation.js']
     ]
