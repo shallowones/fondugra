@@ -16,7 +16,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Инвестиционные проекты", 
-		"/investment-projects/", 
+		"/investment/", 
 		Array(), 
 		Array(), 
 		"" 
