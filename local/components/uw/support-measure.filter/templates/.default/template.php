@@ -8,21 +8,23 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  * @global CMain $APPLICATION
  */
 ?>
-<form action="<?= POST_FORM_ACTION_URI ?>" method="post">
-    <h4>Форма поддержки</h4>
-    <? foreach ($arResult['formsSupport'] as $item): ?>
-        <label style="display: block; margin-bottom: 5px;">
-            <input
-                    type="checkbox"
-                    name="formsSupport[]"
-                    value="<?= $item['id'] ?>"
-                <? if (in_array($item['id'], $arResult['restoreSupportFilter']['formsSupport'])) {
-                    echo 'checked';
-                } ?>
-            >
-            <?= $item['name'] ?>
-        </label>
+<form class="side-form" action="<?= POST_FORM_ACTION_URI ?>" method="post">
+    <div class="side-title">Форма поддержки</div>
+    <div class="side-checkbox">
+    <? foreach ($arResult['formsSupport'] as $keyItem => $item): ?>
+        <input
+                type="checkbox"
+                name="formsSupport[]"
+                value="<?= $item['id'] ?>"
+                class="side-checkbox__input"
+                id="check-<?= $keyItem ?>"
+            <? if (in_array($item['id'], $arResult['restoreSupportFilter']['formsSupport'])) {
+                echo 'checked';
+            } ?>
+        >
+        <label class="side-checkbox__label" for="check-<?= $keyItem ?>"><?= $item['name'] ?></label>
     <? endforeach; ?>
+    </div>
     <h4>Сегмент</h4>
     <? foreach ($arResult['segments'] as $item): ?>
         <label style="display: block; margin-bottom: 5px;">
