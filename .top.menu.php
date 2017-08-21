@@ -15,15 +15,8 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Инвестиционные проекты", 
+		"Проекты", 
 		"/investment/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Информационные ресурсы", 
-		"/info-resources/", 
 		Array(), 
 		Array(), 
 		"" 
@@ -38,6 +31,13 @@ $aMenuLinks = Array(
 	Array(
 		"Мероприятия", 
 		"/events/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Информационные ресурсы", 
+		"/info-resources/", 
 		Array(), 
 		Array(), 
 		"" 

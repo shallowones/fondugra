@@ -30,7 +30,8 @@ if (
 $page = [
     'addCss' => [
         SITE_TEMPLATE_PATH . '/dist/fonts/bundle.css',
-        SITE_TEMPLATE_PATH . '/js/vendor/jquery.selectmenu/jquery-selectmenu.css',
+        SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.datepicker/jquery-datepicker.css',
+        SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.selectmenu/jquery-selectmenu.css',
         SITE_TEMPLATE_PATH . '/dist/css/' . $manifest['main.css'],
         SITE_TEMPLATE_PATH . '/dist/js/vendor/slick/slick.css',
         SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.css',
@@ -38,8 +39,9 @@ $page = [
     'addJs' => [
         SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.js',
         SITE_TEMPLATE_PATH . '/dist/js/vendor/slick/slick.js',
-        SITE_TEMPLATE_PATH . '/js/vendor/jquery.selectmenu/jquery-selectmenu.js',
+        SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.selectmenu/jquery-selectmenu.js',
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['main.js'],
+        SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['langSelect.js'],
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['submenu.js'],
         SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.js',
     ]
@@ -63,9 +65,9 @@ foreach ($page as $method => $params) {
         <div class="container">
             <div class="headline"><a class="logo" href="/"></a>
                 <? $APPLICATION->IncludeFile(
-                    SITE_TEMPLATE_PATH . "/inc/hdr_icons.txt",
+                    SITE_TEMPLATE_PATH . "/inc/hdr_icons.php",
                     Array(),
-                    Array("MODE" => "text")
+                    Array("MODE" => "php")
                 ); ?>
                 <div class="head-info">
                     <div class="head-info__item">
