@@ -11,49 +11,52 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 <form class="side-form" action="<?= POST_FORM_ACTION_URI ?>" method="post">
     <div class="side-title">Форма поддержки</div>
     <div class="side-checkbox">
-    <? foreach ($arResult['formsSupport'] as $keyItem => $item): ?>
-        <input
-                type="checkbox"
-                name="formsSupport[]"
-                value="<?= $item['id'] ?>"
-                class="side-checkbox__input"
-                id="check-<?= $keyItem ?>"
-            <? if (in_array($item['id'], $arResult['restoreSupportFilter']['formsSupport'])) {
-                echo 'checked';
-            } ?>
-        >
-        <label class="side-checkbox__label" for="check-<?= $keyItem ?>"><?= $item['name'] ?></label>
-    <? endforeach; ?>
+        <? foreach ($arResult['formsSupport'] as $keyItem => $item): ?>
+            <input
+                    type="checkbox"
+                    name="formsSupport[]"
+                    value="<?= $item['id'] ?>"
+                    class="side-checkbox__input"
+                    id="check-<?= $keyItem ?>"
+                <? if (in_array($item['id'], $arResult['restoreSupportFilter']['formsSupport'])) {
+                    echo 'checked';
+                } ?>
+            >
+            <label class="side-checkbox__label" for="check-<?= $keyItem ?>"><?= $item['name'] ?></label>
+        <? endforeach; ?>
     </div>
-    <h4>Сегмент</h4>
-    <? foreach ($arResult['segments'] as $item): ?>
-        <label style="display: block; margin-bottom: 5px;">
+    <div class="side-title">Сегмент</div>
+    <div class="side-checkbox">
+        <? foreach ($arResult['segments'] as $keyItem => $item): ?>
             <input
                     type="checkbox"
                     name="segments[]"
                     value="<?= $item['id'] ?>"
+                    class="side-checkbox__input"
+                    id="check2-<?= $keyItem ?>"
                 <? if (in_array($item['id'], $arResult['restoreSupportFilter']['segments'])) {
                     echo 'checked';
                 } ?>
             >
-            <?= $item['name'] ?>
-        </label>
-    <? endforeach; ?>
-    <h4>Тип поддержки</h4>
-    <? foreach ($arResult['typeSupport'] as $item): ?>
-        <label style="display: block; margin-bottom: 5px;">
+            <label class="side-checkbox__label" for="check2-<?= $keyItem ?>"><?= $item['name'] ?></label>
+        <? endforeach; ?>
+    </div>
+    <div class="side-title">Тип поддержки</div>
+    <div class="side-checkbox">
+    <? foreach ($arResult['typeSupport'] as $keyItem => $item): ?>
             <input
                     type="checkbox"
                     name="typeSupport[]"
                     value="<?= $item['id'] ?>"
+                    class="side-checkbox__input"
+                    id="check3-<?= $keyItem ?>"
                 <? if (in_array($item['id'], $arResult['restoreSupportFilter']['typeSupport'])) {
                     echo 'checked';
                 } ?>
             >
-            <?= $item['name'] ?>
-        </label>
+        <label class="side-checkbox__label" for="check3-<?= $keyItem ?>"><?= $item['name'] ?></label>
     <? endforeach; ?>
-    <button name="setFilter" value="setFilter">Применить</button>
-    <br>
-    <button name="clearFilter" value="clearFilter">Сбрсоить</button>
+    </div>
+    <button class="button button_yellow" name="setFilter" value="setFilter">Применить</button>
+    <button class="button" name="clearFilter" value="clearFilter">Сбрсоить</button>
 </form>

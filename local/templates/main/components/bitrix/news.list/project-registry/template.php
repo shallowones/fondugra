@@ -72,9 +72,9 @@
     <? if (count($arItem['DISPLAY_PROPERTIES']['files']['FILE_VALUE']) > 0): ?>
         <? foreach ($arItem['DISPLAY_PROPERTIES']['files']['FILE_VALUE'] as $arFile): ?>
             <a class="files__item" href="<?= $arFile['SRC'] ?>">
-                <div class="files__item-format pdf"><?= $arFile['ext'] ?></div>
+                <div class="files__item-format <?= $arFile['ext'] ?>"><?= $arFile['ext'] ?></div>
                 <div class="files__item-desc">
-                    <?= $arFile['name'] ?>
+                    <?= $arFile['name'] ?> (<?= $arFile['size'] ?>)
                 </div>
             </a>
         <? endforeach; ?>

@@ -14,65 +14,81 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<div class="news-detail">
-    <table class="support-table">
-        <? if (isset($arResult['DISPLAY_PROPERTIES']['recipient_support']['DISPLAY_VALUE'])): ?>
-            <tr>
-                <td>Получатель поддержки</td>
-                <td><?= $arResult['DISPLAY_PROPERTIES']['recipient_support']['DISPLAY_VALUE'] ?></td>
-            </tr>
-        <? endif; ?>
-        <? if (isset($arResult['DISPLAY_PROPERTIES']['limits_budgetary']['DISPLAY_VALUE'])): ?>
-            <tr>
-                <td>Лимиты бюджетных ассигнований для исполнения государственной поддержки на очередной финансовый год и плановый период</td>
-                <td><?= $arResult['DISPLAY_PROPERTIES']['limits_budgetary']['DISPLAY_VALUE'] ?></td>
-            </tr>
-        <? endif; ?>
-        <? if (isset($arResult['DISPLAY_PROPERTIES']['conditions_transfer']['DISPLAY_VALUE'])): ?>
-            <tr>
-                <td>Условия предоставления</td>
-                <td><?= $arResult['DISPLAY_PROPERTIES']['conditions_transfer']['DISPLAY_VALUE'] ?></td>
-            </tr>
-        <? endif; ?>
-        <? if (isset($arResult['DISPLAY_PROPERTIES']['other']['DISPLAY_VALUE'])): ?>
-            <tr>
-                <td>Прочее</td>
-                <td><?= $arResult['DISPLAY_PROPERTIES']['other']['DISPLAY_VALUE'] ?></td>
-            </tr>
-        <? endif; ?>
-    </table>
-    <br>
-    <? if ($arResult['organization']): ?>
-        <b>Ответственный исполнитель государственной программы</b><br>
-        <?= $arResult['organization']['name'] ?><br>
-        <? if ($arResult['organization']['link']): ?>
-            <i>Сайт:</i> <?= $arResult['organization']['link'] ?><br>
-        <? endif; ?>
-        <? if ($arResult['organization']['address']): ?>
-            <i>Адрес:</i> <?= $arResult['organization']['address'] ?><br>
-        <? endif; ?>
-        <? if ($arResult['organization']['schedule']): ?>
-            <i>График работы:</i> <?= $arResult['organization']['schedule'] ?><br>
-        <? endif; ?>
-        <? if ($arResult['organization']['phone']): ?>
-            <i>Телефон:</i> <?= $arResult['organization']['phone'] ?><br>
-        <? endif; ?>
+<div class="table black">
+    <? if (isset($arResult['DISPLAY_PROPERTIES']['recipient_support']['DISPLAY_VALUE'])): ?>
+        <div class="table-line">
+            <div class="table-line-left">Получатель поддержки</div>
+            <div class="table-line-right"><?= $arResult['DISPLAY_PROPERTIES']['recipient_support']['DISPLAY_VALUE'] ?></div>
+        </div>
     <? endif; ?>
-    <br/>
-    <? if (isset($arResult['DISPLAY_PROPERTIES']['files']['FILE_VALUE'])): ?>
-        <table class="support-table">
-            <tr>
-                <td>Тип файла</td>
-                <td>Название документа для скачивания</td>
-                <td>Размер файла</td>
-            </tr>
-            <? foreach ($arResult['DISPLAY_PROPERTIES']['files']['FILE_VALUE'] as $arFile): ?>
-                <tr>
-                    <td><?= $arFile['ext'] ?></td>
-                    <td><a href="<?= $arFile['SRC'] ?>"><?= $arFile['name'] ?></a></td>
-                    <td><?= $arFile['size'] ?></td>
-                </tr>
-            <? endforeach; ?>
-        </table>
+    <? if (isset($arResult['DISPLAY_PROPERTIES']['limits_budgetary']['DISPLAY_VALUE'])): ?>
+        <div class="table-line">
+            <div class="table-line-left">Лимиты бюджетных ассигнований для исполнения государственной поддержки на
+                очередной финансовый год и плановый период
+            </div>
+            <div class="table-line-right"><?= $arResult['DISPLAY_PROPERTIES']['limits_budgetary']['DISPLAY_VALUE'] ?></div>
+        </div>
+    <? endif; ?>
+    <? if (isset($arResult['DISPLAY_PROPERTIES']['conditions_transfer']['DISPLAY_VALUE'])): ?>
+        <div class="table-line">
+            <div class="table-line-left">Условия предоставления</div>
+            <div class="table-line-right"><?= $arResult['DISPLAY_PROPERTIES']['conditions_transfer']['DISPLAY_VALUE'] ?></div>
+        </div>
+    <? endif; ?>
+    <? if (isset($arResult['DISPLAY_PROPERTIES']['other']['DISPLAY_VALUE'])): ?>
+        <div class="table-line">
+            <div class="table-line-left">Прочее</div>
+            <div class="table-line-right"><?= $arResult['DISPLAY_PROPERTIES']['other']['DISPLAY_VALUE'] ?></div>
+        </div>
     <? endif; ?>
 </div>
+<p>
+    Для получения более подробной информации о данной мере поддержке, предлагаем изучить
+    Карточку государственной поддержки и Нормативно правовые акты:
+</p>
+<? if (isset($arResult['DISPLAY_PROPERTIES']['files']['FILE_VALUE'])): ?>
+    <? foreach ($arResult['DISPLAY_PROPERTIES']['files']['FILE_VALUE'] as $arFile): ?>
+        <a class="files__item" href="<?= $arFile['SRC'] ?>">
+            <div class="files__item-format <?= $arFile['ext'] ?>"><?= $arFile['ext'] ?></div>
+            <div class="files__item-desc">
+                <?= $arFile['name'] ?> (<?= $arFile['size'] ?>)
+            </div>
+        </a>
+    <? endforeach; ?>
+<? endif; ?>
+<? $this->SetViewTarget('organizationInfo'); ?>
+<? if ($arResult['organization']): ?>
+    <div class="inner-right">
+        <div class="info">
+            <div class="info-desc">Ответственный исполнитель государственной программы</div>
+            <div><b><?= $arResult['organization']['name'] ?></b></div>
+            <br>
+            <? if ($arResult['organization']['phone']): ?>
+                <div class="info-line">
+                    <div class="info-row label">Телефон:</div>
+                    <div class="info-row"><?= $arResult['organization']['phone'] ?></div>
+                </div>
+            <? endif; ?>
+            <? if ($arResult['organization']['link']): ?>
+                <div class="info-line">
+                    <div class="info-row label">Сайт:</div>
+                    <div class="info-row"><a href="<?= $arResult['organization']['link'] ?>"
+                                             target="_blank"><?= $arResult['organization']['link'] ?></a></div>
+                </div>
+            <? endif; ?>
+            <? if ($arResult['organization']['address']): ?>
+                <div class="info-line">
+                    <div class="info-row label">Адрес:</div>
+                    <div class="info-row"><?= $arResult['organization']['address'] ?></div>
+                </div><br>
+            <? endif; ?>
+            <? if ($arResult['organization']['schedule']): ?>
+                <div class="info-line">
+                    <div class="info-row label">График работы:</div>
+                    <div class="info-row"><?= $arResult['organization']['schedule'] ?></div>
+                </div>
+            <? endif; ?>
+        </div>
+    </div>
+<? endif; ?>
+<? $this->EndViewTarget(); ?>

@@ -13,8 +13,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 
 use \Bitrix\Main\Config\Option;
 
-$newWidth = 100;
-$newHeight = 70;
+$newWidth = 96;
+$newHeight = 96;
 
 $noPhoto = Option::get('main', 'noPhoto');
 if (intval($noPhoto) < 1) {
@@ -32,7 +32,7 @@ foreach ($arResult["ITEMS"] as $key => $arItem) {
     $file = CFile::ResizeImageGet(
         $fileID,
         array('width' => $newWidth, 'height' => $newHeight),
-        BX_RESIZE_IMAGE_EXACT,
+        BX_RESIZE_IMAGE_PROPORTIONAL,
         false
     );
     if ($file['src']) {

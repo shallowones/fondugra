@@ -14,7 +14,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<div class="news-list">
+<div class="navigator">
     <? foreach ($arResult["ITEMS"] as $arItem): ?>
         <?
         $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'],
@@ -23,32 +23,23 @@ $this->setFrameMode(true);
             CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"),
             array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
         ?>
-        <div class="news-item <? if (!empty($arItem['PROPERTIES']['important']['VALUE'])) {
-            echo 'news-important';
-        } ?>" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+        <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="navigator-item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
             <? if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arItem["PREVIEW_PICTURE"])): ?>
-                <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><img
-                            class="preview_picture"
-                            border="0"
-                            src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>"
-                            alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>"
-                            title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>"
-                            style="float:left"
-                    /></a>
+                <img
+                        class="navigator-item__img"
+                        src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>"
+                />
             <? endif ?>
             <? if ($arParams["DISPLAY_NAME"] != "N" && $arItem["NAME"]): ?>
-                <a href="<? echo $arItem["DETAIL_PAGE_URL"] ?>"><b><? echo $arItem["NAME"] ?></b></a><br/>
+                <div class="navigator-item__title"><? echo $arItem["NAME"] ?></div>
             <? endif; ?>
             <? if ($arItem["DISPLAY_PROPERTIES"]['short_description']['DISPLAY_VALUE']): ?>
-                <? echo TruncateText(strip_tags($arItem["DISPLAY_PROPERTIES"]['short_description']['DISPLAY_VALUE']),
-                    100); ?>
+                <p><? echo TruncateText(strip_tags($arItem["DISPLAY_PROPERTIES"]['short_description']['DISPLAY_VALUE']),
+                        75); ?></p>
             <? endif; ?>
-            <? if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arItem["PREVIEW_PICTURE"])): ?>
-                <div style="clear:both"></div>
-            <? endif ?>
-        </div>
+        </a>
     <? endforeach; ?>
-    <? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
-        <br/><?= $arResult["NAV_STRING"] ?>
-    <? endif; ?>
 </div>
+<? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
+    <br/><?= $arResult["NAV_STRING"] ?>
+<? endif; ?>

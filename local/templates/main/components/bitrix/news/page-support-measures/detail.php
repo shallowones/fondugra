@@ -12,6 +12,8 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+<section class="inner">
+    <div class="inner-left">
 <?$ElementID = $APPLICATION->IncludeComponent(
 	"bitrix:news.detail",
 	"",
@@ -69,3 +71,8 @@ $this->setFrameMode(true);
 	$component
 );?>
 <p><a href="<?=$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["news"]?>"><?=GetMessage("T_NEWS_DETAIL_BACK")?></a></p>
+    </div>
+    <div class="inner-right">
+        <? $APPLICATION->ShowViewContent('organizationInfo'); ?>
+    </div>
+</section>

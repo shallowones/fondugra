@@ -23,7 +23,8 @@ foreach ($arResult['ITEMS'] as $key => $arItem) {
         foreach ($arItem['DISPLAY_PROPERTIES']['files']['FILE_VALUE'] as $keyFile => $arFile) {
             $arFile['ext'] = end(explode('.', $arFile['FILE_NAME']));
             $arFile['name'] = str_replace('.' . $arFile['ext'], '', $arFile['ORIGINAL_NAME']);
-            $arFile['ext'] = ToUpper(end(explode('.', $arFile['FILE_NAME'])));
+            $arFile['ext'] = ToLower(end(explode('.', $arFile['FILE_NAME'])));
+            $arFile['size'] = UW\Services::FBytes($arFile['FILE_SIZE'], 0);
             $arResult['ITEMS'][$key]['DISPLAY_PROPERTIES']['files']['FILE_VALUE'][$keyFile] = $arFile;
         }
     }
