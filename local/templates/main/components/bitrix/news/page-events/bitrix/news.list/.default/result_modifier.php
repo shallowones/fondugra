@@ -13,8 +13,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 
 use \Bitrix\Main\Config\Option;
 
-$newWidth = 238;
-$newHeight = 158;
+$newWidth = 300;
+$newHeight = 200;
 
 $noPhoto = Option::get('main', 'noPhoto');
 if (intval($noPhoto) < 1) {
@@ -49,5 +49,6 @@ foreach ($arResult["ITEMS"] as $key => &$arItem) {
         $mDateTo = MakeTimeStamp($arItem['PROPERTIES']['date_to']['VALUE']);
         $arItem['day_to'] = date('d', $mDateTo);
         $arItem['month_to'] = ToUpper(FormatDate('F', $mDateTo));
+        $arItem['years_to'] = ToUpper(FormatDate('Y', $mDateTo));
     }
 }

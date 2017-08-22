@@ -14,17 +14,6 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<div class="news-detail">
-    <? if (!empty($arResult['PROPERTIES']['date_from']['VALUE'])): ?>
-        <?= $arResult['day_from'] ?> <?= $arResult['month_from'] ?>
-    <? endif; ?>
-    <? if (!empty($arResult['PROPERTIES']['date_to']['VALUE'])): ?>
-        -
-        <?= $arResult['day_to'] ?> <?= $arResult['month_to'] ?>
-    <? endif; ?>
-    <br>
-    <div style="clear:both"></div>
-    <br/>
     <? if (isset($arResult['DISPLAY_PROPERTIES']['photos']['FILE_VALUE'])): ?>
         <? foreach ($arResult['DISPLAY_PROPERTIES']['photos']['FILE_VALUE'] as $arFile): ?>
             <div class="photo-item"><a data-fancybox="gallery" href="<?= $arFile['BIG'] ?>"><img
@@ -40,4 +29,3 @@ $this->setFrameMode(true);
             </div>
         <? endforeach; ?>
     <? endif; ?>
-</div>
