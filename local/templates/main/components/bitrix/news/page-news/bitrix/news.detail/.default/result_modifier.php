@@ -14,7 +14,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 if ($arResult["DISPLAY_PICTURE"] != "N" && is_array($arResult['DETAIL_PICTURE'])) {
     $file = CFile::ResizeImageGet(
         $arResult['DETAIL_PICTURE']['ID'],
-        array('width' => 350, 'height' => 210),
+        array('width' => 410, 'height' => 240),
         BX_RESIZE_IMAGE_EXACT,
         false
     );

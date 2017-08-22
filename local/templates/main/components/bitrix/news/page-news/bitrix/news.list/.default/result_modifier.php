@@ -13,8 +13,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 
 use \Bitrix\Main\Config\Option;
 
-$newWidth = 238;
-$newHeight = 158;
+$newWidth = 300;
+$newHeight = 200;
 
 $noPhoto = Option::get('main', 'noPhoto');
 if (intval($noPhoto) < 1) {
