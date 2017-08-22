@@ -13,11 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && strlen($_POST["submit"]) > 0 && CMod
     // Проверка на заполнение полей
     $arResult["Error"] = Array();
 
-    if (strlen($_POST["subscribe-email"]) < 4) {
-        $arResult["Error"][] = "Не введен E-MAIL";
+    if (strlen($_POST["subscribe-email"]) < 2) {
+        $arResult["Error"][] = "Не введен e-mail";
     }
     if (strlen($_POST["subscribe-email"]) > 1 && !check_email($_POST["subscribe-email"])) {
-        $arResult["Error"][] = "Неверно указан E-MAIL";
+        $arResult["Error"][] = "Неверно указан e-mail";
     }
     if (count($_POST['subscribe-rubric']) < 1) {
         $arResult["Error"][] = "Не выбрана ни одна рубрика";

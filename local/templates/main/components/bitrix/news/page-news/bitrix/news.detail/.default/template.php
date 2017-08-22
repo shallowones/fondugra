@@ -14,19 +14,16 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<div class="news-detail">
+<? if ($arParams["DISPLAY_DATE"] != "N" && $arResult["DISPLAY_ACTIVE_FROM"]): ?>
+<div class="list-item__date"><?= $arResult["DISPLAY_ACTIVE_FROM"] ?></div>
+<? endif; ?>
+<div class="detail">
     <? if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arResult["DETAIL_PICTURE"])): ?>
         <img
-                class="detail_picture"
-                border="0"
+                class="detail__img"
                 src="<?= $arResult["DETAIL_PICTURE"]["SRC"] ?>"
-                alt="<?= $arResult["DETAIL_PICTURE"]["ALT"] ?>"
-                title="<?= $arResult["DETAIL_PICTURE"]["TITLE"] ?>"
         />
     <? endif ?>
-    <? if ($arParams["DISPLAY_DATE"] != "N" && $arResult["DISPLAY_ACTIVE_FROM"]): ?>
-        <span class="news-date-time"><?= $arResult["DISPLAY_ACTIVE_FROM"] ?></span>
-    <? endif; ?>
     <? if (strlen($arResult["DETAIL_TEXT"]) > 0): ?>
         <? echo $arResult["DETAIL_TEXT"]; ?>
     <? endif ?>
