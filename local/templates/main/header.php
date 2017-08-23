@@ -126,7 +126,7 @@ foreach ($page as $method => $params) {
         <h1 class="h1"><? $APPLICATION->ShowTitle() ?></h1>
         <? if ($bool2Col): ?>
         <section class="inner">
-            <div class="inner-left">
+            <div class="inner-left<? $APPLICATION->ShowProperty('inner_left_detail'); ?>">
         <? endif; ?>
         <? endif; ?>
         <? if ($boolHomePage): ?>
