@@ -23,6 +23,13 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             ),
                 false
             ); ?>
+            <? $APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+                    "AREA_FILE_SHOW" => "sect",
+                    "AREA_FILE_SUFFIX" => "inc",
+                    "AREA_FILE_RECURSIVE" => "Y",
+                    "EDIT_TEMPLATE" => "standard.php"
+                )
+            ); ?>
         </div>
         </section>
     <? endif; ?>
