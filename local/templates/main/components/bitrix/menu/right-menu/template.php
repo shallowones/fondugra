@@ -4,13 +4,35 @@
 
 <? if (!empty($arResult)): ?>
     <ul class="side">
-        <? foreach ($arResult as $arItem): ?>
+        <? foreach ($arResult as $item):
+            $classOpen = '';
+            foreach ($item['CHILDREN'] as $keySubItem => $subItem) {
+                if ($subItem['SELECTED']) {
+                    $classOpen = ' open';
+                }
+            }
+            ?>
             <li class="side__item">
-                <a class="side__link <? if ($arItem['SELECTED']) {
-                    echo 'active';
-                } ?>" href="<?= $arItem["LINK"] ?>">
-                    <?= $arItem["TEXT"] ?>
-                </a>
+                <? if ($item["IS_PARENT"]): ?>
+                    <div class="side__link parent js-menu<?= $classOpen ?>"><?= $item["TEXT"] ?></div>
+                    <ul class="side-child js-side-child">
+                        <? foreach ($item['CHILDREN'] as $keySubItem => $subItem): ?>
+                            <li class="side-child__item">
+                                <a class="side__link <? if ($subItem['SELECTED']) {
+                                    echo 'active';
+                                } ?>" href="<?= $subItem['LINK'] ?>">
+                                    <?= $subItem['TEXT'] ?>
+                                </a>
+                            </li>
+                        <? endforeach ?>
+                    </ul>
+                <? else: ?>
+                    <a class="side__link <? if ($item['SELECTED']) {
+                        echo 'active';
+                    } ?>" href="<?= $item["LINK"] ?>">
+                        <?= $item["TEXT"] ?>
+                    </a>
+                <? endif; ?>
             </li>
         <? endforeach ?>
     </ul>

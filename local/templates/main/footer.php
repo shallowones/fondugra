@@ -7,22 +7,25 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     <? if ($bool2Col): ?>
         </div> <!-- inner-left -->
         <div class="inner-right">
-            <? $APPLICATION->IncludeComponent("bitrix:menu", "right-menu", Array(
-                "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
-                "CHILD_MENU_TYPE" => "left",    // Тип меню для остальных уровней
-                "DELAY" => "N",    // Откладывать выполнение шаблона меню
-                "MAX_LEVEL" => "2",    // Уровень вложенности меню
-                "MENU_CACHE_GET_VARS" => array(    // Значимые переменные запроса
-                    0 => "",
-                ),
-                "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
-                "MENU_CACHE_TYPE" => "N",    // Тип кеширования
-                "MENU_CACHE_USE_GROUPS" => "Y",    // Учитывать права доступа
-                "ROOT_MENU_TYPE" => "right",    // Тип меню для первого уровня
-                "USE_EXT" => "N",    // Подключать файлы с именами вида .тип_меню.menu_ext.php
-            ),
-                false
-            ); ?>
+            <? $APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"right-menu", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "subright",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "3",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "right",
+		"USE_EXT" => "N",
+		"COMPONENT_TEMPLATE" => "right-menu"
+	),
+	false
+); ?>
             <? $APPLICATION->IncludeComponent("bitrix:main.include","",Array(
                     "AREA_FILE_SHOW" => "sect",
                     "AREA_FILE_SUFFIX" => "inc",

@@ -22,7 +22,8 @@ $manifest = json_decode(file_get_contents(Application::getDocumentRoot() . SITE_
 $bool2Col = false;
 if (
     file_exists(Application::getDocumentRoot() . $curDir . '.right.menu.php') ||
-    file_exists($dirParent . '.right.menu.php')
+    file_exists($dirParent . '.right.menu.php') ||
+    file_exists($dirParent . '.subright.menu.php')
 ) {
     $bool2Col = true;
 }
@@ -43,6 +44,7 @@ $page = [
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['main.js'],
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['langSelect.js'],
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['submenu.js'],
+        SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['menu.js'],
         SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.js',
     ]
 ];

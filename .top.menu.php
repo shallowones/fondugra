@@ -2,7 +2,7 @@
 $aMenuLinks = Array(
 	Array(
 		"О фонде", 
-		"/about-fund/", 
+		"/about/", 
 		Array(), 
 		Array(), 
 		"" 
