@@ -14,7 +14,7 @@
 /** @var CBitrixComponent $component */
 $subs = [];
 if (count($arResult) > 0): ?>
-    <section class="navigation">
+    <section class="navigation navigation_fpu">
         <div class="container">
             <nav class="nav js-menu">
                 <? foreach ($arResult as $keyItem => $item): ?>
