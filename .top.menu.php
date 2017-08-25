@@ -51,7 +51,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Фонд промышленности", 
-		"/frpu/", 
+		"/fpu/", 
 		Array(), 
 		Array(), 
 		"" 
