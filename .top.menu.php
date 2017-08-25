@@ -9,7 +9,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Одно окно", 
-		"/one-window/", 
+		"/odno-okno/", 
 		Array(), 
 		Array(), 
 		"" 
