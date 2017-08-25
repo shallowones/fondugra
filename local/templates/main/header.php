@@ -33,8 +33,8 @@ $page = [
         SITE_TEMPLATE_PATH . '/dist/fonts/bundle.css',
         SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.datepicker/jquery-datepicker.css',
         SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.selectmenu/jquery-selectmenu.css',
-        SITE_TEMPLATE_PATH . '/dist/css/' . $manifest['main.css'],
         SITE_TEMPLATE_PATH . '/dist/js/vendor/slick/slick.css',
+        SITE_TEMPLATE_PATH . '/dist/css/' . $manifest['main.css'],
         SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.css',
     ],
     'addJs' => [
@@ -45,6 +45,8 @@ $page = [
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['langSelect.js'],
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['submenu.js'],
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['menu.js'],
+        SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.datepicker/jquery-datepicker.js',
+        SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['calendar.js'],
         SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.js',
     ]
 ];

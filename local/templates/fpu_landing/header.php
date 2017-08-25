@@ -25,8 +25,8 @@ $page = [
         $pathTplMain . '/dist/fonts/bundle.css',
         $pathTplMain . '/dist/js/vendor/jquery.datepicker/jquery-datepicker.css',
         $pathTplMain . '/dist/js/vendor/jquery.selectmenu/jquery-selectmenu.css',
-        $pathTplMain . '/dist/css/' . $manifest['main.css'],
         $pathTplMain . '/dist/js/vendor/slick/slick.css',
+        $pathTplMain . '/dist/css/' . $manifest['main.css'],
     ],
     'addJs' => [
         $pathTplMain . '/dist/js/vendor/jquery.js',

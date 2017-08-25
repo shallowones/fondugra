@@ -16,7 +16,7 @@ $subs = [];
 if (count($arResult) > 0): ?>
     <section class="navigation navigation_fpu">
         <div class="container">
-            <nav class="nav js-menu">
+            <nav class="nav js-tmenu">
                 <? foreach ($arResult as $keyItem => $item): ?>
                     <? if ($item["IS_PARENT"]):
                         $subs[] = '#sub-' . $keyItem; ?>
@@ -24,7 +24,7 @@ if (count($arResult) > 0): ?>
                     <? else: ?>
                         <a class="link nav__link" href="<?= $item['LINK'] ?>"><?= $item['TEXT'] ?></a>
                     <? endif; ?>
-                <? endforeach; ?>
+                <? endforeach ?>
             </nav>
         </div>
     </section>

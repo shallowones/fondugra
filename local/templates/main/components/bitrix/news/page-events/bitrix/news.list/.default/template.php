@@ -12,28 +12,7 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-$this->setFrameMode(true);
 ?>
-<form class="filter" action="#">
-    <div class="filter-left">
-        <div class="filter-date">
-            <div class="filter-date__desc">От</div>
-            <label class="filter-date__label js-calendar" for="date-1">
-                <input class="filter-date__input" id="date-1">
-            </label>
-        </div>
-        <div class="filter-date">
-            <div class="filter-date__desc">До</div>
-            <label class="filter-date__label js-calendar" for="date-2">
-                <input class="filter-date__input" id="date-2" value="29.09.2017">
-            </label>
-        </div>
-    </div>
-    <div class="filter-right">
-        <button class="button">Сбросить</button>
-        <button class="button button_yellow">Применить</button>
-    </div>
-</form>
 <div class="events">
     <? foreach ($arResult["ITEMS"] as $arItem): ?>
         <?
