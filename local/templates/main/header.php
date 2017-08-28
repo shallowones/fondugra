@@ -13,6 +13,7 @@ $oAsset = Asset::getInstance();
 
 $siteName = Option::get('main', 'site_name');
 $curDir = Application::getInstance()->getContext()->getRequest()->getRequestedPageDirectory() . '/';
+$curFullDir = Application::getDocumentRoot() . $curDir;
 $dirParent = realpath('../') . '/';
 $boolHomePage = ($curDir == '/');
 
@@ -21,7 +22,8 @@ $manifest = json_decode(file_get_contents(Application::getDocumentRoot() . SITE_
 
 $bool2Col = false;
 if (
-    file_exists(Application::getDocumentRoot() . $curDir . '.right.menu.php') ||
+    file_exists($curFullDir . '.right.menu.php') ||
+    file_exists($curFullDir . 'sect_right_contact_inc.php') ||
     file_exists($dirParent . '.right.menu.php') ||
     file_exists($dirParent . '.subright.menu.php')
 ) {
