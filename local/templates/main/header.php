@@ -20,13 +20,16 @@ $boolHomePage = ($curDir == '/');
 $manifest = json_decode(file_get_contents(Application::getDocumentRoot() . SITE_TEMPLATE_PATH . '/dist/manifest.json'),
     true);
 
-$bool2Col = false;
-if (
-    file_exists($curFullDir . '.right.menu.php') ||
-    file_exists($curFullDir . 'sect_right_contact_inc.php') ||
+$boolMenu = file_exists($curFullDir . '.right.menu.php') ||
     file_exists($dirParent . '.right.menu.php') ||
-    file_exists($dirParent . '.subright.menu.php')
-) {
+    file_exists($dirParent . '.subright.menu.php');
+
+$boolRightContact = file_exists($curFullDir . 'sect_right_contact_inc.php');
+
+$boolFpu = (stripos($curDir, '/fpu/') !== false);
+
+$bool2Col = false;
+if ( ($boolMenu || $boolRightContact) && !$boolFpu) {
     $bool2Col = true;
 }
 
