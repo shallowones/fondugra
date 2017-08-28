@@ -1,0 +1,16 @@
+.banner-image {
+    display: flex!important;
+    flex-direction: column!important;
+    justify-content: center!important;
+    min-height: 90px!important;
+}
+
+.banner__item {
+    display: -webkit-box!important;
+    display: flex!important;
+    color: inherit!important;
+    text-decoration: none!important;
+    -webkit-box-align: center!important;
+    align-items: flex-start!important;
+    flex-direction: column!important;
+}

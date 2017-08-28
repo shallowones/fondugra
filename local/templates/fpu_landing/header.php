@@ -111,7 +111,13 @@ foreach ($page as $method => $params) {
     <section class="intro">
         <div class="container container_slim">
             <div class="intro-inner">
-                <h1 class="intro__title" id="intro-title">государственный фонд<br>развития промышленности</h1>
+                <h1 class="intro__title" id="intro-title">
+                    <? $APPLICATION->IncludeFile(
+                        SITE_TEMPLATE_PATH . "/inc/gos_fond_rezvitiy.txt",
+                        Array(),
+                        Array("MODE" => "text")
+                    ); ?>
+                </h1>
                 <div class="intro-text">
                     <div class="intro-text__left" id="intro-text-left">
                         <h3 class="text-bold">Содействует в <span class="text-orange">формировании  государственной политики </span>и <span class="text-orange">разработке ключевых <br>нормативно-правовых документов </span>в сфере промышленности.</h3><br>Участвует в реализации окружной программы развития промышленности<br>2018-2025 гг.

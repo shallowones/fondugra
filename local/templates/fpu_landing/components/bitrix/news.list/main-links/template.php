@@ -14,7 +14,7 @@
 /** @var CBitrixComponent $component */
 ?>
 <? if (count($arResult["ITEMS"]) > 0): ?>
-    <section class="banners">
+    <section class="banners banners_invert">
         <div class="container">
             <div class="banner-list">
                 <div class="slider main-slider">

@@ -13,8 +13,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 
 use \Bitrix\Main\Config\Option;
 
-$newWidth = 69;
-$newHeight = 79;
+$newWidth = 800; // 69
+$newHeight = 600; // 79
 
 $noPhoto = Option::get('main', 'noPhoto');
 if (intval($noPhoto) < 1) {
@@ -45,4 +45,4 @@ foreach ($arResult["ITEMS"] as $key => $arItem) {
     $arResult["ITEMS"][$key]['link'] = $link;
 }
 
-$arResult["ITEMS"] = array_chunk($arResult["ITEMS"], 3);
+$arResult["ITEMS"] = array_chunk($arResult["ITEMS"], 4);

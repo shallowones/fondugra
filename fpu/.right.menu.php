@@ -1,7 +1,7 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Фонд промышленности", 
+		"О фонде промышленности", 
 		"/fpu/", 
 		Array(), 
 		Array(), 
