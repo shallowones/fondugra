@@ -59,9 +59,11 @@ $APPLICATION->SetTitle("Информационные ресурсы");
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"PROPERTY_CODE" => array(
-			0 => "DESCRIPTION",
-			1 => "LINK",
+			0 => "region",
+			1 => "link",
 			2 => "",
+			3 => "",
+			4 => "",
 		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",

@@ -1,4 +1,4 @@
-<?
+<? /** @global $APPLICATION */
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     die();
 }
@@ -114,11 +114,14 @@ foreach ($page as $method => $params) {
                 <h1 class="intro__title" id="intro-title">государственный фонд<br>развития промышленности</h1>
                 <div class="intro-text">
                     <div class="intro-text__left" id="intro-text-left">
-                        <h3 class="text-bold">Содействует в <span class="text-orange">формировании  государственной политики </span>и <span class="text-orange">разработке ключевых <br>нормативно-правовых документов </span>в сфере промышленности.</h3><br>Участвует в реализации окружной программы развития промышленности<br>2018-2025 гг.
+                        <h3 class="text-bold">Содействует в <span class="text-orange">формировании  государственной политики </span>и
+                            <span class="text-orange">разработке ключевых <br>нормативно-правовых документов </span>в
+                            сфере промышленности.</h3><br>Участвует в реализации окружной программы развития
+                        промышленности<br>2018-2025 гг.
                     </div>
                     <div class="intro-text__right" id="intro-text-right">
                         <div class="intro-text__top">внедрил</div>
-                        <div class="orange__number"> <span class="number number_22"></span></div>
+                        <div class="orange__number"><span class="number number_22"></span></div>
                         <div class="intro-text__bottom">предложения</div>
                     </div>
                 </div>
@@ -136,7 +139,8 @@ foreach ($page as $method => $params) {
         <div class="container container_slim">
             <div class="stat-inner">
                 <div id="animation-anchor-1"></div>
-                <h3 class="text-bold text-white stat-fade">Оказывает <span class="text-orange">финансовую поддержку субъектам деятельности </span>в сфере промышленности  по приоритетным направлениям развития.</h3><br><br>
+                <h3 class="text-bold text-white stat-fade">Оказывает <span class="text-orange">финансовую поддержку субъектам деятельности </span>в
+                    сфере промышленности по приоритетным направлениям развития.</h3><br><br>
                 <h3 class="text-bold text-white stat-fade">Предоставляет льготные займы по проектам</h3>
             </div>
         </div>
@@ -148,7 +152,7 @@ foreach ($page as $method => $params) {
             </div>
             <div class="stat-line"></div>
             <div class="stat-fade">
-                <div class="text-bold text-white">на срок  <span class="text-bold__small">от</span></div>
+                <div class="text-bold text-white">на срок <span class="text-bold__small">от</span></div>
                 <div class="orange__number small-margin">
                     <div class="number_custom">20</div>
                     <div class="text-bold text-white"><span class="text-bold__small">до</span></div>
@@ -158,14 +162,15 @@ foreach ($page as $method => $params) {
             </div>
             <div class="stat-line"></div>
             <div class="stat-fade">
-                <div class="text-bold text-white">на сумму  <span class="text-bold__small">от</span></div>
+                <div class="text-bold text-white">на сумму <span class="text-bold__small">от</span></div>
                 <div class="orange__number"><span class="number number_5"></span></div>
                 <div class="text-bold text-white text-right">лет</div>
             </div>
             <div class="stat-line"></div>
             <div class="stat-fade">
                 <div class="text-bold text-white">под</div>
-                <div class="orange__number"><span class="number number_5"></span><span class="stat-numbers__percent">%</span></div>
+                <div class="orange__number"><span class="number number_5"></span><span
+                            class="stat-numbers__percent">%</span></div>
                 <div class="text-bold text-white text-right">годовых</div>
             </div>
         </div>
@@ -178,8 +183,9 @@ foreach ($page as $method => $params) {
         <div class="line line_orange line_orange-stat-white" id="while-line-2"></div>
         <div class="line line_black line_black-stat-white" id="while-line-1"></div>
         <div class="container stat-white-head">
-            <h3 class="text-bold stat-white-fade fixed"><span class="text-orange">Софинансирует проекты </span>совместно с фондом развития промышленности РФ.</h3>
-            <div class="stat-white-number number_custom stat-white-fade"> <span>70</span>
+            <h3 class="text-bold stat-white-fade fixed"><span class="text-orange">Софинансирует проекты </span>совместно
+                с фондом развития промышленности РФ.</h3>
+            <div class="stat-white-number number_custom stat-white-fade"><span>70</span>
                 <div class="stat-white-desc">РФ<span>%</span></div>
             </div>
             <div class="stat-white-number number_custom big stat-white-fade"><span>30</span>
@@ -187,21 +193,25 @@ foreach ($page as $method => $params) {
             </div>
             <div id="animation-anchor-3"></div>
             <div class="container container_slim stat-white-inner">
-                <h3 class="text-bold stat-white-fade">развивает <span class="text-orange">промышленную инфраструктуру</span></h3>
+                <h3 class="text-bold stat-white-fade">развивает <span
+                            class="text-orange">промышленную инфраструктуру</span></h3>
             </div>
             <div class="container white-bottom">
                 <div class="stat-numbers stat-numbers_white">
                     <div class="stat-white-fade">
                         <div class="text-bold">учавствует в создании</div>
-                        <div class="orange__number"><span class="number number_4"></span><span class="stat-numbers__percent">-x</span></div>
+                        <div class="orange__number"><span class="number number_4"></span><span
+                                    class="stat-numbers__percent">-x</span></div>
                         <div class="text-bold text-right">индустриальных<br>парков</div>
                     </div>
                     <div class="stat-line stat-line_light"></div>
                     <div class="stat-white-fade">
                         <div class="text-bold">определил</div>
-                        <div class="orange__number"><span class="number number_50"></span><span class="stat-white-fade mar-left">
+                        <div class="orange__number"><span class="number number_50"></span><span
+                                    class="stat-white-fade mar-left">
                     <div class="text-bold">прощадок</div>
-                    <div>в муниципальных <br>образованиях Югры<br>для размещения <br>промышленных объектов</div></span></div>
+                    <div>в муниципальных <br>образованиях Югры<br>для размещения <br>промышленных объектов</div></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -224,7 +234,8 @@ foreach ($page as $method => $params) {
     </section>
     <section class="supports">
         <div class="container">
-            <h2 class="supports__title">Выберите меру поддержки воспользовавшись <span class="text-orange">НАВИГАТОРОМ</span></h2>
+            <h2 class="supports__title">Выберите меру поддержки воспользовавшись <span
+                        class="text-orange">НАВИГАТОРОМ</span></h2>
             <div class="news-more">
                 <button class="button button_yellow">подобрать меру поддержки</button>
             </div>
@@ -235,7 +246,7 @@ foreach ($page as $method => $params) {
         '>=PROPERTY_date_to' => date('Y-m-d')
     ];
     ?>
-    <?$APPLICATION->IncludeComponent(
+    <? $APPLICATION->IncludeComponent(
         "bitrix:news.list",
         "main-events",
         array(
@@ -300,8 +311,8 @@ foreach ($page as $method => $params) {
             "COMPONENT_TEMPLATE" => "main-events"
         ),
         false
-    );?>
-    <?$APPLICATION->IncludeComponent(
+    ); ?>
+    <? $APPLICATION->IncludeComponent(
         "bitrix:news.list",
         "main-news",
         array(
@@ -365,4 +376,4 @@ foreach ($page as $method => $params) {
             "COMPONENT_TEMPLATE" => "main-news"
         ),
         false
-    );?>
+    ); ?>

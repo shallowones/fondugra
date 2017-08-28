@@ -1,0 +1,17 @@
+.resource {
+    padding: 0 100px 0 115px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 26px;
+}
+.resource-block {
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+.resource-line span {
+    margin-left: 0;
+}
+.resource.white {
+    color: #fff;
+}
