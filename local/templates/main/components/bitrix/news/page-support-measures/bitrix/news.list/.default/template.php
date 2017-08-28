@@ -23,12 +23,13 @@ $this->setFrameMode(true);
             CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"),
             array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
         ?>
-        <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="navigator-item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+        <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="navigator-item"
+           id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
             <? if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arItem["PREVIEW_PICTURE"])): ?>
-                <img
-                        class="navigator-item__img"
-                        src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>"
-                />
+                <div class="navigator-item-pic"><img
+                            class="navigator-item__img"
+                            src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>"
+                    /></div>
             <? endif ?>
             <? if ($arParams["DISPLAY_NAME"] != "N" && $arItem["NAME"]): ?>
                 <div class="navigator-item__title"><? echo $arItem["NAME"] ?></div>
