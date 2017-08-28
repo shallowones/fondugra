@@ -13,6 +13,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 ?>
+<? if(count($arResult["ITEMS"]) > 0): ?>
 <div class="events">
     <? foreach ($arResult["ITEMS"] as $arItem): ?>
         <?
@@ -59,3 +60,6 @@
         <br/><?= $arResult["NAV_STRING"] ?>
     <? endif; ?>
 </div>
+<? else: ?>
+    <p>Нет мероприятий.</p>
+<? endif; ?>

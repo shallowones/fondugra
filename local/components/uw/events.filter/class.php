@@ -16,14 +16,31 @@ class CEventFilterComponent extends CBitrixComponent
         $_SESSION['resultEventsFilter'] = [];
         $_SESSION['restoreEventsFilter'] = [];
 
-        if (strlen(trim($request['date_from'])) > 0) {
-            $_SESSION['resultEventsFilter']['>=PROPERTY_date_from'] =
-                (new DateTime($request['date_from']))->format('Y-m-d') . ' 00:00:00';
+        if (strlen(trim($request['date_from'])) > 0 && strlen(trim($request['date_to'])) > 0) {
+
+            $beg = (new DateTime($request['date_from']))->format('Y-m-d') . ' 00:00:00';
+            $end = (new DateTime($request['date_to']))->format('Y-m-d') . ' 23:59:59';
+
+            $_SESSION['resultEventsFilter'][] = [
+                'LOGIC' => 'OR',
+                [
+                    '>=PROPERTY_date_from' => $beg,
+                    '<=PROPERTY_date_from' => $end,
+                ],
+                [
+                    '>=PROPERTY_date_to' => $beg,
+                    '<=PROPERTY_date_to' => $end,
+                ],
+                [
+                    '>=PROPERTY_date_from' => $beg,
+                    '<=PROPERTY_date_to' => $end,
+                ],
+            ];
+
+            /*$_SESSION['resultEventsFilter']['>=PROPERTY_date_from'] = $beg;
+            $_SESSION['resultEventsFilter']['<=PROPERTY_date_to'] = $end;*/
+
             $_SESSION['restoreEventsFilter']['date_from'] = trim($request['date_from']);
-        }
-        if (strlen(trim($request['date_to'])) > 0) {
-            $_SESSION['resultEventsFilter']['<=PROPERTY_date_from'] =
-                (new DateTime($request['date_to']))->format('Y-m-d') . ' 23:59:59';
             $_SESSION['restoreEventsFilter']['date_to'] = trim($request['date_to']);
         }
 
