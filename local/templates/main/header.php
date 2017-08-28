@@ -45,6 +45,7 @@ $page = [
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['langSelect.js'],
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['submenu.js'],
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['menu.js'],
+        SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['mess.js'],
         SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.datepicker/jquery-datepicker.js',
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['calendar.js'],
         SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.js',

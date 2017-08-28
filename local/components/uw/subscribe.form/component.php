@@ -97,7 +97,7 @@ if (intval($_GET["ID"]) > 0 && !empty($_GET["CONFIRM_CODE"])) {
         $_SESSION['SEND_SUBSCRIBE_CONFIRM'] = "Не удалось подтвердить попдиску.";
     }
 
-    LocalRedirect($APPLICATION->GetCurDir());
+    LocalRedirect($APPLICATION->GetCurDir() . '#subscribe-form');
 }
 
 

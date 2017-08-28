@@ -8,25 +8,24 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         </div> <!-- inner-left -->
         <div class="inner-right">
             <? $APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"right-menu", 
-	array(
-		"ALLOW_MULTI_SELECT" => "N",
-		"CHILD_MENU_TYPE" => "subright",
-		"DELAY" => "N",
-		"MAX_LEVEL" => "3",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "N",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"ROOT_MENU_TYPE" => "right",
-		"USE_EXT" => "N",
-		"COMPONENT_TEMPLATE" => "right-menu"
-	),
-	false
-); ?>
-            <? $APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+                "bitrix:menu",
+                "right-menu",
+                array(
+                    "ALLOW_MULTI_SELECT" => "N",
+                    "CHILD_MENU_TYPE" => "subright",
+                    "DELAY" => "N",
+                    "MAX_LEVEL" => "3",
+                    "MENU_CACHE_GET_VARS" => array(),
+                    "MENU_CACHE_TIME" => "3600",
+                    "MENU_CACHE_TYPE" => "N",
+                    "MENU_CACHE_USE_GROUPS" => "Y",
+                    "ROOT_MENU_TYPE" => "right",
+                    "USE_EXT" => "N",
+                    "COMPONENT_TEMPLATE" => "right-menu"
+                ),
+                false
+            ); ?>
+            <? $APPLICATION->IncludeComponent("bitrix:main.include", "", Array(
                     "AREA_FILE_SHOW" => "sect",
                     "AREA_FILE_SUFFIX" => "inc",
                     "AREA_FILE_RECURSIVE" => "Y",
@@ -37,6 +36,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         </section>
     <? endif; ?>
     </div> <!-- container inner-detail -->
+    <? if (stripos($curDir, '/news/') !== false): ?>
+        <? $APPLICATION->IncludeComponent('uw:subscribe.form', '',
+            [],
+            false
+        ); ?>
+    <? endif; ?>
 <? endif; ?>
 <!-- класс .banners_invert можно убрать, блок с баннерами станет серым-->
 <? $APPLICATION->IncludeComponent(
