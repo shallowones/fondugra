@@ -24,7 +24,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         </div>
     </div>
     <div class="filter-right">
-        <button class="button" name="clearFilter" value="clearFilter">Сбросить</button>
         <button class="button button_yellow" name="setFilter" value="setFilter">Применить</button>
+        <button class="button" name="clearFilter" value="clearFilter">Сбросить</button>
     </div>
 </form>
