@@ -35,6 +35,14 @@
             </div>
         </div>
     <? endif; ?>
+        <? if ($item['touch_coordinate_x'] && $item['touch_coordinate_y']): ?>
+        <div class="fond-map-touch"
+             style="left: <?= $item['touch_coordinate_x'] ?>px; top: <?= $item['touch_coordinate_y'] ?>px;"></div>
+    <? endif; ?>
+        <? if ($item['city_coordinate_x'] && $item['city_coordinate_y']): ?>
+        <div class="fond-map-city"
+             style="left: <?= $item['city_coordinate_x'] ?>px; top: <?= $item['city_coordinate_y'] ?>px;"><?= $item['name'] ?></div>
+    <? endif; ?>
     <? endforeach; ?>
 </div>
 <br>

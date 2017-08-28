@@ -34,6 +34,10 @@ class CMapList extends CBitrixComponent
                 'name' => $arEl['NAME'],
                 'coordinate_x' => $arEl['props']['coordinate_x']['VALUE'],
                 'coordinate_y' => $arEl['props']['coordinate_y']['VALUE'],
+                'touch_coordinate_x' => $arEl['props']['touch_coordinate_x']['VALUE'],
+                'touch_coordinate_y' => $arEl['props']['touch_coordinate_y']['VALUE'],
+                'city_coordinate_x' => $arEl['props']['city_coordinate_x']['VALUE'],
+                'city_coordinate_y' => $arEl['props']['city_coordinate_y']['VALUE'],
                 'projects' => array_flip($arEl['props']['projects']['VALUE'])
             ];
             if (is_array($arEl['props']['projects']['VALUE'])) {
