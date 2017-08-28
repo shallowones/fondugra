@@ -71,7 +71,7 @@ foreach ($page as $method => $params) {
             <div class="headline"><a class="logo" href="/"></a>
                 <? $APPLICATION->IncludeFile(
                     SITE_TEMPLATE_PATH . "/inc/hdr_icons.php",
-                    Array(),
+                    Array('SEARCH_ID' => 'hdr_search'),
                     Array("MODE" => "php")
                 ); ?>
                 <div class="head-info">

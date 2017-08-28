@@ -120,8 +120,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 ); ?>
             </div>
             <? $APPLICATION->IncludeFile(
-                SITE_TEMPLATE_PATH . "/inc/hdr_icons.txt",
-                Array(),
+                SITE_TEMPLATE_PATH . "/inc/hdr_icons.php",
+                Array('SEARCH_ID' => 'ftr_search'),
                 Array("MODE" => "text")
             ); ?>
             <div class="head-info">
@@ -151,6 +151,11 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 </div>
             </div>
         </div>
+        <? $APPLICATION->IncludeFile(
+            SITE_TEMPLATE_PATH . "/inc/ftr_dev.txt",
+            Array(),
+            Array("MODE" => "text")
+        ); ?>
         <div class="to-top"><a class="to-top__link" id="to-top" href="#">наверх</a></div>
     </div>
 </footer>
