@@ -5,6 +5,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 } ?>
 <a name="subscribe-form"></a>
 <? if ($_SESSION['SEND_SUBSCRIBE_CONFIRM']): ?>
+
     <div class="mess valid">
         <div class="mess-wrap">
             <div class="mess-left"><?= $_SESSION['SEND_SUBSCRIBE_CONFIRM'] ?></div>
@@ -13,20 +14,20 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     </div>
     <? $_SESSION['SEND_SUBSCRIBE_CONFIRM'] = 0; ?>
 
-<? else: ?>
+<? // Вывод сообщение об успешной подписке?>
+<? elseif ($_SESSION['SEND_SUBSCRIBE_OK']): ?>
 
-    <? // Вывод сообщение об успешной подписке?>
-    <? if ($_SESSION['SEND_SUBSCRIBE_OK']): ?>
-        <div class="mess valid">
-            <div class="mess-wrap">
-                <div class="mess-left">На указанный в форме E-MAIL отправлено письмо с ссылкой для подтверждения
-                    подписки.
-                </div>
-                <button class="button js-mess-close" type="button">Закрыть</button>
+    <div class="mess valid">
+        <div class="mess-wrap">
+            <div class="mess-left">На указанный в форме E-MAIL отправлено письмо с ссылкой для подтверждения
+                подписки.
             </div>
+            <button class="button js-mess-close" type="button">Закрыть</button>
         </div>
-        <? $_SESSION['SEND_SUBSCRIBE_OK'] = 0; ?>
-    <? endif; ?>
+    </div>
+    <? $_SESSION['SEND_SUBSCRIBE_OK'] = 0; ?>
+
+<? else: ?>
 
     <div class="mess<? if (count($arResult["Error"]) > 0) {
         echo ' invalid';
