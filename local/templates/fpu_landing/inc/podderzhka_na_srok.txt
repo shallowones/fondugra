@@ -1,4 +1,4 @@
-<div class="text-bold text-white">на срок  <span class="text-bold__small">от</span></div>
+<div class="text-bold text-white">на сумму  <span class="text-bold__small">от</span></div>
 <div class="orange__number small-margin">
     <div class="number_custom">20</div>
     <div class="text-bold text-white"><span class="text-bold__small">до</span></div>
