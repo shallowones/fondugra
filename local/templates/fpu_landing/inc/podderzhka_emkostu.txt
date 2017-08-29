@@ -1,3 +1,0 @@
-<div class="text-bold text-white">емкостью <span class="text-bold__small">от</span></div>
-<div class="orange__number"><span class="number number_40"></span></div>
-<div class="text-bold text-white text-right">млн руб</div>

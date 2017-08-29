@@ -1,2 +1,0 @@
-<span>30</span>
-<div class="stat-white-desc">Югра<span>%</span></div>

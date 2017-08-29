@@ -1,0 +1,4 @@
+<h2 class="supports__title">Выберите меру поддержки воспользовавшись <span class="text-orange">НАВИГАТОРОМ</span></h2>
+<div class="news-more">
+    <button class="button button_yellow">подобрать меру поддержки</button>
+</div>

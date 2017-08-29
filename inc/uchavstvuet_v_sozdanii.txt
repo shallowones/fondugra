@@ -1,0 +1,3 @@
+<div class="text-bold">учавствует в создании</div>
+<div class="orange__number"><span class="number number_4"></span><span class="stat-numbers__percent">-x</span></div>
+<div class="text-bold text-right">индустриальных<br>парков</div>

@@ -5,7 +5,7 @@ $APPLICATION->SetTitle("Инвестиционный совет");
 
 <div class="detail">
     <? $APPLICATION->IncludeFile(
-        SITE_TEMPLATE_PATH . "/inc/sovet_text.txt",
+        SITE_DIR . "inc/sovet_text.txt",
         Array(),
         Array("MODE" => "text")
     ); ?>

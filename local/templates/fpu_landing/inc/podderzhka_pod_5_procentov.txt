@@ -1,3 +1,0 @@
-<div class="text-bold text-white">под</div>
-<div class="orange__number"><span class="number number_5"></span><span class="stat-numbers__percent">%</span></div>
-<div class="text-bold text-white text-right">годовых</div>

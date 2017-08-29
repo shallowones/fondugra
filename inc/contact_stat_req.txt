@@ -1,0 +1,17 @@
+<div class="contacts-static__title">Статистические реквизиты</div>
+<table class="contacts-static">
+    <tbody>
+    <tr>
+        <th>ОКПО</th>
+        <td>894 057 87</td>
+    </tr>
+    <tr>
+        <th>ОКТМО</th>
+        <td>718 710 000 001</td>
+    </tr>
+    <tr>
+        <th>ОКОГУ</th>
+        <td>49014</td>
+    </tr>
+    </tbody>
+</table>

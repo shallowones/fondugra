@@ -121,37 +121,37 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         <div class="headline headline_footer">
             <div class="copyright">
                 <? $APPLICATION->IncludeFile(
-                    SITE_TEMPLATE_PATH . "/inc/ftr_copy.txt",
+                    SITE_DIR . "inc/ftr_copy.txt",
                     Array(),
                     Array("MODE" => "text")
                 ); ?>
             </div>
             <? $APPLICATION->IncludeFile(
-                SITE_TEMPLATE_PATH . "/inc/hdr_icons.php",
+                SITE_DIR . "inc/hdr_icons.php",
                 Array('SEARCH_ID' => 'ftr_search'),
                 Array("MODE" => "text")
             ); ?>
             <div class="head-info">
                 <div class="head-info__item">
                     <? $APPLICATION->IncludeFile(
-                        SITE_TEMPLATE_PATH . "/inc/hdr_email.txt",
+                        SITE_DIR . "inc/hdr_email.txt",
                         Array(),
                         Array("MODE" => "text")
                     ); ?>
                     <? $APPLICATION->IncludeFile(
-                        SITE_TEMPLATE_PATH . "/inc/hdr_ask_question.txt",
+                        SITE_DIR . "inc/hdr_ask_question.txt",
                         Array(),
                         Array("MODE" => "text")
                     ); ?>
                 </div>
                 <div class="head-info__item">
                     <? $APPLICATION->IncludeFile(
-                        SITE_TEMPLATE_PATH . "/inc/hdr_phone.txt",
+                        SITE_DIR . "inc/hdr_phone.txt",
                         Array(),
                         Array("MODE" => "text")
                     ); ?>
                     <? $APPLICATION->IncludeFile(
-                        SITE_TEMPLATE_PATH . "/inc/hdr_fax.txt",
+                        SITE_DIR . "inc/hdr_fax.txt",
                         Array(),
                         Array("MODE" => "text")
                     ); ?>
@@ -159,7 +159,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             </div>
         </div>
         <? $APPLICATION->IncludeFile(
-            SITE_TEMPLATE_PATH . "/inc/ftr_dev.txt",
+            SITE_DIR . "inc/ftr_dev.txt",
             Array(),
             Array("MODE" => "text")
         ); ?>

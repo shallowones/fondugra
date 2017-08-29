@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Фонд развития Югры</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./fonts/bundle.css">
+    <link rel="stylesheet" href="js/vendor/jquery.datepicker/jquery-datepicker.css">
+    <link rel="stylesheet" href="js/vendor/jquery.selectmenu/jquery-selectmenu.css">
+    <link rel="stylesheet" href="js/vendor/slick/slick.css">
+    <link rel="stylesheet" href="./css/main-29e15c731f.css">
+  </head>
+  <!-- класс .loading только для страницы frpu, чтобы показать лоадер-->
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="container">
+          <div class="headline"><a class="logo" href="#"></a>
+            <nav class="head-nav">
+              <form class="head-nav__link head-nav__link_search" action="#">
+                <input class="search__checkbox js-search" type="checkbox" id="search">
+                <input class="search__text js-search-input">
+                <label class="search__label" for="search"></label><span class="head-nav__desc">Поиск</span>
+              </form><a class="head-nav__link head-nav__link_map" href="#"><span class="head-nav__desc">Карта сайта</span></a><a class="head-nav__link head-nav__link_eye" href="#"><span class="head-nav__desc">Версия для слабовидящих</span></a><a class="head-nav__link head-nav__link_print" href="#"><span class="head-nav__desc">Версия для печати</span></a>
+              <form class="head-nav__language js-lang" action="#">
+                <select name="language">
+                  <option value="RU" selected>RU</option>
+                  <option value="RU">EN</option>
+                </select>
+              </form>
+            </nav>
+            <div class="head-info">
+              <div class="head-info__item">e-mail: <a class="link" href="mailto:office@fondugra.ru"><b>office@fondugra.ru</b></a><br><a class="link" href="#"><b>Задать вопрос</b></a></div>
+              <div class="head-info__item">тел.: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a><br>факс: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- класс .navigation_fpu это состояние для ФПЮ, на других страницах он не нужен-->
+      <section class="navigation navigation_fpu">
+        <div class="container">
+          <nav class="nav js-tmenu"><span class="link nav__link" data-submenu="#sub-0">О фонде</span><a class="link nav__link" href="#">Одно окно</a><span class="link nav__link" data-submenu="#sub-2">Инвестиционные проекты</span><a class="link nav__link" href="#">Информационные ресурсы</a><a class="link nav__link" href="#">Новости</a><a class="link nav__link" href="#">Мероприятия</a><a class="link nav__link" href="#">Инвестиционный совет</a><a class="link nav__link" href="#">Фонд промышленности</a>
+          </nav>
+        </div>
+      </section>
+      <section class="nav-sub">
+        <div class="container js-submenu">
+          <div class="seacher" id="sub-0">
+            <div class="submenu"><a class="link nav__link" href="#">Одно окно</a><a class="link nav__link" href="#">Инвестиционные проекты</a><a class="link nav__link" href="#">Закупки</a><a class="link nav__link" href="#">Документы</a></div>
+          </div>
+          <div class="seacher" id="sub-2">
+            <div class="submenu"><a class="link nav__link" href="#">Одно окно2</a><a class="link nav__link" href="#">Инвестиционные проекты2</a><a class="link nav__link" href="#">Закупки2</a><a class="link nav__link" href="#">Документы2</a></div>
+          </div>
+        </div>
+      </section>
+      <div class="container inner-detail">
+        <nav class="breadcrumbs"><a class="breadcrumbs__item" href="#">Фонд развития промышленности</a><a class="breadcrumbs__item" href="#">Новости и мероприятия</a><span class="breadcrumbs__item">Мероприятия</span></nav>
+        <h1 class="h1">Мероприятия</h1>
+        <form class="filter" action="#">
+          <div class="filter-left">
+            <div class="filter-date">
+              <div class="filter-date__desc">От</div>
+              <label class="filter-date__label js-calendar" for="date-1">
+                <input class="filter-date__input" id="date-1">
+              </label>
+            </div>
+            <div class="filter-date">
+              <div class="filter-date__desc">До</div>
+              <label class="filter-date__label js-calendar" for="date-2">
+                <input class="filter-date__input" id="date-2" value="29.09.2017">
+              </label>
+            </div>
+          </div>
+          <div class="filter-right">
+            <button class="button">Сбросить</button>
+            <button class="button button_yellow">Применить</button>
+          </div>
+        </form>
+        <div class="events"><a class="events-item" href="#"><img class="events-item__img" src="upload/events1.png">
+            <div class="events-item__title">Стратегический форум «Транспортные системы России»</div>
+            <div class="events-item__date">06 марта - 07 июля 2017</div></a><a class="events-item" href="#"><img class="events-item__img" src="upload/events2.png">
+            <div class="events-item__title">Российский конгресс «Удвоение производительности: от слов к делу»</div>
+            <div class="events-item__date">12-13 апреля 2017</div></a><a class="events-item" href="#"><img class="events-item__img" src="images/no-photo2.png">
+            <div class="events-item__title">«Дни Югры в Совете Федерации РФ»</div>
+            <div class="events-item__date">28-29 июня 2016</div></a><a class="events-item" href="#"><img class="events-item__img" src="upload/events3.png">
+            <div class="events-item__title">Международная промышленная выставка «Иннопром»</div>
+            <div class="events-item__date">11-14 июля 2016</div></a><a class="events-item" href="#"><img class="events-item__img" src="upload/events2.png">
+            <div class="events-item__title">Югорский промышленный форум</div>
+            <div class="events-item__date">14-15 апреля 2016</div></a><a class="events-item" href="#"><img class="events-item__img" src="images/no-photo2.png">
+            <div class="events-item__title">Международный инвестиционный форум «Сочи»</div>
+            <div class="events-item__date">01-04 октября 2015</div></a><a class="events-item" href="#"><img class="events-item__img" src="upload/events3.png">
+            <div class="events-item__title">Югорский промышленный форум </div>
+            <div class="events-item__date">15-16 апреля 2015</div></a></div>
+        <div class="pag"><a class="pag__link left" href="#"></a>
+          <div class="pag__link active">1</div><a class="pag__link" href="#">2</a><a class="pag__link" href="#">...</a><a class="pag__link" href="#">11</a><a class="pag__link" href="#">12</a><a class="pag__link right" href="#"></a>
+        </div>
+      </div>
+      <!-- класс .banners_invert можно убрать, блок с баннерами станет серым-->
+      <section class="banners banners_invert">
+        <div class="container">
+          <div class="banner-list">
+            <div class="slider main-slider">
+              <div>
+                <div class="row row_banner">
+                  <div class="col"><a class="banner__item" href="#">
+                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                      <div class="banner-text"><span class="banner-text__bold">Единый сайт исполнительных органов государственной власти</span> Ханты-Мансийского автономного округа – Югры
+                      </div></a></div>
+                  <div class="col"><a class="banner__item" href="#">
+                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                      <div class="banner-text"><span class="banner-text__bold">Инвестиционный портал </span> Ханты-Мансийского автономного округа – Югры
+                      </div></a></div>
+                  <div class="col"><a class="banner__item" href="#">
+                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                      <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
+                      </div></a></div>
+                  <div class="col"><a class="banner__item" href="#">
+                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                      <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
+                      </div></a></div>
+                </div>
+              </div>
+              <div>
+                <div class="row row_banner">
+                  <div class="col"><a class="banner__item" href="#">
+                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                      <div class="banner-text"><span class="banner-text__bold">Единый сайт исполнительных органов государственной власти</span> Ханты-Мансийского автономного округа – Югры
+                      </div></a></div>
+                  <div class="col"><a class="banner__item" href="#">
+                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                      <div class="banner-text"><span class="banner-text__bold">Инвестиционный портал </span> Ханты-Мансийского автономного округа – Югры
+                      </div></a></div>
+                  <div class="col"><a class="banner__item" href="#">
+                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                      <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
+                      </div></a></div>
+                  <div class="col"><a class="banner__item" href="#">
+                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                      <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
+                      </div></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="headline headline_footer">
+            <div class="copyright">Фонд развития Югры © 2017</div>
+            <nav class="head-nav"><a class="head-nav__link head-nav__link_[object Object]" href="#"></a><a class="head-nav__link head-nav__link_[object Object]" href="#"></a><a class="head-nav__link head-nav__link_[object Object]" href="#"></a>
+              <form class="head-nav__link head-nav__link_search" action="#">
+                <input class="search__checkbox js-search" type="checkbox" id="search-footer">
+                <input class="search__text js-search-input">
+                <label class="search__label" for="search-footer"></label><span class="head-nav__desc">Поиск</span>
+              </form><a class="head-nav__link head-nav__link_map" href="#"><span class="head-nav__desc">Карта сайта</span></a><a class="head-nav__link head-nav__link_eye" href="#"><span class="head-nav__desc">Версия для слабовидящих</span></a><a class="head-nav__link head-nav__link_print" href="#"><span class="head-nav__desc">Версия для печати</span></a>
+            </nav>
+            <div class="head-info">
+              <div class="head-info__item">e-mail: <a class="link" href="mailto:office@fondugra.ru"><b>office@fondugra.ru</b></a><br><a class="link" href="#"><b>Задать вопрос</b></a></div>
+              <div class="head-info__item">тел.: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a><br>факс: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a></div>
+            </div>
+          </div><a class="uw" href="#" target="_blank"></a>
+          <div class="to-top"><a class="to-top__link" id="to-top" href="#">наверх</a></div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/slick/slick.js"></script>
+    <script src="js/vendor/jquery.selectmenu/jquery-selectmenu-974f7f6030.js"></script>
+    <script src="js/main-ca63fad188.js"></script>
+    <script src="js/langSelect-84b0c7cb2d.js"></script>
+    <script src="js/submenu-3b4d18e42e.js"></script>
+    <script src="js/vendor/jquery.datepicker/jquery-datepicker.js"></script>
+    <script src="js/calendar-d01a5b9cbb.js"></script>
+  </body>
+</html>

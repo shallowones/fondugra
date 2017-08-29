@@ -1,4 +1,0 @@
-<div class="big-71"></div>
-<div>
-    <div class="one-window__title">мера<br>поддержки</div>
-</div>

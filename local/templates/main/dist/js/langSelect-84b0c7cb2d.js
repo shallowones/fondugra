@@ -1,0 +1,1 @@
+"use strict";!function(e){e(function(){var n=e(".js-lang").find("select");n.selectmenu({change:function(e,t){n.selectmenu("disable"),window.location.href=t.item.value}})})}(jQuery);

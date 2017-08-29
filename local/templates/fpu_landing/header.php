@@ -113,7 +113,7 @@ foreach ($page as $method => $params) {
             <div class="intro-inner">
                 <h1 class="intro__title" id="intro-title">
                     <? $APPLICATION->IncludeFile(
-                        SITE_TEMPLATE_PATH . "/inc/gos_fond_rezvitiy.txt",
+                        SITE_DIR . "inc/gos_fond_rezvitiy.txt",
                         Array(),
                         Array("MODE" => "text")
                     ); ?>
@@ -121,14 +121,14 @@ foreach ($page as $method => $params) {
                 <div class="intro-text">
                     <div class="intro-text__left" id="intro-text-left">
                         <? $APPLICATION->IncludeFile(
-                            SITE_TEMPLATE_PATH . "/inc/sodeystvuet_formirov_gos_politiki.txt",
+                            SITE_DIR . "inc/sodeystvuet_formirov_gos_politiki.txt",
                             Array(),
                             Array("MODE" => "text")
                         ); ?>
                     </div>
                     <div class="intro-text__right" id="intro-text-right">
                         <? $APPLICATION->IncludeFile(
-                            SITE_TEMPLATE_PATH . "/inc/vnedril_22_predlozheniy.txt",
+                            SITE_DIR . "inc/vnedril_22_predlozheniy.txt",
                             Array(),
                             Array("MODE" => "text")
                         ); ?>
@@ -149,7 +149,7 @@ foreach ($page as $method => $params) {
             <div class="stat-inner">
                 <div id="animation-anchor-1"></div>
                 <? $APPLICATION->IncludeFile(
-                    SITE_TEMPLATE_PATH . "/inc/okazyvaet_finansovuu_podderzhku.txt",
+                    SITE_DIR . "inc/okazyvaet_finansovuu_podderzhku.txt",
                     Array(),
                     Array("MODE" => "text")
                 ); ?>
@@ -158,7 +158,7 @@ foreach ($page as $method => $params) {
         <div class="container stat-numbers">
             <div class="stat-fade">
                 <? $APPLICATION->IncludeFile(
-                    SITE_TEMPLATE_PATH . "/inc/podderzhka_emkostu.txt",
+                    SITE_DIR . "inc/podderzhka_emkostu.txt",
                     Array(),
                     Array("MODE" => "text")
                 ); ?>
@@ -166,7 +166,7 @@ foreach ($page as $method => $params) {
             <div class="stat-line"></div>
             <div class="stat-fade">
                 <? $APPLICATION->IncludeFile(
-                    SITE_TEMPLATE_PATH . "/inc/podderzhka_na_srok.txt",
+                    SITE_DIR . "inc/podderzhka_na_srok.txt",
                     Array(),
                     Array("MODE" => "text")
                 ); ?>
@@ -174,7 +174,7 @@ foreach ($page as $method => $params) {
             <div class="stat-line"></div>
             <div class="stat-fade">
                 <? $APPLICATION->IncludeFile(
-                    SITE_TEMPLATE_PATH . "/inc/podderzhka_na_summu.txt",
+                    SITE_DIR . "inc/podderzhka_na_summu.txt",
                     Array(),
                     Array("MODE" => "text")
                 ); ?>
@@ -182,7 +182,7 @@ foreach ($page as $method => $params) {
             <div class="stat-line"></div>
             <div class="stat-fade">
                 <? $APPLICATION->IncludeFile(
-                    SITE_TEMPLATE_PATH . "/inc/podderzhka_pod_5_procentov.txt",
+                    SITE_DIR . "inc/podderzhka_pod_5_procentov.txt",
                     Array(),
                     Array("MODE" => "text")
                 ); ?>
@@ -191,7 +191,7 @@ foreach ($page as $method => $params) {
         <div id="animation-anchor-2"></div>
         <div class="news-more">
             <? $APPLICATION->IncludeFile(
-                SITE_TEMPLATE_PATH . "/inc/poluchit_zaem_fonda_razvitiy.txt",
+                SITE_DIR . "inc/poluchit_zaem_fonda_razvitiy.txt",
                 Array(),
                 Array("MODE" => "text")
             ); ?>
@@ -203,21 +203,21 @@ foreach ($page as $method => $params) {
         <div class="container stat-white-head">
             <h3 class="text-bold stat-white-fade fixed">
                 <? $APPLICATION->IncludeFile(
-                    SITE_TEMPLATE_PATH . "/inc/sofinansiruet_proekty.txt",
+                    SITE_DIR . "inc/sofinansiruet_proekty.txt",
                     Array(),
                     Array("MODE" => "text")
                 ); ?>
             </h3>
             <div class="stat-white-number number_custom stat-white-fade">
                 <? $APPLICATION->IncludeFile(
-                    SITE_TEMPLATE_PATH . "/inc/sofinansiruet_proekty_70.txt",
+                    SITE_DIR . "inc/sofinansiruet_proekty_70.txt",
                     Array(),
                     Array("MODE" => "text")
                 ); ?>
             </div>
             <div class="stat-white-number number_custom big stat-white-fade">
                 <? $APPLICATION->IncludeFile(
-                    SITE_TEMPLATE_PATH . "/inc/sofinansiruet_proekty_30.txt",
+                    SITE_DIR . "inc/sofinansiruet_proekty_30.txt",
                     Array(),
                     Array("MODE" => "text")
                 ); ?>
@@ -226,7 +226,7 @@ foreach ($page as $method => $params) {
             <div class="container container_slim stat-white-inner">
                 <h3 class="text-bold stat-white-fade">
                     <? $APPLICATION->IncludeFile(
-                        SITE_TEMPLATE_PATH . "/inc/razvivaet_prom_infra.txt",
+                        SITE_DIR . "inc/razvivaet_prom_infra.txt",
                         Array(),
                         Array("MODE" => "text")
                     ); ?>
@@ -236,7 +236,7 @@ foreach ($page as $method => $params) {
                 <div class="stat-numbers stat-numbers_white">
                     <div class="stat-white-fade">
                         <? $APPLICATION->IncludeFile(
-                            SITE_TEMPLATE_PATH . "/inc/uchavstvuet_v_sozdanii.txt",
+                            SITE_DIR . "inc/uchavstvuet_v_sozdanii.txt",
                             Array(),
                             Array("MODE" => "text")
                         ); ?>
@@ -244,7 +244,7 @@ foreach ($page as $method => $params) {
                     <div class="stat-line stat-line_light"></div>
                     <div class="stat-white-fade">
                         <? $APPLICATION->IncludeFile(
-                            SITE_TEMPLATE_PATH . "/inc/opredelil_ploshadok.txt",
+                            SITE_DIR . "inc/opredelil_ploshadok.txt",
                             Array(),
                             Array("MODE" => "text")
                         ); ?>
@@ -261,7 +261,7 @@ foreach ($page as $method => $params) {
             <div class="one-window">
                 <div class="one-window__item">
                     <? $APPLICATION->IncludeFile(
-                        SITE_TEMPLATE_PATH . "/inc/kolichestvo_mer_podderzhki.txt",
+                        SITE_DIR . "inc/kolichestvo_mer_podderzhki.txt",
                         Array(),
                         Array("MODE" => "text")
                     ); ?>
@@ -272,7 +272,7 @@ foreach ($page as $method => $params) {
     <section class="supports">
         <div class="container">
             <? $APPLICATION->IncludeFile(
-                SITE_TEMPLATE_PATH . "/inc/vyberite_meru_podderzhki.txt",
+                SITE_DIR . "inc/vyberite_meru_podderzhki.txt",
                 Array(),
                 Array("MODE" => "text")
             ); ?>

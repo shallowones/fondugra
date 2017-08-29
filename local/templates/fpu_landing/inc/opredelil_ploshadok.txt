@@ -1,4 +1,0 @@
-<div class="text-bold">определил</div>
-    <div class="orange__number"><span class="number number_50"></span><span class="stat-white-fade mar-left">
-<div class="text-bold">прощадок</div>
-<div>в муниципальных <br>образованиях Югры<br>для размещения <br>промышленных объектов</div></span></div>

@@ -70,14 +70,14 @@ $APPLICATION->SetTitle("Контакты");
         <div class="contacts__item">
             <div class="contacts__item-left">
                 <? $APPLICATION->IncludeFile(
-                    SITE_TEMPLATE_PATH . "/inc/contact_stat_req.txt",
+                    SITE_DIR . "inc/contact_stat_req.txt",
                     Array(),
                     Array("MODE" => "text")
                 ); ?>
             </div>
             <div class="contacts__item-right">
                 <? $APPLICATION->IncludeFile(
-                    SITE_TEMPLATE_PATH . "/inc/contact_bank_req.txt",
+                    SITE_DIR . "inc/contact_bank_req.txt",
                     Array(),
                     Array("MODE" => "text")
                 ); ?>
@@ -86,7 +86,7 @@ $APPLICATION->SetTitle("Контакты");
     </div>
     <div class="map-block">
         <? $APPLICATION->IncludeFile(
-            SITE_TEMPLATE_PATH . "/inc/contact_address.txt",
+            SITE_DIR . "inc/contact_address.txt",
             Array(),
             Array("MODE" => "text")
         ); ?>

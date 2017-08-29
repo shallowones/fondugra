@@ -1,2 +1,0 @@
-<span>70</span>
-<div class="stat-white-desc">РФ<span>%</span></div>

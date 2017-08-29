@@ -1,0 +1,3 @@
+<div class="text-bold text-white">на срок  <span class="text-bold__small">от</span></div>
+<div class="orange__number"><span class="number number_5"></span></div>
+<div class="text-bold text-white text-right">лет</div>

@@ -14,9 +14,13 @@
  */
 
 /*Автоматическое подключение классов*/
-\Bitrix\Main\Loader::registerAutoLoadClasses(null, array(
-    'UW\Services'           => '/local/libs/services.php',
-));
+\Bitrix\Main\Loader::registerAutoLoadClasses(
+    null,
+    [
+        'UW\Services' => '/local/libs/Services.php',
+        'UW\IbCodes' => '/local/libs/IbCodes.php'
+    ]
+);
 
 function gG($var, $mode = 0, $str = 'Var', $die = 0)
 {
