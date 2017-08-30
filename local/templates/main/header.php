@@ -14,6 +14,7 @@ $curDir = Application::getInstance()->getContext()->getRequest()->getRequestedPa
 $curFullDir = Application::getDocumentRoot() . $curDir;
 $dirParent = realpath('../') . '/';
 $boolEng = \UW\Services::isEngVersion();
+$bool404 = defined('AUTH_404');
 $boolHomePage = ($curDir === '/') || ($curDir === '/en/');
 
 $manifest = json_decode(file_get_contents(Application::getDocumentRoot() . SITE_TEMPLATE_PATH . '/dist/manifest.json'),
@@ -39,7 +40,7 @@ $page = [
         SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.selectmenu/jquery-selectmenu.css',
         SITE_TEMPLATE_PATH . '/dist/js/vendor/slick/slick.css',
         SITE_TEMPLATE_PATH . '/dist/css/' . $manifest['main.css'],
-        SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.css',
+        SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.css'
     ],
     'addJs' => [
         SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.js',
@@ -50,15 +51,17 @@ $page = [
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['submenu.js'],
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['menu.js'],
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['mess.js'],
+        SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['map.js'],
         SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.datepicker/jquery-datepicker.js',
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['calendar.js'],
-        SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.js',
+        SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.js'
     ]
 ];
 
 foreach ($page as $method => $params) {
     array_map([$oAsset, $method], $params);
 }
+$oAsset->addString('<link rel="shortcut icon" href="' . SITE_TEMPLATE_PATH . '/favicon.ico" type="image/x-icon">');
 ?>
 <!DOCTYPE html>
 <html lang="<? echo LANGUAGE_ID ?>">
@@ -123,7 +126,7 @@ foreach ($page as $method => $params) {
     ),
         false
     ); ?>
-    <? if (!$boolHomePage): ?>
+    <? if (!$boolHomePage && !$bool404): ?>
     <div class="container inner-detail">
         <? $APPLICATION->IncludeComponent("bitrix:breadcrumb", "nav", Array(
             "PATH" => "",    // Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
@@ -138,7 +141,7 @@ foreach ($page as $method => $params) {
             <div class="inner-left<? $APPLICATION->ShowProperty('inner_left_detail'); ?>">
         <? endif; ?>
     <? endif; ?>
-    <? if ($boolHomePage): ?>
+    <? if ($boolHomePage && !$bool404): ?>
         <section class="slider-wrapper">
             <div class="slider-fixed">
                 <div class="slider-fixed__body">

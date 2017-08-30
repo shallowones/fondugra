@@ -22,6 +22,7 @@
             </a>
         <? endforeach; ?>
     </div>
+    <? echo $arResult['NAV_STRING'] ?>
 <? else: ?>
     <div class="err-notify">По Вашему запросу ничего не найдено.</div>
 <? endif; ?>
