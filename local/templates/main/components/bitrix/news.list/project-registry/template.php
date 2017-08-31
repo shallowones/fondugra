@@ -46,7 +46,7 @@
         <? endif; ?>
         <? if (count($arItem["PROPERTIES"]['links_map']['VALUE']) === 1): ?>
             <? foreach ($arItem["PROPERTIES"]['links_map']['VALUE'] as $keyLink => $href): ?>
-                <a class="registry__item mapping" href="<?= $href ?>">
+                <a class="registry__item mapping" href="<?= $href ?>" target="_blank">
                     <? if ($arItem["PROPERTIES"]['links_map']['DESCRIPTION'][$keyLink]): ?>
                         <?= $arItem["PROPERTIES"]['links_map']['DESCRIPTION'][$keyLink] ?>
                     <? else: ?>
@@ -58,7 +58,7 @@
         <? if (count($arItem["PROPERTIES"]['links_map']['VALUE']) > 1): ?>
             <div class="registry__item mapping">
                 <? foreach ($arItem["PROPERTIES"]['links_map']['VALUE'] as $keyLink => $href): ?>
-                    <a class="registry__item-link" href="<?= $href ?>">
+                    <a class="registry__item-link" href="<?= $href ?>" target="_blank">
                         <? if ($arItem["PROPERTIES"]['links_map']['DESCRIPTION'][$keyLink]): ?>
                             <?= $arItem["PROPERTIES"]['links_map']['DESCRIPTION'][$keyLink] ?>
                         <? else: ?>
@@ -69,9 +69,11 @@
             </div>
         <? endif; ?>
     </div>
+    <br>
+    <br>
     <? if (count($arItem['DISPLAY_PROPERTIES']['files']['FILE_VALUE']) > 0): ?>
         <? foreach ($arItem['DISPLAY_PROPERTIES']['files']['FILE_VALUE'] as $arFile): ?>
-            <a class="files__item" href="<?= $arFile['SRC'] ?>">
+            <a class="files__item" href="<?= $arFile['SRC'] ?>" target="_blank">
                 <div class="files__item-format <?= $arFile['ext'] ?>"><?= $arFile['ext'] ?></div>
                 <div class="files__item-desc">
                     <?= $arFile['name'] ?> (<?= $arFile['size'] ?>)

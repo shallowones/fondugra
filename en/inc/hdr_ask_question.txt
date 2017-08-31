@@ -1,1 +1,1 @@
-<a class="link" href="#"><b>Ask a Question</b></a>
+<a class="link"href="http://investugra.ru/rus/ask-question/" target="_blank"><b>Ask a Question</b></a>

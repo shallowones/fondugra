@@ -31,18 +31,12 @@ foreach ($arResult as $arItem) {
         $lastInd = count($parents[$lev - 1]['CHILDREN']) - 1;
         $parents[$lev] = &$parents[$lev - 1]['CHILDREN'][$lastInd];
         if ($arItem['SELECTED']) {
-
-            //gg($parents['1']);
-            //gg($parents);
-            //$arResult['SELECTED_SUBMENU'] =
+            foreach ($menuList as $key => $item) {
+                if ($parents[$lev - 1]['TEXT'] === $item['TEXT']) {
+                    $arResult['PARENT_SELECTED'] = $key;
+                }
+            }
         }
-
-    }
-
-    if ($arItem['PARAMS']['load']) {
-        //$arResult['']
     }
 }
-$arResult = $menuList;
-
-//gg($arResult);
+$arResult['ITEMS'] = $menuList;

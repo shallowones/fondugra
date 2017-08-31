@@ -30,6 +30,13 @@ foreach ($arResult as $arItem) {
         $parents[$lev - 1]['CHILDREN'][] = $arItem;
         $lastInd = count($parents[$lev - 1]['CHILDREN']) - 1;
         $parents[$lev] = &$parents[$lev - 1]['CHILDREN'][$lastInd];
+        if ($arItem['SELECTED']) {
+            foreach ($menuList as $key => $item) {
+                if ($parents[$lev - 1]['TEXT'] === $item['TEXT']) {
+                    $arResult['PARENT_SELECTED'] = $key;
+                }
+            }
+        }
     }
 }
-$arResult = $menuList;
+$arResult['ITEMS'] = $menuList;

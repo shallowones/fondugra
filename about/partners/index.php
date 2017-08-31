@@ -134,7 +134,7 @@ $APPLICATION->SetTitle("Взаимодействие с партнерами");
 		"PARENT_SECTION_CODE" => "prochie",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"PROPERTY_CODE" => array(
-			0 => "",
+			0 => "LINK",
 			1 => "",
 		),
 		"SET_BROWSER_TITLE" => "Y",

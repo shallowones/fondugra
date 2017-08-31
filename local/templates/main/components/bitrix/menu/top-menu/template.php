@@ -2,16 +2,16 @@
 /** @var array $arResult */
 
 $subs = [];
-if (count($arResult) > 0): ?>
+if (count($arResult['ITEMS']) > 0): ?>
     <section class="navigation navigation_fpu">
         <div class="container">
             <nav class="nav js-tmenu">
-                <? foreach ($arResult as $keyItem => $item):
+                <? foreach ($arResult['ITEMS'] as $keyItem => $item):
                     $subs[] = '#sub-' . $keyItem;
                     ?>
                     <? if ($item["IS_PARENT"]): ?>
                     <span
-                            class="link nav__link"
+                            class="link nav__link<? echo ($keyItem === $arResult['PARENT_SELECTED']) ? ' active' : '' ?>"
                             data-submenu="#sub-<?= $keyItem ?>"
                         <? echo ($item['PARAMS']['load']) ? 'data-load="' . $item['LINK'] . '"' : '' ?>>
                             <?= $item['TEXT'] ?>
@@ -27,10 +27,10 @@ if (count($arResult) > 0): ?>
     </section>
     <? if (count($subs) > 0): ?>
         <section class="nav-sub">
-            <div class="container js-submenu">
-                <? foreach ($arResult as $keyItem => $item): ?>
+            <div class="container js-submenu"<? echo ($arResult['PARENT_SELECTED'] !== false) ? ' style="display: block"' : '' ?>>
+                <? foreach ($arResult['ITEMS'] as $keyItem => $item): ?>
                     <? if ($item["IS_PARENT"]): ?>
-                        <div class="seacher" id="sub-<?= $keyItem ?>">
+                        <div class="seacher<? echo ($arResult['PARENT_SELECTED'] === $keyItem) ? ' active' : '' ?>" id="sub-<?= $keyItem ?>">
                             <div class="submenu">
                                 <? foreach ($item['CHILDREN'] as $keySubItem => $subItem): ?>
                                     <a class="link nav__link<? echo ($subItem['SELECTED']) ? ' active' : '' ?>"
