@@ -26,7 +26,7 @@
                         <? if (empty($arProject['link_map'])): ?>
                             <span class="fond-map-list-section__link"><?= $arProject['name'] ?></span>
                         <? else: ?>
-                            <a class="fond-map-list-section__link" href="<?= $arProject['link_map'] ?>">
+                            <a class="fond-map-list-section__link" href="<?= $arProject['link_map'] ?>" target="_blank">
                                 <?= $arProject['name'] ?>
                             </a>
                         <? endif; ?>

@@ -14,7 +14,7 @@ $curDir = Application::getInstance()->getContext()->getRequest()->getRequestedPa
 $curFullDir = Application::getDocumentRoot() . $curDir;
 $dirParent = realpath('../') . '/';
 $boolEng = \UW\Services::isEngVersion();
-$bool404 = defined('AUTH_404');
+$bool404 = defined('ERR_404');
 $boolHomePage = ($curDir === '/') || ($curDir === '/en/');
 
 $manifest = json_decode(file_get_contents(Application::getDocumentRoot() . SITE_TEMPLATE_PATH . '/dist/manifest.json'),
@@ -55,13 +55,15 @@ $page = [
         SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.datepicker/jquery-datepicker.js',
         SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['calendar.js'],
         SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.js'
+    ],
+    'addString' => [
+        '<link rel="shortcut icon" href="' . SITE_TEMPLATE_PATH . '/favicon.ico" type="image/x-icon">'
     ]
 ];
 
 foreach ($page as $method => $params) {
     array_map([$oAsset, $method], $params);
 }
-$oAsset->addString('<link rel="shortcut icon" href="' . SITE_TEMPLATE_PATH . '/favicon.ico" type="image/x-icon">');
 ?>
 <!DOCTYPE html>
 <html lang="<? echo LANGUAGE_ID ?>">

@@ -1,16 +1,6 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Владимир
- * Date: 24.08.2017
- * Time: 18:05
- * @var array $arResult
- * @var array $arParams
- */
-
-if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
-    die();
-}
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+/** @var array $arResult */
+/** @var array $arParams */
 
 $sections = [];
 foreach ($arResult['ITEMS'] as $keyItem => $item) {
@@ -29,8 +19,11 @@ foreach ($arResult['ITEMS'] as $keyItem => $item) {
 
 if (count($sections) > 0) {
     $sections = array_unique($sections);
-    $rsSectionsInfo = CIBlockSection::GetList(
-        ['ID' => 'ASC'],
+    $rsSectionsInfo = \CIBlockSection::GetList(
+        [
+            $arParams['SORT_BY1'] => $arParams['SORT_ORDER1'],
+            $arParams['SORT_BY2'] => $arParams['SORT_ORDER2']
+        ],
         [
             'IBLOCK_ID' => $arParams['IBLOCK_ID'],
             'ID' => $sections
@@ -46,11 +39,15 @@ if (count($sections) > 0) {
     while ($obSectionsInfo = $rsSectionsInfo->GetNextElement()) {
         $arFields = $obSectionsInfo->GetFields();
         if (array_key_exists($arFields['ID'], $arResult['departments'])) {
-            $arResult['departments'][$arFields['ID']]['info'] = [
-                'name' => $arFields['NAME'],
-                'phones' => $arFields['UF_PHONES'],
-                'displayName' => intval($arFields['UF_DISPLAY_NAME']),
+            $arResult['deps'][] = [
+                'info' => [
+                    'name' => $arFields['NAME'],
+                    'phones' => $arFields['UF_PHONES'],
+                    'displayName' => intval($arFields['UF_DISPLAY_NAME'])
+                ],
+                'items' => $arResult['departments'][$arFields['ID']]['items']
             ];
         }
     }
 }
+unset($arResult['departments']);

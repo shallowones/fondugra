@@ -5,19 +5,19 @@
         <label class="search__label" for="<?= $arParams['SEARCH_ID'] ?>"></label>
         <span class="head-nav__desc">Поиск</span>
     </form>
-    <a class="head-nav__link head-nav__link_map" href="#">
+    <a class="head-nav__link head-nav__link_map" href="/sitemap/">
         <span class="head-nav__desc">Карта сайта</span>
     </a>
-    <a class="head-nav__link head-nav__link_eye" href="#">
+    <? /*<a class="head-nav__link head-nav__link_eye" href="#">
         <span class="head-nav__desc">Версия для слабовидящих</span>
     </a>
     <a class="head-nav__link head-nav__link_print" href="#">
         <span class="head-nav__desc">Версия для печати</span>
     </a>
-    <? $APPLICATION->IncludeComponent(
+    $APPLICATION->IncludeComponent(
         'uw:language',
         '.default',
         [],
         false
-    ); ?>
+    );*/ ?>
 </nav>

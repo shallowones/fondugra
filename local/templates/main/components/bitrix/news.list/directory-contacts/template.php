@@ -13,7 +13,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 ?>
-<? foreach ($arResult['departments'] as $department): ?>
+<? foreach ($arResult['deps'] as $department): ?>
     <div class="contacts__item">
         <div class="contacts__item-left">
             <? if ($department['info']['displayName']): ?>

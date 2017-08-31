@@ -3,7 +3,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     die();
 }
 ?>
-<? if (!$boolHomePage): ?>
+<? if (!$boolHomePage && !$bool404): ?>
     <? if ($bool2Col): ?>
         </div> <!-- inner-left -->
         <div class="inner-right">
