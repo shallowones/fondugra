@@ -60,7 +60,7 @@ $APPLICATION->SetTitle("Мероприятия");
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
-		"NEWS_COUNT" => "10",
+		"NEWS_COUNT" => "12",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
