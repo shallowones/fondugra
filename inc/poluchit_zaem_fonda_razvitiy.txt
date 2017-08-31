@@ -1,1 +1,1 @@
-<button class="button button_yellow">Получить заем фонда развития Югры</button>
+<a href="/fpu/navigator/277/" class="button button_yellow">Получить заем фонда развития Югры</a>
