@@ -23,7 +23,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Экспертный совет", 
-		"/fpu/ekspertnyy-sovet/", 
+		"/fpu/experts/",
 		Array(), 
 		Array(), 
 		"" 
