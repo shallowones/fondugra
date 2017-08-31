@@ -19,6 +19,6 @@ $this->setFrameMode(true);
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 	$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 	?>
-	<a class="partners__link" href="<?=$arItem['DISPLAY_PROPERTIES']['VALUE']?>" target="_blank"><img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>"></a>
+	<a class="partners__link" id="<? echo $this->GetEditAreaId($arItem['ID']); ?>" href="<?=$arItem['DISPLAY_PROPERTIES']['LINK']['VALUE']?>" target="_blank"><img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>"></a>
 <?endforeach;?>
 </div>
