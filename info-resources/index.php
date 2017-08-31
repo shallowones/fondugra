@@ -9,7 +9,7 @@ $APPLICATION->SetTitle("Информационные ресурсы");
 		"AREA_FILE_SHOW" => "file",
 		"AREA_FILE_SUFFIX" => "inc",
 		"EDIT_TEMPLATE" => "",
-		"PATH" => "/local/templates/main/inc/resource_top.php"
+		"PATH" => "/inc/resource_top.php"
 	)
 );?>
 <div class="detail">
@@ -18,7 +18,7 @@ $APPLICATION->SetTitle("Информационные ресурсы");
 	"main-resources", 
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
@@ -44,7 +44,7 @@ $APPLICATION->SetTitle("Информационные ресурсы");
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "12",
 		"IBLOCK_TYPE" => "-",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
 		"NEWS_COUNT" => "20",
@@ -62,8 +62,6 @@ $APPLICATION->SetTitle("Информационные ресурсы");
 			0 => "region",
 			1 => "link",
 			2 => "",
-			3 => "",
-			4 => "",
 		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
@@ -88,7 +86,7 @@ $APPLICATION->SetTitle("Информационные ресурсы");
 		"AREA_FILE_SHOW" => "file",
 		"AREA_FILE_SUFFIX" => "inc",
 		"EDIT_TEMPLATE" => "",
-		"PATH" => "/local/templates/main/inc/resource_bottom.php"
+		"PATH" => "/inc/resource_bottom.php"
 	)
 );?>
 </div>
