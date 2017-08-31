@@ -61,4 +61,6 @@ $APPLICATION->SetTitle("Экспертный совет");
 		"STRICT_SECTION_CHECK" => "N",	// Строгая проверка раздела для показа списка
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+<a href="/upload/polozhenie_ob_expertnom_sovete_fonda.pdf" class="file">Положение об Экспертном совете Фонда</a>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
