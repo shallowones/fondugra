@@ -62,5 +62,5 @@ $APPLICATION->SetTitle("Экспертный совет");
 	),
 	false
 );?>
-<a href="/upload/polozhenie_ob_expertnom_sovete_fonda.pdf" class="file">Положение об Экспертном совете Фонда</a>
+<a href="/upload/polozhenie_ob_expertnom_sovete_fonda.pdf" target="_blank" class="file">Положение об Экспертном совете Фонда</a>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
