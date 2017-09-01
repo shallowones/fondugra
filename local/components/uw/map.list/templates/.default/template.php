@@ -31,6 +31,7 @@
                             </a>
                         <? endif; ?>
                     <? endforeach; ?>
+                    <i class="close">&times;</i>
                 </div>
             </div>
         </div>
