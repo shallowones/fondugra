@@ -1,1 +1,0 @@
-"use strict";!function(n){n(function(){n(".js-lang").find("select").selectmenu({change:function(n,e){console.log(n),console.log(e)}})})}(jQuery);

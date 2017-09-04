@@ -1,1 +1,0 @@
-"use strict";!function(e){e(function(){e(".js-lang").find("select").selectmenu()})}(jQuery);
