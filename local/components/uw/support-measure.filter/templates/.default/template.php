@@ -58,5 +58,5 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     <? endforeach; ?>
     </div>
     <button class="button button_yellow" name="setFilter" value="setFilter">Применить</button>
-    <button class="button" name="clearFilter" value="clearFilter">Сбрсоить</button>
+    <button class="button" name="clearFilter" value="clearFilter">Сбросить</button>
 </form>

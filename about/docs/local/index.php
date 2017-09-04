@@ -23,7 +23,7 @@ $APPLICATION->SetTitle("Локальные акты, регулирующие д
  <a href="/upload/Положение-о-закупках-Фонда-развития-Югры.pdf" class="file">Положение о закупках Фонда</a>
 </p>
 <p>
- <a href="/upload/medialibrary/3cc/Polozhenie_ob_uchastii_Fonda_v_industr.parkakh.pdf" target="_blank" class="file">Положение&nbsp;об участии Фонда в проектах создания и развития индустриальных&nbsp; парков</a>
+ <a href="/upload/medialibrary/3cc/Polozhenie_ob_uchastii_Fonda_v_industr.parkakh.pdf" target="_blank" class="file">Положение об участии Фонда в проектах создания и развития индустриальных (промышленных) парков, промышленных технопарков и технопарков в сфере высоких технологий</a>
 </p>
 <p>
  <a href="/upload/medialibrary/213/1._Pravila_predostavleniya_zaymov_Fonda.pdf" target="_blank" class="file">Правила предоставления займов Фонда</a>

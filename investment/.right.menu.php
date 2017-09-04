@@ -1,7 +1,7 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Карта проектов Фонда", 
+		"Карта проектов", 
 		"/investment/map/", 
 		Array(), 
 		Array(), 

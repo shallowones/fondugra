@@ -17,7 +17,7 @@ $this->setFrameMode(true);
 <div class="table black">
     <? if (isset($arResult['DISPLAY_PROPERTIES']['recipient_support']['DISPLAY_VALUE'])): ?>
         <div class="table-line">
-            <div class="table-line-left">Получатель поддержки</div>
+            <div class="table-line-left">Наименование меры поддержки</div>
             <div class="table-line-right"><?= $arResult['DISPLAY_PROPERTIES']['recipient_support']['DISPLAY_VALUE'] ?></div>
         </div>
     <? endif; ?>
@@ -41,11 +41,10 @@ $this->setFrameMode(true);
             <div class="table-line-right"><?= $arResult['DISPLAY_PROPERTIES']['other']['DISPLAY_VALUE'] ?></div>
         </div>
     <? endif; ?>
+
+<br>
+	<div class="table-line-left">  ДОКУМЕНТЫ ДЛЯ ПОЛУЧАТЕЛЯ </div>
 </div>
-<p>
-    Для получения более подробной информации о данной мере поддержке, предлагаем изучить
-    Карточку государственной поддержки и Нормативно правовые акты:
-</p>
 <? if (isset($arResult['DISPLAY_PROPERTIES']['files']['FILE_VALUE'])): ?>
     <? foreach ($arResult['DISPLAY_PROPERTIES']['files']['FILE_VALUE'] as $arFile): ?>
         <a class="files__item" href="<?= $arFile['SRC'] ?>">
@@ -60,7 +59,7 @@ $this->setFrameMode(true);
 <? if ($arResult['organization']): ?>
     <div class="inner-right">
         <div class="info">
-            <div class="info-desc">Ответственный исполнитель государственной программы</div>
+            <div class="info-desc">Ответственный исполнитель</div>
             <div><b><?= $arResult['organization']['name'] ?></b></div>
             <br>
             <? if ($arResult['organization']['phone']): ?>
