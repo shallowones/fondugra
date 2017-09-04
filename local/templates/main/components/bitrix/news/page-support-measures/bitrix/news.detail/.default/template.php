@@ -1,18 +1,6 @@
-<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
-    die();
-}
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
-/** @global CMain $APPLICATION */
-/** @global CUser $USER */
-/** @global CDatabase $DB */
-/** @var CBitrixComponentTemplate $this */
-/** @var string $templateName */
-/** @var string $templateFile */
-/** @var string $templateFolder */
-/** @var string $componentPath */
-/** @var CBitrixComponent $component */
-$this->setFrameMode(true);
 ?>
 <div class="table black">
     <? if (isset($arResult['DISPLAY_PROPERTIES']['recipient_support']['DISPLAY_VALUE'])): ?>
@@ -42,8 +30,8 @@ $this->setFrameMode(true);
         </div>
     <? endif; ?>
 
-<br>
-	<div class="table-line-left">  ДОКУМЕНТЫ ДЛЯ ПОЛУЧАТЕЛЯ </div>
+    <br>
+    <div class="table-line-left"> ДОКУМЕНТЫ ДЛЯ ПОЛУЧАТЕЛЯ</div>
 </div>
 <? if (isset($arResult['DISPLAY_PROPERTIES']['files']['FILE_VALUE'])): ?>
     <? foreach ($arResult['DISPLAY_PROPERTIES']['files']['FILE_VALUE'] as $arFile): ?>
@@ -85,6 +73,16 @@ $this->setFrameMode(true);
                 <div class="info-line">
                     <div class="info-row label">График работы:</div>
                     <div class="info-row"><?= $arResult['organization']['schedule'] ?></div>
+                </div>
+            <? endif; ?>
+            <? if ($arResult['organization']['email']): ?>
+                <div class="info-line">
+                    <div class="info-row label">E-mail:</div>
+                    <div class="info-row">
+                        <a href="mailto:<?= $arResult['organization']['email'] ?>">
+                            <?= $arResult['organization']['email'] ?>
+                        </a>
+                    </div>
                 </div>
             <? endif; ?>
         </div>

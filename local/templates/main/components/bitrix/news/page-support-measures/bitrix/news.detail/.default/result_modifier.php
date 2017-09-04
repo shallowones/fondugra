@@ -39,6 +39,7 @@ if (intval($arResult['PROPERTIES']['organization']['VALUE']) > 0) {
             'address' => $arProperties['address']['VALUE'],
             'schedule' => $arProperties['schedule']['VALUE']['TEXT'],
             'phone' => $arProperties['phone']['VALUE'],
+            'email' => $arProperties['email']['VALUE']
         ];
     }
 }
