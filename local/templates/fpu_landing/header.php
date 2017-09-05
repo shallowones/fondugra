@@ -37,6 +37,9 @@ $page = [
         $pathTplMain . '/dist/js/' . $manifest['submenu.js'],
         $pathTplMain . '/dist/js/vendor/scrollmagic.js',
         $pathTplMain . '/dist/js/' . $manifest['animation.js']
+    ],
+    'addString' => [
+        '<link rel="shortcut icon" href="' . $pathTplMain . '/favicon.ico" type="image/x-icon">'
     ]
 ];
 
@@ -249,6 +252,18 @@ foreach ($page as $method => $params) {
                             Array("MODE" => "text")
                         ); ?>
                     </div>
+                </div>
+            </div>
+            <div class="container space-b">
+                <div class="stat-white-fade">
+                    <a class="button button_yellow" href="http://investugra.ru/rus/cabinet/type-request/" target="_blank">
+                        Стать резидентом индустриального парка
+                    </a>
+                </div>
+                <div class="stat-white-fade">
+                    <a class="button button_yellow" href="http://map.investugra.ru/?lng=ru" target="_blank">
+                        Подобрать площадку
+                    </a>
                 </div>
             </div>
         </div>

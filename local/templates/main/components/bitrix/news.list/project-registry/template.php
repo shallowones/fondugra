@@ -26,7 +26,7 @@
     <div class="registry" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
         <? if ($arItem["PROPERTIES"]['municipality']['VALUE']): ?>
             <div class="registry__item">
-                <div class="registry__item-text"><?= $arItem["PROPERTIES"]['municipality']['VALUE'] ?></div>
+                <div class="registry__item-text"><?= $arItem["PROPERTIES"]['municipality']['~VALUE']['TEXT'] ?></div>
                 <div class="registry__item-desc">Муниципалитет</div>
             </div>
         <? endif; ?>
