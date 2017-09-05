@@ -1,3 +1,6 @@
 <?
-$sSectionName="Взаимодействие с партнерами";
+$sSectionName = "Партнеры";
+$arDirProperties = Array(
+
+);
 ?>

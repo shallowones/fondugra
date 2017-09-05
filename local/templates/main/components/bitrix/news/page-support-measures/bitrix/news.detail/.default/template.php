@@ -56,6 +56,16 @@
                     <div class="info-row"><?= $arResult['organization']['phone'] ?></div>
                 </div>
             <? endif; ?>
+            <? if ($arResult['organization']['email']): ?>
+                <div class="info-line">
+                    <div class="info-row label">E-mail:</div>
+                    <div class="info-row">
+                        <a href="mailto:<?= $arResult['organization']['email'] ?>">
+                            <?= $arResult['organization']['email'] ?>
+                        </a>
+                    </div>
+                </div>
+            <? endif; ?>
             <? if ($arResult['organization']['link']): ?>
                 <div class="info-line">
                     <div class="info-row label">Сайт:</div>
@@ -67,22 +77,12 @@
                 <div class="info-line">
                     <div class="info-row label">Адрес:</div>
                     <div class="info-row"><?= $arResult['organization']['address'] ?></div>
-                </div><br>
+                </div>
             <? endif; ?>
             <? if ($arResult['organization']['schedule']): ?>
                 <div class="info-line">
                     <div class="info-row label">График работы:</div>
                     <div class="info-row"><?= $arResult['organization']['schedule'] ?></div>
-                </div>
-            <? endif; ?>
-            <? if ($arResult['organization']['email']): ?>
-                <div class="info-line">
-                    <div class="info-row label">E-mail:</div>
-                    <div class="info-row">
-                        <a href="mailto:<?= $arResult['organization']['email'] ?>">
-                            <?= $arResult['organization']['email'] ?>
-                        </a>
-                    </div>
                 </div>
             <? endif; ?>
         </div>

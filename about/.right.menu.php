@@ -15,15 +15,15 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Взаимодействие с партнерами", 
-		"/about/partners/", 
+		"Контакты", 
+		"/about/contacts/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Контакты", 
-		"/about/contacts/", 
+		"Партнеры", 
+		"/about/partners/", 
 		Array(), 
 		Array(), 
 		"" 

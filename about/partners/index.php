@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Взаимодействие с партнерами");
+$APPLICATION->SetTitle("Партнеры");
 ?>
 <div class="detail">
     <?$APPLICATION->IncludeComponent(

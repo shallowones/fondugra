@@ -41,5 +41,5 @@ foreach ($arResult["ITEMS"] as $key => $arItem) {
 
     $arResult["ITEMS"][$key]['DISPLAY_ACTIVE_FROM'] = ToLower($arItem["DISPLAY_ACTIVE_FROM"]);
 
-    $arResult["ITEMS"][$key]['NAME'] = TruncateText($arItem['NAME'], 70);
+	//  $arResult["ITEMS"][$key]['NAME'] = TruncateText($arItem['NAME'], 70);
 }

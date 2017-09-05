@@ -1,3 +1,6 @@
 <?
-$sSectionName="Карта проектов Фонда";
+$sSectionName = "Карта проектов ";
+$arDirProperties = Array(
+
+);
 ?>
