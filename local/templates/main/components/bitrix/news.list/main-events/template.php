@@ -21,7 +21,7 @@
                                             <div class="event-date__date">
                                                 <span class="event-date__day"><? echo $arItem['day_from'] ?></span>
                                                 <? if ($arItem['month_from'] !== $arItem['month_to']): ?>
-                                                    <span class="event-date__month"><? echo $arItem['month_from'] ?></span>
+                                                    <span class="event-date__month"><? echo $arItem['month_from'] ?> <? echo ($arItem['years_to']) ? $arItem['years_to'] : '' ?></span>
                                                 <? endif; ?>
                                             </div>
                                         <? endif; ?>
@@ -29,7 +29,7 @@
                                             <div class="event-date__delimiter"></div>
                                             <div class="event-date__date">
                                                 <span class="event-date__day"><? echo $arItem['day_to'] ?></span>
-                                                <span class="event-date__month"><? echo $arItem['month_to'] ?></span>
+                                                <span class="event-date__month"><? echo $arItem['month_to'] . ' ' . $arItem['years_to'] ?></span>
                                             </div>
                                         <? endif; ?>
                                     </div>
