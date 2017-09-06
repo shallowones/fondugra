@@ -27,6 +27,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
-	)
+	),
+    Array(
+        "Медиатека",
+        "/about/media/",
+        Array(),
+        Array(),
+        ""
+    ),
 );
 ?>

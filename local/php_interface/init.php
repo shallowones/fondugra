@@ -50,3 +50,5 @@ AddEventHandler("subscribe", "BeforePostingSendMail", array("UW\\Services", "Bef
 
 AddEventHandler("iblock", "OnBeforeIBlockElementAdd",   array("UW\\Services", "replaceName"));
 AddEventHandler("iblock", "OnBeforeIBlockElementUpdate",   array("UW\\Services", "replaceName"));
+
+require (\Bitrix\Main\Application::getDocumentRoot() . '/local/php_interface/inc/videoHandler.php');

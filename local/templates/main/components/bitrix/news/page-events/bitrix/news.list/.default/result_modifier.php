@@ -43,6 +43,9 @@ foreach ($arResult["ITEMS"] as $key => &$arItem) {
         $mDateFrom = MakeTimeStamp($arItem['PROPERTIES']['date_from']['VALUE']);
         $arItem['day_from'] = date('d', $mDateFrom);
         $arItem['month_from'] = ToUpper(FormatDate('F', $mDateFrom));
+        if (empty($arItem['PROPERTIES']['date_to']['VALUE'])) {
+            $arItem['years_to'] = ToUpper(FormatDate('Y', $mDateFrom));
+        }
     }
 
     if (!empty($arItem['PROPERTIES']['date_to']['VALUE'])) {
