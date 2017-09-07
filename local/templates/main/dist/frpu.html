@@ -7,337 +7,342 @@
     <link rel="stylesheet" href="js/vendor/jquery.datepicker/jquery-datepicker.css">
     <link rel="stylesheet" href="js/vendor/jquery.selectmenu/jquery-selectmenu.css">
     <link rel="stylesheet" href="js/vendor/slick/slick.css">
-    <link rel="stylesheet" href="./css/main-7a3a388826.css">
+    <link rel="stylesheet" href="./css/main-9ed0d3cef4.css">
   </head>
   <!-- класс .loading только для страницы frpu, чтобы показать лоадер-->
   <body>
     <div class="loading-overlay loading-overlay_visible"></div>
     <div class="page">
-      <header class="header">
-        <div class="container">
-          <div class="headline"><a class="logo" href="#"></a>
-            <nav class="head-nav">
-              <form class="head-nav__link head-nav__link_search" action="#">
-                <input class="search__checkbox js-search" type="checkbox" id="search">
-                <input class="search__text js-search-input">
-                <label class="search__label" for="search"></label><span class="head-nav__desc">Поиск</span>
-              </form><a class="head-nav__link head-nav__link_map" href="#"><span class="head-nav__desc">Карта сайта</span></a><a class="head-nav__link head-nav__link_eye" href="#"><span class="head-nav__desc">Версия для слабовидящих</span></a><a class="head-nav__link head-nav__link_print" href="#"><span class="head-nav__desc">Версия для печати</span></a>
-              <form class="head-nav__language js-lang" action="#">
-                <select name="language">
-                  <option value="RU" selected>RU</option>
-                  <option value="RU">EN</option>
-                </select>
-              </form>
+      <div class="page-top">
+        <header class="header">
+          <div class="container">
+            <div class="headline"><a class="logo" href="#"></a>
+              <nav class="head-nav">
+                <form class="head-nav__link head-nav__link_search" action="#">
+                  <input class="search__checkbox js-search" type="checkbox" id="search">
+                  <input class="search__text js-search-input">
+                  <label class="search__label" for="search"></label><span class="head-nav__desc">Поиск</span>
+                </form><a class="head-nav__link head-nav__link_map" href="#"><span class="head-nav__desc">Карта сайта</span></a><a class="head-nav__link head-nav__link_eye" href="#"><span class="head-nav__desc">Версия для слабовидящих</span></a><a class="head-nav__link head-nav__link_print" href="#"><span class="head-nav__desc">Версия для печати</span></a>
+                <form class="head-nav__language js-lang" action="#">
+                  <select name="language">
+                    <option value="RU" selected>RU</option>
+                    <option value="RU">EN</option>
+                  </select>
+                </form>
+              </nav>
+              <div class="head-info">
+                <div class="head-info__item">e-mail: <a class="link" href="mailto:office@fondugra.ru"><b>office@fondugra.ru</b></a><br><a class="link" href="#"><b>Задать вопрос</b></a></div>
+                <div class="head-info__item">тел.: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a><br>факс: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a></div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- класс .navigation_fpu это состояние для ФПЮ, на других страницах он не нужен-->
+        <section class="navigation navigation_fpu">
+          <div class="container">
+            <nav class="nav js-tmenu"><span class="link nav__link" data-submenu="#sub-0">О фонде</span><a class="link nav__link" href="#">Одно окно</a><span class="link nav__link" data-submenu="#sub-2">Инвестиционные проекты</span><a class="link nav__link" href="#">Информационные ресурсы</a><a class="link nav__link" href="#">Новости</a><a class="link nav__link" href="#">Мероприятия</a><a class="link nav__link" href="#">Инвестиционный совет</a><span class="link nav__link" data-load="#" data-submenu="#sub-7">Фонд промышленности</span>
             </nav>
-            <div class="head-info">
-              <div class="head-info__item">e-mail: <a class="link" href="mailto:office@fondugra.ru"><b>office@fondugra.ru</b></a><br><a class="link" href="#"><b>Задать вопрос</b></a></div>
-              <div class="head-info__item">тел.: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a><br>факс: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a></div>
+          </div>
+        </section>
+      </div>
+      <div class="page-bottom">
+        <section class="nav-sub">
+          <div class="container js-submenu">
+            <div class="seacher" id="sub-0">
+              <div class="submenu"><a class="link nav__link" href="#">Одно окно</a><a class="link nav__link" href="#">Инвестиционные проекты</a><a class="link nav__link" href="#">Закупки</a><a class="link nav__link" href="#">Документы</a></div>
+            </div>
+            <div class="seacher" id="sub-2">
+              <div class="submenu"><a class="link nav__link" href="#">Одно окно2</a><a class="link nav__link" href="#">Инвестиционные проекты2</a><a class="link nav__link" href="#">Закупки2</a><a class="link nav__link" href="#">Документы2</a></div>
             </div>
           </div>
-        </div>
-      </header>
-      <!-- класс .navigation_fpu это состояние для ФПЮ, на других страницах он не нужен-->
-      <section class="navigation navigation_fpu">
-        <div class="container">
-          <nav class="nav js-tmenu"><span class="link nav__link" data-submenu="#sub-0">О фонде</span><a class="link nav__link" href="#">Одно окно</a><span class="link nav__link" data-submenu="#sub-2">Инвестиционные проекты</span><a class="link nav__link" href="#">Информационные ресурсы</a><a class="link nav__link" href="#">Новости</a><a class="link nav__link" href="#">Мероприятия</a><a class="link nav__link" href="#">Инвестиционный совет</a><span class="link nav__link" data-load="#" data-submenu="#sub-7">Фонд промышленности</span>
-          </nav>
-        </div>
-      </section>
-      <section class="nav-sub">
-        <div class="container js-submenu">
-          <div class="seacher" id="sub-0">
-            <div class="submenu"><a class="link nav__link" href="#">Одно окно</a><a class="link nav__link" href="#">Инвестиционные проекты</a><a class="link nav__link" href="#">Закупки</a><a class="link nav__link" href="#">Документы</a></div>
-          </div>
-          <div class="seacher" id="sub-2">
-            <div class="submenu"><a class="link nav__link" href="#">Одно окно2</a><a class="link nav__link" href="#">Инвестиционные проекты2</a><a class="link nav__link" href="#">Закупки2</a><a class="link nav__link" href="#">Документы2</a></div>
-          </div>
-        </div>
-      </section>
-      <section class="intro">
-        <div class="container container_slim">
-          <div class="intro-inner">
-            <h1 class="intro__title" id="intro-title">государственный фонд<br>развития промышленности</h1>
-            <div class="intro-text">
-              <div class="intro-text__left" id="intro-text-left">
-                <h3 class="text-bold">Содействует в <span class="text-orange">формировании  государственной политики </span>и <span class="text-orange">разработке ключевых <br>нормативно-правовых документов </span>в сфере промышленности.</h3><br>Участвует в реализации окружной программы развития промышленности<br>2018-2025 гг.
-              </div>
-              <div class="intro-text__right" id="intro-text-right">
-                <div class="intro-text__top">внедрил</div>
-                <div class="orange__number"> <span class="number number_22"></span></div>
-                <div class="intro-text__bottom">предложения</div>
+        </section>
+        <section class="intro">
+          <div class="container container_slim">
+            <div class="intro-inner">
+              <h1 class="intro__title" id="intro-title">государственный фонд<br>развития промышленности</h1>
+              <div class="intro-text">
+                <div class="intro-text__left" id="intro-text-left">
+                  <h3 class="text-bold">Содействует в <span class="text-orange">формировании  государственной политики </span>и <span class="text-orange">разработке ключевых <br>нормативно-правовых документов </span>в сфере промышленности.</h3><br>Участвует в реализации окружной программы развития промышленности<br>2018-2025 гг.
+                </div>
+                <div class="intro-text__right" id="intro-text-right">
+                  <div class="intro-text__top">внедрил</div>
+                  <div class="orange__number"> <span class="number number_22"></span></div>
+                  <div class="intro-text__bottom">предложения</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="intro__overlay" id="intro-overlay"></div>
-        <div class="intro__factory" id="intro-factory"></div>
-        <div class="shape shape_intro2" id="intro-shape2"></div>
-        <div class="shape shape_intro1" id="intro-shape1"></div>
-        <div class="line line_orange line_orange-intro" id="intro-orange"></div>
-        <div class="line line_black line_black-intro" id="intro-black"></div>
-        <div class="polygon polygon_intro"></div>
-      </section>
-      <section class="stat">
-        <div class="container container_slim">
-          <div class="stat-inner">
-            <div id="animation-anchor-1"></div>
-            <h3 class="text-bold text-white stat-fade">Оказывает <span class="text-orange">финансовую поддержку субъектам деятельности </span>в сфере промышленности  по приоритетным направлениям развития.</h3><br><br>
-            <h3 class="text-bold text-white stat-fade">Предоставляет льготные займы по проектам</h3>
-          </div>
-        </div>
-        <div class="container stat-numbers">
-          <div class="stat-fade">
-            <div class="text-bold text-white">емкостью <span class="text-bold__small">от</span></div>
-            <div class="orange__number"><span class="number number_40"></span></div>
-            <div class="text-bold text-white text-right">млн руб</div>
-          </div>
-          <div class="stat-line"></div>
-          <div class="stat-fade">
-            <div class="text-bold text-white">на срок  <span class="text-bold__small">от</span></div>
-            <div class="orange__number small-margin">
-              <div class="number_custom">20</div>
-              <div class="text-bold text-white"><span class="text-bold__small">до</span></div>
-              <div class="number_custom orange">500</div>
-            </div>
-            <div class="text-bold text-white text-right">млн руб.</div>
-          </div>
-          <div class="stat-line"></div>
-          <div class="stat-fade">
-            <div class="text-bold text-white">на сумму  <span class="text-bold__small">от</span></div>
-            <div class="orange__number"><span class="number number_5"></span></div>
-            <div class="text-bold text-white text-right">лет</div>
-          </div>
-          <div class="stat-line"></div>
-          <div class="stat-fade">
-            <div class="text-bold text-white">под</div>
-            <div class="orange__number"><span class="number number_5"></span><span class="stat-numbers__percent">%</span></div>
-            <div class="text-bold text-white text-right">годовых</div>
-          </div>
-        </div>
-        <div id="animation-anchor-2"></div>
-        <div class="news-more">
-          <button class="button button_yellow">Получить заем фонда развития Югры</button>
-        </div>
-      </section>
-      <section class="stat-white">
-        <div class="line line_orange line_orange-stat-white" id="while-line-2"></div>
-        <div class="line line_black line_black-stat-white" id="while-line-1"></div>
-        <div class="container stat-white-head">
-          <h3 class="text-bold stat-white-fade fixed"><span class="text-orange">Софинансирует проекты </span>совместно с фондом развития промышленности РФ.</h3>
-          <div class="stat-white-number number_custom stat-white-fade"> <span>70</span>
-            <div class="stat-white-desc">РФ<span>%</span></div>
-          </div>
-          <div class="stat-white-number number_custom big stat-white-fade"><span>30</span>
-            <div class="stat-white-desc">Югра<span>%</span></div>
-          </div>
-          <div id="animation-anchor-3"></div>
-          <div class="container container_slim stat-white-inner">
-            <h3 class="text-bold stat-white-fade">развивает <span class="text-orange">промышленную инфраструктуру</span></h3>
-          </div>
-          <div class="container white-bottom">
-            <div class="stat-numbers stat-numbers_white">
-              <div class="stat-white-fade">
-                <div class="text-bold">учавствует в создании</div>
-                <div class="orange__number"> <span class="number number_4"></span><span class="stat-numbers__percent">-x</span></div>
-                <div class="text-bold text-right">индустриальных<br>парков</div>
-              </div>
-              <div class="stat-line stat-line_light"></div>
-              <div class="stat-white-fade">
-                <div class="text-bold">определил</div>
-                <div class="orange__number"><span class="number number_50"></span><span class="stat-white-fade mar-left">
-                    <div class="text-bold">прощадок</div>
-                    <div>в муниципальных <br>образованиях Югры<br>для размещения <br>промышленных объектов</div></span></div>
-              </div>
+          <div class="intro__overlay" id="intro-overlay"></div>
+          <div class="intro__factory" id="intro-factory"></div>
+          <div class="shape shape_intro2" id="intro-shape2"></div>
+          <div class="shape shape_intro1" id="intro-shape1"></div>
+          <div class="line line_orange line_orange-intro" id="intro-orange"></div>
+          <div class="line line_black line_black-intro" id="intro-black"></div>
+          <div class="polygon polygon_intro"></div>
+        </section>
+        <section class="stat">
+          <div class="container container_slim">
+            <div class="stat-inner">
+              <div id="animation-anchor-1"></div>
+              <h3 class="text-bold text-white stat-fade">Оказывает <span class="text-orange">финансовую поддержку субъектам деятельности </span>в сфере промышленности  по приоритетным направлениям развития.</h3><br><br>
+              <h3 class="text-bold text-white stat-fade">Предоставляет льготные займы по проектам</h3>
             </div>
           </div>
-          <div class="container space-b">
-            <div class="stat-white-fade"><a class="button button_yellow" href="#">Стать резидентом индустриального парка</a></div>
-            <div class="stat-white-fade"><a class="button button_yellow" href="#">Подобрать площадку</a></div>
-          </div>
-        </div>
-        <div class="shape shape_stat-white2" id="shape-white-2"></div>
-        <div class="shape shape_stat-white1" id="shape-white-1"></div>
-        <div class="polygon polygon_stat-white"></div>
-      </section>
-      <section class="stat-window">
-        <div class="container">
-          <div class="one-window">
-            <div class="one-window__item">
-              <div class="big-71"></div>
-              <div>
-                <div class="one-window__title">мера<br>поддержки</div>
+          <div class="container stat-numbers">
+            <div class="stat-fade">
+              <div class="text-bold text-white">емкостью <span class="text-bold__small">от</span></div>
+              <div class="orange__number"><span class="number number_40"></span></div>
+              <div class="text-bold text-white text-right">млн руб</div>
+            </div>
+            <div class="stat-line"></div>
+            <div class="stat-fade">
+              <div class="text-bold text-white">на срок  <span class="text-bold__small">от</span></div>
+              <div class="orange__number small-margin">
+                <div class="number_custom">20</div>
+                <div class="text-bold text-white"><span class="text-bold__small">до</span></div>
+                <div class="number_custom orange">500</div>
               </div>
+              <div class="text-bold text-white text-right">млн руб.</div>
+            </div>
+            <div class="stat-line"></div>
+            <div class="stat-fade">
+              <div class="text-bold text-white">на сумму  <span class="text-bold__small">от</span></div>
+              <div class="orange__number"><span class="number number_5"></span></div>
+              <div class="text-bold text-white text-right">лет</div>
+            </div>
+            <div class="stat-line"></div>
+            <div class="stat-fade">
+              <div class="text-bold text-white">под</div>
+              <div class="orange__number"><span class="number number_5"></span><span class="stat-numbers__percent">%</span></div>
+              <div class="text-bold text-white text-right">годовых</div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="supports">
-        <div class="container">
-          <h2 class="supports__title">Выберите меру поддержки воспользовавшись <span class="text-orange">НАВИГАТОРОМ</span></h2>
+          <div id="animation-anchor-2"></div>
           <div class="news-more">
-            <button class="button button_yellow">подобрать меру поддержки</button>
+            <button class="button button_yellow">Получить заем фонда развития Югры</button>
           </div>
-        </div>
-      </section>
-      <section class="section events">
-        <div class="container">
-          <h2 class="caption">Мероприятия</h2>
-          <div class="event-list">
-            <div class="row">
-              <div class="col"><a class="event__item" href="#">
-                  <div class="event__title">разработка организационно-управленческих механизмов</div>
-                  <div class="event-date">
-                    <div class="event-date__date"><span class="event-date__day">25</span> <span class="event-date__month">апреля</span>
-                    </div>
-                    <div class="event-date__delimiter"></div>
-                    <div class="event-date__date"><span class="event-date__day">13</span> <span class="event-date__month">мая</span>
-                    </div>
-                  </div></a></div>
-              <div class="col"><a class="event__item" href="#">
-                  <div class="event__title">проведение маркетинговых исследований создания проектов</div>
-                  <div class="event-date">
-                    <div class="event-date__date"><span class="event-date__day">28</span> <span class="event-date__month">апреля</span>
-                    </div>
-                    <div class="event-date__delimiter"></div>
-                    <div class="event-date__date"><span class="event-date__day">01</span> <span class="event-date__month">мая</span>
-                    </div>
-                  </div></a></div>
+        </section>
+        <section class="stat-white">
+          <div class="line line_orange line_orange-stat-white" id="while-line-2"></div>
+          <div class="line line_black line_black-stat-white" id="while-line-1"></div>
+          <div class="container stat-white-head">
+            <h3 class="text-bold stat-white-fade fixed"><span class="text-orange">Софинансирует проекты </span>совместно с фондом развития промышленности РФ.</h3>
+            <div class="stat-white-number number_custom stat-white-fade"> <span>70</span>
+              <div class="stat-white-desc">РФ<span>%</span></div>
             </div>
-            <div class="row">
-              <div class="col"><a class="event__item" href="#">
-                  <div class="event__title">разработка организационно-управленческих механизмов</div>
-                  <div class="event-date">
-                    <div class="event-date__date"><span class="event-date__day">25</span> <span class="event-date__month">апреля</span>
-                    </div>
-                    <div class="event-date__delimiter"></div>
-                    <div class="event-date__date"><span class="event-date__day">13</span> <span class="event-date__month">мая</span>
-                    </div>
-                  </div></a></div>
-              <div class="col"><a class="event__item" href="#">
-                  <div class="event__title">проведение маркетинговых исследований создания проектов</div>
-                  <div class="event-date">
-                    <div class="event-date__date"><span class="event-date__day">28</span> <span class="event-date__month">апреля</span>
-                    </div>
-                    <div class="event-date__delimiter"></div>
-                    <div class="event-date__date"><span class="event-date__day">01</span> <span class="event-date__month">мая</span>
-                    </div>
-                  </div></a></div>
+            <div class="stat-white-number number_custom big stat-white-fade"><span>30</span>
+              <div class="stat-white-desc">Югра<span>%</span></div>
             </div>
-            <div class="news-more">
-              <button class="button">Все мероприятия</button>
+            <div id="animation-anchor-3"></div>
+            <div class="container container_slim stat-white-inner">
+              <h3 class="text-bold stat-white-fade">развивает <span class="text-orange">промышленную инфраструктуру</span></h3>
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="section news">
-        <div class="container">
-          <h2 class="caption caption_white">Новости</h2>
-          <div class="news-list">
-            <div class="row">
-              <div class="col"><a class="news__item" href="#">
-                  <div class="news__image"><img class="image" src="upload/news1.png" alt="Фонд развития принимает участие в «Российской неделе ГЧП»"></div>
-                  <div class="news-text">
-                    <div class="news-text__title">Фонд развития принимает участие в «Российской неделе ГЧП»</div>
-                    <div class="news-text__date">30 марта 2017</div>
-                  </div></a></div>
-              <div class="col"><a class="news__item" href="#">
-                  <div class="news__image"><img class="image" src="upload/news2.png" alt="Фонд развития Югры представил общественникам проект комплексного..."></div>
-                  <div class="news-text">
-                    <div class="news-text__title">Фонд развития Югры представил общественникам проект комплексного...</div>
-                    <div class="news-text__date">15 марта 2017</div>
-                  </div></a></div>
-              <div class="col"><a class="news__item" href="#">
-                  <div class="news__image"><img class="image" src="upload/news3.png" alt="Вопросы развития промышленности обсуждаются в Сургуте"></div>
-                  <div class="news-text">
-                    <div class="news-text__title">Вопросы развития промышленности обсуждаются в Сургуте</div>
-                    <div class="news-text__date">10 марта 2017</div>
-                  </div></a></div>
-              <div class="col"><a class="news__item" href="#">
-                  <div class="news__image"><img class="image" src="upload/news4.png" alt="При участии Фонда в Сургутском районе создается индустриальный парк"></div>
-                  <div class="news-text">
-                    <div class="news-text__title">При участии Фонда в Сургутском районе создается индустриальный парк</div>
-                    <div class="news-text__date">3 марта 2017</div>
-                  </div></a></div>
-            </div>
-            <div class="news-more">
-              <button class="button on-grey">Все новости</button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- класс .banners_invert можно убрать, блок с баннерами станет серым-->
-      <section class="banners banners_invert">
-        <div class="container">
-          <div class="banner-list">
-            <div class="slider-bottom main-slider">
-              <div>
-                <div class="row row_banner">
-                  <div class="col"><a class="banner__item" href="#">
-                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
-                      <div class="banner-text"><span class="banner-text__bold">Единый сайт исполнительных органов государственной власти</span> Ханты-Мансийского автономного округа – Югры
-                      </div></a></div>
-                  <div class="col"><a class="banner__item" href="#">
-                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
-                      <div class="banner-text"><span class="banner-text__bold">Инвестиционный портал </span> Ханты-Мансийского автономного округа – Югры
-                      </div></a></div>
-                  <div class="col"><a class="banner__item" href="#">
-                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
-                      <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
-                      </div></a></div>
-                  <div class="col"><a class="banner__item" href="#">
-                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
-                      <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
-                      </div></a></div>
+            <div class="container white-bottom">
+              <div class="stat-numbers stat-numbers_white">
+                <div class="stat-white-fade">
+                  <div class="text-bold">учавствует в создании</div>
+                  <div class="orange__number"> <span class="number number_4"></span><span class="stat-numbers__percent">-x</span></div>
+                  <div class="text-bold text-right">индустриальных<br>парков</div>
+                </div>
+                <div class="stat-line stat-line_light"></div>
+                <div class="stat-white-fade">
+                  <div class="text-bold">определил</div>
+                  <div class="orange__number"><span class="number number_50"></span><span class="stat-white-fade mar-left">
+                      <div class="text-bold">прощадок</div>
+                      <div>в муниципальных <br>образованиях Югры<br>для размещения <br>промышленных объектов</div></span></div>
                 </div>
               </div>
-              <div>
-                <div class="row row_banner">
-                  <div class="col"><a class="banner__item" href="#">
-                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
-                      <div class="banner-text"><span class="banner-text__bold">Единый сайт исполнительных органов государственной власти</span> Ханты-Мансийского автономного округа – Югры
-                      </div></a></div>
-                  <div class="col"><a class="banner__item" href="#">
-                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
-                      <div class="banner-text"><span class="banner-text__bold">Инвестиционный портал </span> Ханты-Мансийского автономного округа – Югры
-                      </div></a></div>
-                  <div class="col"><a class="banner__item" href="#">
-                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
-                      <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
-                      </div></a></div>
-                  <div class="col"><a class="banner__item" href="#">
-                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
-                      <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
-                      </div></a></div>
+            </div>
+            <div class="container space-b">
+              <div class="stat-white-fade"><a class="button button_yellow" href="#">Стать резидентом индустриального парка</a></div>
+              <div class="stat-white-fade"><a class="button button_yellow" href="#">Подобрать площадку</a></div>
+            </div>
+          </div>
+          <div class="shape shape_stat-white2" id="shape-white-2"></div>
+          <div class="shape shape_stat-white1" id="shape-white-1"></div>
+          <div class="polygon polygon_stat-white"></div>
+        </section>
+        <section class="stat-window">
+          <div class="container">
+            <div class="one-window">
+              <div class="one-window__item">
+                <div class="big-71"></div>
+                <div>
+                  <div class="one-window__title">мера<br>поддержки</div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="container">
-          <div class="headline headline_footer">
-            <div class="copyright">Фонд развития Югры © 2017</div>
-            <nav class="head-nav"><a class="head-nav__link head-nav__link_[object Object]" href="#"></a><a class="head-nav__link head-nav__link_[object Object]" href="#"></a><a class="head-nav__link head-nav__link_[object Object]" href="#"></a>
-              <form class="head-nav__link head-nav__link_search" action="#">
-                <input class="search__checkbox js-search" type="checkbox" id="search-footer">
-                <input class="search__text js-search-input">
-                <label class="search__label" for="search-footer"></label><span class="head-nav__desc">Поиск</span>
-              </form><a class="head-nav__link head-nav__link_map" href="#"><span class="head-nav__desc">Карта сайта</span></a><a class="head-nav__link head-nav__link_eye" href="#"><span class="head-nav__desc">Версия для слабовидящих</span></a><a class="head-nav__link head-nav__link_print" href="#"><span class="head-nav__desc">Версия для печати</span></a>
-            </nav>
-            <div class="head-info">
-              <div class="head-info__item">e-mail: <a class="link" href="mailto:office@fondugra.ru"><b>office@fondugra.ru</b></a><br><a class="link" href="#"><b>Задать вопрос</b></a></div>
-              <div class="head-info__item">тел.: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a><br>факс: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a></div>
+        </section>
+        <section class="supports">
+          <div class="container">
+            <h2 class="supports__title">Выберите меру поддержки воспользовавшись <span class="text-orange">НАВИГАТОРОМ</span></h2>
+            <div class="news-more">
+              <button class="button button_yellow">подобрать меру поддержки</button>
             </div>
-          </div><a class="uw" href="#" target="_blank"></a>
-          <div class="to-top"><a class="to-top__link" id="to-top" href="#">наверх</a></div>
-        </div>
-      </footer>
+          </div>
+        </section>
+        <section class="section events">
+          <div class="container">
+            <h2 class="caption">Мероприятия</h2>
+            <div class="event-list">
+              <div class="row">
+                <div class="col"><a class="event__item" href="#">
+                    <div class="event__title">разработка организационно-управленческих механизмов</div>
+                    <div class="event-date">
+                      <div class="event-date__date"><span class="event-date__day">25</span> <span class="event-date__month">апреля</span>
+                      </div>
+                      <div class="event-date__delimiter"></div>
+                      <div class="event-date__date"><span class="event-date__day">13</span> <span class="event-date__month">мая</span>
+                      </div>
+                    </div></a></div>
+                <div class="col"><a class="event__item" href="#">
+                    <div class="event__title">проведение маркетинговых исследований создания проектов</div>
+                    <div class="event-date">
+                      <div class="event-date__date"><span class="event-date__day">28</span> <span class="event-date__month">апреля</span>
+                      </div>
+                      <div class="event-date__delimiter"></div>
+                      <div class="event-date__date"><span class="event-date__day">01</span> <span class="event-date__month">мая</span>
+                      </div>
+                    </div></a></div>
+              </div>
+              <div class="row">
+                <div class="col"><a class="event__item" href="#">
+                    <div class="event__title">разработка организационно-управленческих механизмов</div>
+                    <div class="event-date">
+                      <div class="event-date__date"><span class="event-date__day">25</span> <span class="event-date__month">апреля</span>
+                      </div>
+                      <div class="event-date__delimiter"></div>
+                      <div class="event-date__date"><span class="event-date__day">13</span> <span class="event-date__month">мая</span>
+                      </div>
+                    </div></a></div>
+                <div class="col"><a class="event__item" href="#">
+                    <div class="event__title">проведение маркетинговых исследований создания проектов</div>
+                    <div class="event-date">
+                      <div class="event-date__date"><span class="event-date__day">28</span> <span class="event-date__month">апреля</span>
+                      </div>
+                      <div class="event-date__delimiter"></div>
+                      <div class="event-date__date"><span class="event-date__day">01</span> <span class="event-date__month">мая</span>
+                      </div>
+                    </div></a></div>
+              </div>
+              <div class="news-more">
+                <button class="button">Все мероприятия</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section news">
+          <div class="container">
+            <h2 class="caption caption_white">Новости</h2>
+            <div class="news-list">
+              <div class="row">
+                <div class="col"><a class="news__item" href="#">
+                    <div class="news__image"><img class="image" src="upload/news1.png" alt="Фонд развития принимает участие в «Российской неделе ГЧП»"></div>
+                    <div class="news-text">
+                      <div class="news-text__title">Фонд развития принимает участие в «Российской неделе ГЧП»</div>
+                      <div class="news-text__date">30 марта 2017</div>
+                    </div></a></div>
+                <div class="col"><a class="news__item" href="#">
+                    <div class="news__image"><img class="image" src="upload/news2.png" alt="Фонд развития Югры представил общественникам проект комплексного..."></div>
+                    <div class="news-text">
+                      <div class="news-text__title">Фонд развития Югры представил общественникам проект комплексного...</div>
+                      <div class="news-text__date">15 марта 2017</div>
+                    </div></a></div>
+                <div class="col"><a class="news__item" href="#">
+                    <div class="news__image"><img class="image" src="upload/news3.png" alt="Вопросы развития промышленности обсуждаются в Сургуте"></div>
+                    <div class="news-text">
+                      <div class="news-text__title">Вопросы развития промышленности обсуждаются в Сургуте</div>
+                      <div class="news-text__date">10 марта 2017</div>
+                    </div></a></div>
+                <div class="col"><a class="news__item" href="#">
+                    <div class="news__image"><img class="image" src="upload/news4.png" alt="При участии Фонда в Сургутском районе создается индустриальный парк"></div>
+                    <div class="news-text">
+                      <div class="news-text__title">При участии Фонда в Сургутском районе создается индустриальный парк</div>
+                      <div class="news-text__date">3 марта 2017</div>
+                    </div></a></div>
+              </div>
+              <div class="news-more">
+                <button class="button on-grey">Все новости</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- класс .banners_invert можно убрать, блок с баннерами станет серым-->
+        <section class="banners banners_invert">
+          <div class="container">
+            <div class="banner-list">
+              <div class="slider-bottom main-slider">
+                <div>
+                  <div class="row row_banner">
+                    <div class="col"><a class="banner__item" href="#">
+                        <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                        <div class="banner-text"><span class="banner-text__bold">Единый сайт исполнительных органов государственной власти</span> Ханты-Мансийского автономного округа – Югры
+                        </div></a></div>
+                    <div class="col"><a class="banner__item" href="#">
+                        <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                        <div class="banner-text"><span class="banner-text__bold">Инвестиционный портал </span> Ханты-Мансийского автономного округа – Югры
+                        </div></a></div>
+                    <div class="col"><a class="banner__item" href="#">
+                        <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                        <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
+                        </div></a></div>
+                    <div class="col"><a class="banner__item" href="#">
+                        <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                        <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
+                        </div></a></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="row row_banner">
+                    <div class="col"><a class="banner__item" href="#">
+                        <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                        <div class="banner-text"><span class="banner-text__bold">Единый сайт исполнительных органов государственной власти</span> Ханты-Мансийского автономного округа – Югры
+                        </div></a></div>
+                    <div class="col"><a class="banner__item" href="#">
+                        <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                        <div class="banner-text"><span class="banner-text__bold">Инвестиционный портал </span> Ханты-Мансийского автономного округа – Югры
+                        </div></a></div>
+                    <div class="col"><a class="banner__item" href="#">
+                        <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                        <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
+                        </div></a></div>
+                    <div class="col"><a class="banner__item" href="#">
+                        <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                        <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
+                        </div></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="container">
+            <div class="headline headline_footer">
+              <div class="copyright">Фонд развития Югры © 2017</div>
+              <nav class="head-nav"><a class="head-nav__link head-nav__link_[object Object]" href="#"></a><a class="head-nav__link head-nav__link_[object Object]" href="#"></a><a class="head-nav__link head-nav__link_[object Object]" href="#"></a>
+                <form class="head-nav__link head-nav__link_search" action="#">
+                  <input class="search__checkbox js-search" type="checkbox" id="search-footer">
+                  <input class="search__text js-search-input">
+                  <label class="search__label" for="search-footer"></label><span class="head-nav__desc">Поиск</span>
+                </form><a class="head-nav__link head-nav__link_map" href="#"><span class="head-nav__desc">Карта сайта</span></a><a class="head-nav__link head-nav__link_eye" href="#"><span class="head-nav__desc">Версия для слабовидящих</span></a><a class="head-nav__link head-nav__link_print" href="#"><span class="head-nav__desc">Версия для печати</span></a>
+              </nav>
+              <div class="head-info">
+                <div class="head-info__item">e-mail: <a class="link" href="mailto:office@fondugra.ru"><b>office@fondugra.ru</b></a><br><a class="link" href="#"><b>Задать вопрос</b></a></div>
+                <div class="head-info__item">тел.: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a><br>факс: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a></div>
+              </div>
+            </div><a class="uw" href="#" target="_blank"></a>
+            <div class="to-top"><a class="to-top__link" id="to-top" href="#">наверх</a></div>
+          </div>
+        </footer>
+        <button class="arrow-top js-arrow-top" type="button"></button>
+      </div>
     </div>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/slick/slick.js"></script>
     <script src="js/vendor/jquery.selectmenu/jquery-selectmenu-974f7f6030.js"></script>
-    <script src="js/main-342d5b1f71.js"></script>
+    <script src="js/main-313dd6355d.js"></script>
     <script src="js/langSelect-84b0c7cb2d.js"></script>
     <script src="js/submenu-4138000094.js"></script>
     <script src="js/vendor/scrollmagic.js"></script>

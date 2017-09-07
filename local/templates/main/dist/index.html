@@ -7,151 +7,156 @@
     <link rel="stylesheet" href="js/vendor/jquery.datepicker/jquery-datepicker.css">
     <link rel="stylesheet" href="js/vendor/jquery.selectmenu/jquery-selectmenu.css">
     <link rel="stylesheet" href="js/vendor/slick/slick.css">
-    <link rel="stylesheet" href="./css/main-7a3a388826.css">
+    <link rel="stylesheet" href="./css/main-9ed0d3cef4.css">
   </head>
   <!-- класс .loading только для страницы frpu, чтобы показать лоадер-->
   <body>
     <div class="page">
-      <header class="header">
-        <div class="container">
-          <div class="headline"><a class="logo" href="#"></a>
-            <nav class="head-nav">
-              <form class="head-nav__link head-nav__link_search" action="#">
-                <input class="search__checkbox js-search" type="checkbox" id="search">
-                <input class="search__text js-search-input">
-                <label class="search__label" for="search"></label><span class="head-nav__desc">Поиск</span>
-              </form><a class="head-nav__link head-nav__link_map" href="#"><span class="head-nav__desc">Карта сайта</span></a><a class="head-nav__link head-nav__link_eye" href="#"><span class="head-nav__desc">Версия для слабовидящих</span></a><a class="head-nav__link head-nav__link_print" href="#"><span class="head-nav__desc">Версия для печати</span></a>
-              <form class="head-nav__language js-lang" action="#">
-                <select name="language">
-                  <option value="RU" selected>RU</option>
-                  <option value="RU">EN</option>
-                </select>
-              </form>
-            </nav>
-            <div class="head-info">
-              <div class="head-info__item">e-mail: <a class="link" href="mailto:office@fondugra.ru"><b>office@fondugra.ru</b></a><br><a class="link" href="#"><b>Задать вопрос</b></a></div>
-              <div class="head-info__item">тел.: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a><br>факс: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a></div>
+      <div class="page-top">
+        <header class="header">
+          <div class="container">
+            <div class="headline"><a class="logo" href="#"></a>
+              <nav class="head-nav">
+                <form class="head-nav__link head-nav__link_search" action="#">
+                  <input class="search__checkbox js-search" type="checkbox" id="search">
+                  <input class="search__text js-search-input">
+                  <label class="search__label" for="search"></label><span class="head-nav__desc">Поиск</span>
+                </form><a class="head-nav__link head-nav__link_map" href="#"><span class="head-nav__desc">Карта сайта</span></a><a class="head-nav__link head-nav__link_eye" href="#"><span class="head-nav__desc">Версия для слабовидящих</span></a><a class="head-nav__link head-nav__link_print" href="#"><span class="head-nav__desc">Версия для печати</span></a>
+                <form class="head-nav__language js-lang" action="#">
+                  <select name="language">
+                    <option value="RU" selected>RU</option>
+                    <option value="RU">EN</option>
+                  </select>
+                </form>
+              </nav>
+              <div class="head-info">
+                <div class="head-info__item">e-mail: <a class="link" href="mailto:office@fondugra.ru"><b>office@fondugra.ru</b></a><br><a class="link" href="#"><b>Задать вопрос</b></a></div>
+                <div class="head-info__item">тел.: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a><br>факс: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a></div>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
-      <!-- класс .navigation_fpu это состояние для ФПЮ, на других страницах он не нужен-->
-      <section class="navigation navigation_fpu">
-        <div class="container">
-          <nav class="nav js-tmenu"><span class="link nav__link" data-submenu="#sub-0">О фонде</span><a class="link nav__link" href="#">Одно окно</a><span class="link nav__link" data-submenu="#sub-2">Инвестиционные проекты</span><a class="link nav__link" href="#">Информационные ресурсы</a><a class="link nav__link" href="#">Новости</a><a class="link nav__link" href="#">Мероприятия</a><a class="link nav__link" href="#">Инвестиционный совет</a><span class="link nav__link" data-load="#" data-submenu="#sub-7">Фонд промышленности</span>
-          </nav>
-        </div>
-      </section>
-      <section class="nav-sub">
-        <div class="container js-submenu">
-          <div class="seacher" id="sub-0">
-            <div class="submenu"><a class="link nav__link" href="#">Одно окно</a><a class="link nav__link" href="#">Инвестиционные проекты</a><a class="link nav__link" href="#">Закупки</a><a class="link nav__link" href="#">Документы</a></div>
-          </div>
-          <div class="seacher" id="sub-2">
-            <div class="submenu"><a class="link nav__link" href="#">Одно окно2</a><a class="link nav__link" href="#">Инвестиционные проекты2</a><a class="link nav__link" href="#">Закупки2</a><a class="link nav__link" href="#">Документы2</a></div>
-          </div>
-        </div>
-      </section>
-      <div class="page">
-        <section class="section news" style="height:calc(100vh - 65px - 58px);">
-          <div class="container" style="width:500px;">
-            <h2 class="caption caption_white">Оглавление</h2>
-            <ol>
-              <li><a class="link" href="fru.html">ФРЮ</a></li>
-              <li><a class="link" href="frpu.html">ФРПЮ</a></li>
-              <li><a class="link" href="inner_docs.html">Документы</a></li>
-              <li><a class="link" href="inner_registry.html">Реестр проектов</a></li>
-              <li><a class="link" href="inner_projects.html">Проекты - инвестору</a></li>
-              <li><a class="link" href="inner_contacts.html">Контакты</a></li>
-              <li><a class="link" href="inner_expert.html">Экспертный совет</a></li>
-              <li><a class="link" href="inner_news.html">Новости</a></li>
-              <li><a class="link" href="inner_news-detail.html">Новости (детальная)</a></li>
-              <li><a class="link" href="inner_navigator.html">Навигатор</a></li>
-              <li><a class="link" href="inner_navigator-detail.html">Навигатор (детальная)</a></li>
-              <li><a class="link" href="inner_events.html">Мероприятия</a></li>
-              <li><a class="link" href="inner_window.html">Одно окно</a></li>
-              <li><a class="link" href="inner_map.html">Карта проектов фонда</a></li>
-              <li><a class="link" href="inner_partners.html">Партнеры</a></li>
-              <li><a class="link" href="inner_resources.html">Информационные ресурсы</a></li>
-              <li><a class="link" href="inner_state.html">Состояние промышленности Югры</a></li>
-              <li><a class="link" href="inner_404.html">404 страница</a></li>
-            </ol>
+        </header>
+        <!-- класс .navigation_fpu это состояние для ФПЮ, на других страницах он не нужен-->
+        <section class="navigation navigation_fpu">
+          <div class="container">
+            <nav class="nav js-tmenu"><span class="link nav__link" data-submenu="#sub-0">О фонде</span><a class="link nav__link" href="#">Одно окно</a><span class="link nav__link" data-submenu="#sub-2">Инвестиционные проекты</span><a class="link nav__link" href="#">Информационные ресурсы</a><a class="link nav__link" href="#">Новости</a><a class="link nav__link" href="#">Мероприятия</a><a class="link nav__link" href="#">Инвестиционный совет</a><span class="link nav__link" data-load="#" data-submenu="#sub-7">Фонд промышленности</span>
+            </nav>
           </div>
         </section>
       </div>
-      <!-- класс .banners_invert можно убрать, блок с баннерами станет серым-->
-      <section class="banners banners_invert">
-        <div class="container">
-          <div class="banner-list">
-            <div class="slider-bottom main-slider">
-              <div>
-                <div class="row row_banner">
-                  <div class="col"><a class="banner__item" href="#">
-                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
-                      <div class="banner-text"><span class="banner-text__bold">Единый сайт исполнительных органов государственной власти</span> Ханты-Мансийского автономного округа – Югры
-                      </div></a></div>
-                  <div class="col"><a class="banner__item" href="#">
-                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
-                      <div class="banner-text"><span class="banner-text__bold">Инвестиционный портал </span> Ханты-Мансийского автономного округа – Югры
-                      </div></a></div>
-                  <div class="col"><a class="banner__item" href="#">
-                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
-                      <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
-                      </div></a></div>
-                  <div class="col"><a class="banner__item" href="#">
-                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
-                      <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
-                      </div></a></div>
+      <div class="page-bottom">
+        <section class="nav-sub">
+          <div class="container js-submenu">
+            <div class="seacher" id="sub-0">
+              <div class="submenu"><a class="link nav__link" href="#">Одно окно</a><a class="link nav__link" href="#">Инвестиционные проекты</a><a class="link nav__link" href="#">Закупки</a><a class="link nav__link" href="#">Документы</a></div>
+            </div>
+            <div class="seacher" id="sub-2">
+              <div class="submenu"><a class="link nav__link" href="#">Одно окно2</a><a class="link nav__link" href="#">Инвестиционные проекты2</a><a class="link nav__link" href="#">Закупки2</a><a class="link nav__link" href="#">Документы2</a></div>
+            </div>
+          </div>
+        </section>
+        <div class="page">
+          <section class="section news" style="height:calc(100vh - 65px - 58px);">
+            <div class="container" style="width:500px;">
+              <h2 class="caption caption_white">Оглавление</h2>
+              <ol>
+                <li><a class="link" href="fru.html">ФРЮ</a></li>
+                <li><a class="link" href="frpu.html">ФРПЮ</a></li>
+                <li><a class="link" href="inner_docs.html">Документы</a></li>
+                <li><a class="link" href="inner_registry.html">Реестр проектов</a></li>
+                <li><a class="link" href="inner_projects.html">Проекты - инвестору</a></li>
+                <li><a class="link" href="inner_contacts.html">Контакты</a></li>
+                <li><a class="link" href="inner_expert.html">Экспертный совет</a></li>
+                <li><a class="link" href="inner_news.html">Новости</a></li>
+                <li><a class="link" href="inner_news-detail.html">Новости (детальная)</a></li>
+                <li><a class="link" href="inner_navigator.html">Навигатор</a></li>
+                <li><a class="link" href="inner_navigator-detail.html">Навигатор (детальная)</a></li>
+                <li><a class="link" href="inner_events.html">Мероприятия</a></li>
+                <li><a class="link" href="inner_window.html">Одно окно</a></li>
+                <li><a class="link" href="inner_map.html">Карта проектов фонда</a></li>
+                <li><a class="link" href="inner_partners.html">Партнеры</a></li>
+                <li><a class="link" href="inner_resources.html">Информационные ресурсы</a></li>
+                <li><a class="link" href="inner_state.html">Состояние промышленности Югры</a></li>
+                <li><a class="link" href="inner_404.html">404 страница</a></li>
+              </ol>
+            </div>
+          </section>
+        </div>
+        <!-- класс .banners_invert можно убрать, блок с баннерами станет серым-->
+        <section class="banners banners_invert">
+          <div class="container">
+            <div class="banner-list">
+              <div class="slider-bottom main-slider">
+                <div>
+                  <div class="row row_banner">
+                    <div class="col"><a class="banner__item" href="#">
+                        <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                        <div class="banner-text"><span class="banner-text__bold">Единый сайт исполнительных органов государственной власти</span> Ханты-Мансийского автономного округа – Югры
+                        </div></a></div>
+                    <div class="col"><a class="banner__item" href="#">
+                        <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                        <div class="banner-text"><span class="banner-text__bold">Инвестиционный портал </span> Ханты-Мансийского автономного округа – Югры
+                        </div></a></div>
+                    <div class="col"><a class="banner__item" href="#">
+                        <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                        <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
+                        </div></a></div>
+                    <div class="col"><a class="banner__item" href="#">
+                        <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                        <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
+                        </div></a></div>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div class="row row_banner">
-                  <div class="col"><a class="banner__item" href="#">
-                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
-                      <div class="banner-text"><span class="banner-text__bold">Единый сайт исполнительных органов государственной власти</span> Ханты-Мансийского автономного округа – Югры
-                      </div></a></div>
-                  <div class="col"><a class="banner__item" href="#">
-                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
-                      <div class="banner-text"><span class="banner-text__bold">Инвестиционный портал </span> Ханты-Мансийского автономного округа – Югры
-                      </div></a></div>
-                  <div class="col"><a class="banner__item" href="#">
-                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
-                      <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
-                      </div></a></div>
-                  <div class="col"><a class="banner__item" href="#">
-                      <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
-                      <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
-                      </div></a></div>
+                <div>
+                  <div class="row row_banner">
+                    <div class="col"><a class="banner__item" href="#">
+                        <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                        <div class="banner-text"><span class="banner-text__bold">Единый сайт исполнительных органов государственной власти</span> Ханты-Мансийского автономного округа – Югры
+                        </div></a></div>
+                    <div class="col"><a class="banner__item" href="#">
+                        <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                        <div class="banner-text"><span class="banner-text__bold">Инвестиционный портал </span> Ханты-Мансийского автономного округа – Югры
+                        </div></a></div>
+                    <div class="col"><a class="banner__item" href="#">
+                        <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                        <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
+                        </div></a></div>
+                    <div class="col"><a class="banner__item" href="#">
+                        <div class="banner-image"><img class="banner__image" src="upload/banner2.png"></div>
+                        <div class="banner-text"><span class="banner-text__bold">Инвестиционная карта</span> Ханты-Мансийского автономного округа – Югры
+                        </div></a></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="container">
-          <div class="headline headline_footer">
-            <div class="copyright">Фонд развития Югры © 2017</div>
-            <nav class="head-nav"><a class="head-nav__link head-nav__link_[object Object]" href="#"></a><a class="head-nav__link head-nav__link_[object Object]" href="#"></a><a class="head-nav__link head-nav__link_[object Object]" href="#"></a>
-              <form class="head-nav__link head-nav__link_search" action="#">
-                <input class="search__checkbox js-search" type="checkbox" id="search-footer">
-                <input class="search__text js-search-input">
-                <label class="search__label" for="search-footer"></label><span class="head-nav__desc">Поиск</span>
-              </form><a class="head-nav__link head-nav__link_map" href="#"><span class="head-nav__desc">Карта сайта</span></a><a class="head-nav__link head-nav__link_eye" href="#"><span class="head-nav__desc">Версия для слабовидящих</span></a><a class="head-nav__link head-nav__link_print" href="#"><span class="head-nav__desc">Версия для печати</span></a>
-            </nav>
-            <div class="head-info">
-              <div class="head-info__item">e-mail: <a class="link" href="mailto:office@fondugra.ru"><b>office@fondugra.ru</b></a><br><a class="link" href="#"><b>Задать вопрос</b></a></div>
-              <div class="head-info__item">тел.: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a><br>факс: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a></div>
-            </div>
-          </div><a class="uw" href="#" target="_blank"></a>
-          <div class="to-top"><a class="to-top__link" id="to-top" href="#">наверх</a></div>
-        </div>
-      </footer>
+        </section>
+        <footer class="footer">
+          <div class="container">
+            <div class="headline headline_footer">
+              <div class="copyright">Фонд развития Югры © 2017</div>
+              <nav class="head-nav"><a class="head-nav__link head-nav__link_[object Object]" href="#"></a><a class="head-nav__link head-nav__link_[object Object]" href="#"></a><a class="head-nav__link head-nav__link_[object Object]" href="#"></a>
+                <form class="head-nav__link head-nav__link_search" action="#">
+                  <input class="search__checkbox js-search" type="checkbox" id="search-footer">
+                  <input class="search__text js-search-input">
+                  <label class="search__label" for="search-footer"></label><span class="head-nav__desc">Поиск</span>
+                </form><a class="head-nav__link head-nav__link_map" href="#"><span class="head-nav__desc">Карта сайта</span></a><a class="head-nav__link head-nav__link_eye" href="#"><span class="head-nav__desc">Версия для слабовидящих</span></a><a class="head-nav__link head-nav__link_print" href="#"><span class="head-nav__desc">Версия для печати</span></a>
+              </nav>
+              <div class="head-info">
+                <div class="head-info__item">e-mail: <a class="link" href="mailto:office@fondugra.ru"><b>office@fondugra.ru</b></a><br><a class="link" href="#"><b>Задать вопрос</b></a></div>
+                <div class="head-info__item">тел.: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a><br>факс: <a class="link" href="tel:+73467301445">+7 3467 <b>301-445</b></a></div>
+              </div>
+            </div><a class="uw" href="#" target="_blank"></a>
+            <div class="to-top"><a class="to-top__link" id="to-top" href="#">наверх</a></div>
+          </div>
+        </footer>
+        <button class="arrow-top js-arrow-top" type="button"></button>
+      </div>
     </div>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/slick/slick.js"></script>
     <script src="js/vendor/jquery.selectmenu/jquery-selectmenu-974f7f6030.js"></script>
-    <script src="js/main-342d5b1f71.js"></script>
+    <script src="js/main-313dd6355d.js"></script>
     <script src="js/langSelect-84b0c7cb2d.js"></script>
     <script src="js/submenu-4138000094.js"></script>
   </body>
