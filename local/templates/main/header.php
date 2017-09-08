@@ -39,8 +39,9 @@ $page = [
         SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.datepicker/jquery-datepicker.css',
         SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.selectmenu/jquery-selectmenu.css',
         SITE_TEMPLATE_PATH . '/dist/js/vendor/slick/slick.css',
+        SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.css',
+        SITE_TEMPLATE_PATH . '/dist/js/vendor/odometer/odometer-theme-default.css',
         SITE_TEMPLATE_PATH . '/dist/css/' . $manifest['main.css'],
-        SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.css'
     ],
     'addJs' => [
         SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.js',
