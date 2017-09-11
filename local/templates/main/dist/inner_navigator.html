@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="js/vendor/jquery.selectmenu/jquery-selectmenu.css">
     <link rel="stylesheet" href="js/vendor/slick/slick.css">
     <link rel="stylesheet" href="js/vendor/odometer/odometer-theme-default.css">
-    <link rel="stylesheet" href="./css/main-f4a3faba9f.css">
+    <link rel="stylesheet" href="./css/main-200980fbf8.css">
   </head>
   <!-- класс .loading только для страницы frpu, чтобы показать лоадер-->
   <body>
@@ -60,7 +60,7 @@
           <nav class="breadcrumbs"><a class="breadcrumbs__item" href="#">Главная</a><span class="breadcrumbs__item">Выберите меру поддержки</span></nav>
           <h1 class="h1">Выберите меру поддержки</h1>
           <section class="inner">
-            <div class="inner-right">
+            <div class="inner-right" id="sidebar">
               <form class="side-form" action="#">
                 <div class="side-title">Форма поддержки</div>
                 <div class="side-checkbox">
@@ -103,7 +103,7 @@
                 <button class="button">Сбросить</button>
               </form>
             </div>
-            <div class="inner-left">
+            <div class="inner-left" id="content">
               <div class="navigator"><a class="navigator-item" href="#">
                   <div class="navigator-item-pic"><img class="navigator-item__img" src="upload/navigator1.png"></div>
                   <div class="navigator-item__title">Продвижение инвестиционных проектов</div>
@@ -122,10 +122,43 @@
                   <p>Налоговые льготы. Освобождение от уплаты налога после 01.01.2016г</p></a><a class="navigator-item" href="#">
                   <div class="navigator-item-pic"><img class="navigator-item__img" src="upload/navigator2.png"></div>
                   <div class="navigator-item__title">Займ Фонда развития Югры</div>
+                  <p>Займ от 20 до 500 млн. рублей, на срок до 5 лет под 5% годовых</p></a><a class="navigator-item" href="#">
+                  <div class="navigator-item-pic"><img class="navigator-item__img" src="upload/navigator1.png"></div>
+                  <div class="navigator-item__title">Продвижение инвестиционных проектов</div>
+                  <p>Организационно-консультационная поддержка инициаторам проектов</p></a><a class="navigator-item" href="#">
+                  <div class="navigator-item-pic"><img class="navigator-item__img" src="upload/navigator2.png"></div>
+                  <div class="navigator-item__title">Заключение выгодного для инвестора специального инвестиционного контракта</div>
+                  <p>Контракт сроком до 10 лет на сумму более 300 млн. рублей</p></a><a class="navigator-item" href="#">
+                  <div class="navigator-item-pic"><img class="navigator-item__img" src="upload/navigator3.png"></div>
+                  <div class="navigator-item__title">Пониженная налоговая ставка по налогу на прибыль</div>
+                  <p>Налоговые льготы. Применение налоговой ставки 14%</p></a><a class="navigator-item" href="#">
+                  <div class="navigator-item-pic"><img class="navigator-item__img" src="upload/navigator4.png"></div>
+                  <div class="navigator-item__title">Освобождение от уплаты налога на имущество</div>
+                  <p>Налоговые льготы. Освобождение от уплаты налога до 5 налоговых периодов</p></a><a class="navigator-item" href="#">
+                  <div class="navigator-item-pic"><img class="navigator-item__img" src="upload/navigator1.png"></div>
+                  <div class="navigator-item__title">Освобождение от уплаты налога по патентной системе налоообложения</div>
+                  <p>Налоговые льготы. Освобождение от уплаты налога после 01.01.2016г</p></a><a class="navigator-item" href="#">
+                  <div class="navigator-item-pic"><img class="navigator-item__img" src="upload/navigator2.png"></div>
+                  <div class="navigator-item__title">Займ Фонда развития Югры</div>
+                  <p>Займ от 20 до 500 млн. рублей, на срок до 5 лет под 5% годовых</p></a><a class="navigator-item" href="#">
+                  <div class="navigator-item-pic"><img class="navigator-item__img" src="upload/navigator1.png"></div>
+                  <div class="navigator-item__title">Продвижение инвестиционных проектов</div>
+                  <p>Организационно-консультационная поддержка инициаторам проектов</p></a><a class="navigator-item" href="#">
+                  <div class="navigator-item-pic"><img class="navigator-item__img" src="upload/navigator2.png"></div>
+                  <div class="navigator-item__title">Заключение выгодного для инвестора специального инвестиционного контракта</div>
+                  <p>Контракт сроком до 10 лет на сумму более 300 млн. рублей</p></a><a class="navigator-item" href="#">
+                  <div class="navigator-item-pic"><img class="navigator-item__img" src="upload/navigator3.png"></div>
+                  <div class="navigator-item__title">Пониженная налоговая ставка по налогу на прибыль</div>
+                  <p>Налоговые льготы. Применение налоговой ставки 14%</p></a><a class="navigator-item" href="#">
+                  <div class="navigator-item-pic"><img class="navigator-item__img" src="upload/navigator4.png"></div>
+                  <div class="navigator-item__title">Освобождение от уплаты налога на имущество</div>
+                  <p>Налоговые льготы. Освобождение от уплаты налога до 5 налоговых периодов</p></a><a class="navigator-item" href="#">
+                  <div class="navigator-item-pic"><img class="navigator-item__img" src="upload/navigator1.png"></div>
+                  <div class="navigator-item__title">Освобождение от уплаты налога по патентной системе налоообложения</div>
+                  <p>Налоговые льготы. Освобождение от уплаты налога после 01.01.2016г</p></a><a class="navigator-item" href="#">
+                  <div class="navigator-item-pic"><img class="navigator-item__img" src="upload/navigator2.png"></div>
+                  <div class="navigator-item__title">Займ Фонда развития Югры</div>
                   <p>Займ от 20 до 500 млн. рублей, на срок до 5 лет под 5% годовых</p></a></div>
-              <div class="news-more">
-                <button class="button">Показать еще</button>
-              </div>
             </div>
           </section>
         </div>
@@ -203,8 +236,9 @@
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/slick/slick.js"></script>
     <script src="js/vendor/jquery.selectmenu/jquery-selectmenu-974f7f6030.js"></script>
-    <script src="js/main-313dd6355d.js"></script>
+    <script src="js/main-aed327b5b9.js"></script>
     <script src="js/langSelect-84b0c7cb2d.js"></script>
     <script src="js/submenu-4138000094.js"></script>
+    <script src="js/navigatorSidebar-87c9cf508e.js"></script>
   </body>
 </html>

@@ -1,21 +1,17 @@
-<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
-    die();
-}
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
-/** @global CUser $USER */
-/** @global CDatabase $DB */
-/** @var CBitrixComponentTemplate $this */
-/** @var string $templateName */
-/** @var string $templateFile */
-/** @var string $templateFolder */
-/** @var string $componentPath */
 /** @var CBitrixComponent $component */
-$this->setFrameMode(true);
+
+$manifest = \UW\Services::getManifest();
+\Bitrix\Main\Page\Asset::getInstance()->addJs(
+        SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['navigatorSidebar.js']
+);
 ?>
+
 <section class="inner">
-    <div class="inner-right">
+    <div class="inner-right" id="sidebar">
         <? $GLOBALS['resultSupportFilter'] = $APPLICATION->IncludeComponent(
             'uw:support-measure.filter',
             '',
@@ -23,7 +19,7 @@ $this->setFrameMode(true);
             false
         ); ?>
     </div>
-    <div class="inner-left">
+    <div class="inner-left" id="content">
         <? $APPLICATION->IncludeComponent(
             "bitrix:news.list",
             "",
