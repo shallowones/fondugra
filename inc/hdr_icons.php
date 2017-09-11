@@ -11,7 +11,7 @@
     <? /*<a class="head-nav__link head-nav__link_eye" href="#">
         <span class="head-nav__desc">Версия для слабовидящих</span>
     </a>*/ ?>
-    <a class="head-nav__link head-nav__link_print" href="#">
+    <a class="head-nav__link head-nav__link_print" onclick="window.print()">
         <span class="head-nav__desc">Версия для печати</span>
     </a>
     <? /*$APPLICATION->IncludeComponent(

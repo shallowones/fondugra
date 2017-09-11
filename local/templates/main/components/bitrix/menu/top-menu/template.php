@@ -3,7 +3,7 @@
 
 $subs = [];
 if (count($arResult['ITEMS']) > 0): ?>
-    <section class="navigation navigation_fpu">
+    <section class="navigation navigation_fpu no-print">
         <div class="container">
             <nav class="nav js-tmenu">
                 <? foreach ($arResult['ITEMS'] as $keyItem => $item):
@@ -26,7 +26,7 @@ if (count($arResult['ITEMS']) > 0): ?>
         </div>
     </section>
     <? if (count($subs) > 0): ?>
-        <section class="nav-sub">
+        <section class="nav-sub no-print">
             <div class="container js-submenu"<? echo ($arResult['PARENT_SELECTED'] !== false) ? ' style="display: block"' : '' ?>>
                 <? foreach ($arResult['ITEMS'] as $keyItem => $item): ?>
                     <? if ($item["IS_PARENT"]): ?>
