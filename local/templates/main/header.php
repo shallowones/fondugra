@@ -41,7 +41,7 @@ $page = [
         SITE_TEMPLATE_PATH . '/dist/js/vendor/slick/slick.css',
         SITE_TEMPLATE_PATH . '/plugins/fancybox/jquery.fancybox.min.css',
         SITE_TEMPLATE_PATH . '/dist/js/vendor/odometer/odometer-theme-default.css',
-        SITE_TEMPLATE_PATH . '/dist/css/' . $manifest['main.css'],
+        SITE_TEMPLATE_PATH . '/dist/css/' . $manifest['main.css']
     ],
     'addJs' => [
         SITE_TEMPLATE_PATH . '/dist/js/vendor/jquery.js',
@@ -73,7 +73,7 @@ foreach ($page as $method => $params) {
     <? $APPLICATION->ShowHead() ?>
 </head>
 <body>
-<div class="bx-panel"><? $APPLICATION->ShowPanel() ?></div>
+<div class="bx-panel no-print"><? $APPLICATION->ShowPanel() ?></div>
 <div class="page">
     <div class="page-top">
         <header class="header">
@@ -146,7 +146,7 @@ foreach ($page as $method => $params) {
                     <? endif; ?>
                     <? endif; ?>
                     <? if ($boolHomePage && !$bool404): ?>
-                        <section class="slider-wrapper">
+                        <section class="slider-wrapper no-print">
                             <div class="slider-fixed">
                                 <div class="slider-fixed__body">
                                     <div>

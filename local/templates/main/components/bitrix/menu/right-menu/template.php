@@ -3,7 +3,7 @@
 } ?>
 
 <? if (!empty($arResult)): ?>
-    <ul class="side">
+    <ul class="side no-print">
         <? foreach ($arResult as $item):
             $classOpen = '';
             foreach ($item['CHILDREN'] as $keySubItem => $subItem) {
