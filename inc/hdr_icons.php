@@ -10,11 +10,11 @@
     </a>
     <? /*<a class="head-nav__link head-nav__link_eye" href="#">
         <span class="head-nav__desc">Версия для слабовидящих</span>
-    </a>
+    </a>*/ ?>
     <a class="head-nav__link head-nav__link_print" href="#">
         <span class="head-nav__desc">Версия для печати</span>
     </a>
-    $APPLICATION->IncludeComponent(
+    <? /*$APPLICATION->IncludeComponent(
         'uw:language',
         '.default',
         [],
