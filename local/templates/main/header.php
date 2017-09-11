@@ -17,8 +17,7 @@ $boolEng = \UW\Services::isEngVersion();
 $bool404 = defined('ERR_404');
 $boolHomePage = ($curDir === '/') || ($curDir === '/en/');
 
-$manifest = json_decode(file_get_contents(Application::getDocumentRoot() . SITE_TEMPLATE_PATH . '/dist/manifest.json'),
-    true);
+$manifest = \UW\Services::getManifest();
 
 $boolMenu = file_exists($curFullDir . '.right.menu.php') ||
     file_exists($dirParent . '.right.menu.php') ||
@@ -73,7 +72,7 @@ foreach ($page as $method => $params) {
     <? $APPLICATION->ShowHead() ?>
 </head>
 <body>
-<div class="bx-panel no-print"><? $APPLICATION->ShowPanel() ?></div>
+<div class="bx-panel"><? $APPLICATION->ShowPanel() ?></div>
 <div class="page">
     <div class="page-top">
         <header class="header">
@@ -146,7 +145,7 @@ foreach ($page as $method => $params) {
                     <? endif; ?>
                     <? endif; ?>
                     <? if ($boolHomePage && !$bool404): ?>
-                        <section class="slider-wrapper no-print">
+                        <section class="slider-wrapper">
                             <div class="slider-fixed">
                                 <div class="slider-fixed__body">
                                     <div>

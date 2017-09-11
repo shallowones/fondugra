@@ -23,9 +23,7 @@ $this->setFrameMode(true);
             CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"),
             array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
         ?>
-        <a class="list-item" href="<?= $arItem["DETAIL_PAGE_URL"] ?>" <? if (!empty($arItem['PROPERTIES']['important']['VALUE'])) {
-            echo 'news-important';
-        } ?>" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+        <a class="list-item" href="<?= $arItem["DETAIL_PAGE_URL"] ?>" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
             <? if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arItem["PREVIEW_PICTURE"])): ?>
                 <img
                             class="list-item__img"

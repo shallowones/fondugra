@@ -131,4 +131,17 @@ class Services
 
         return $image['src'];
     }
+
+    /**
+     * Метод возвращает файл манифеста
+     * @return mixed
+     */
+    public static function getManifest()
+    {
+        return json_decode(
+            file_get_contents(
+                Application::getDocumentRoot() . SITE_TEMPLATE_PATH . '/dist/manifest.json'
+            ),
+            true);
+    }
 }
