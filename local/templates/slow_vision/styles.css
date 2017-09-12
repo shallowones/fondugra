@@ -1,0 +1,79 @@
+/** -------------------------------------------------------------------------------------------------- print */
+@media print {
+    .bx-panel, .header-tool, .search-block, .top-menu, .no-print {
+        display: none;
+    }
+
+    .print-content {
+        padding-top: 10px;
+        border-top: 2px solid #000;
+    }
+
+    a[href^="http"]:not([href*="fondugra.ru"]):after {
+        content: " (" attr(href) ")";
+    }
+
+    .wrapper {
+        overflow: hidden;
+    }
+
+    .header-logo {
+        margin: 20px 0 !important;
+    }
+}
+
+.digit {
+    margin-bottom: 20px;
+}
+
+.digit-flex {
+    display: flex;
+    align-items: center;
+}
+
+.digit-number[data-value]:after {
+    content: attr(data-value);
+    font-weight: bold;
+}
+
+.digit-title {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.digit-number {
+    min-width: auto !important;
+    margin-right: 20px;
+    font-size: 22px;
+}
+
+#anim-first br, #anim-second br, #anim-third br, #anim-fifth br, #anim-fourth br {
+    display: none;
+}
+
+.digit-stats > .digit {
+    display: flex;
+    align-items: center;
+}
+
+.no-show {
+    display: none;
+}
+
+.h1.img {
+    padding-left: 20px;
+    position: relative;
+    line-height: 30px;
+    margin-top: 36px;
+}
+
+.h1.img:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: calc(50% - 4px);
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 100%;
+}

@@ -55,9 +55,11 @@ $oAsset->addJs(SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['animateNumbers.js']
                 <div class="digit-desc">Энергетика</div>
             </div>
         </div>
-        <h2 class="h2">Основные показатели промышленного производства</h2>
-        <img src="<? echo SITE_TEMPLATE_PATH . '/dist/images/graphs.png' ?>">
-        <br><br><br>
+        <div class="no-show">
+            <h2 class="h2">Основные показатели промышленного производства</h2>
+            <img src="<? echo SITE_TEMPLATE_PATH . '/dist/images/graphs.png' ?>">
+            <br><br><br>
+        </div>
     </div>
     <div id="anim-second">
         <h2 class="h2">Обрабатывающие отрасли</h2>
@@ -150,7 +152,7 @@ $oAsset->addJs(SITE_TEMPLATE_PATH . '/dist/js/' . $manifest['animateNumbers.js']
                 <div class="digit">
                     <div class="digit-title"></div>
                     <div class="digit-flex">
-                        <div class="digit-number js-number" data-value="16.9">16,9</div>
+                        <div class="digit-number js-number" data-value="16.9"></div>
                         <div class="digit-desc">тыс. тонн мяса<br>(68,8% – КФХ)</div>
                     </div>
                 </div>

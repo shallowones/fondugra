@@ -32,6 +32,11 @@ if (($boolMenu || $boolRightContact) && !$boolFpu) {
     $bool2Col = true;
 }
 
+if ($_REQUEST['slow_vision'] === 'Y') {
+    $_SESSION['slow_vision'] = 'Y';
+    LocalRedirect($APPLICATION->GetCurDir());
+}
+
 $page = [
     'addCss' => [
         SITE_TEMPLATE_PATH . '/dist/fonts/bundle.css',
