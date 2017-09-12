@@ -805,11 +805,11 @@ a:hover {
     margin: 22px 0;
 }
 .link_clear {
-    text-decoration: underline;
-    font-weight: bold;
+    text-decoration: none;
 }
 .link_clear:hover {
-    text-decoration: none;
+    text-decoration: underline;
+
 }
 .article p {
     margin: 10px 0;
@@ -1779,4 +1779,22 @@ td {
 .input {
     width: 40px;
     height: 15px;
+}
+.file{
+    font-weight: bold;
+    padding: 10px;
+    display:flex;
+}
+
+.nav-table td{
+    padding: 5px;
+    vertical-align: top;
+}
+
+.link_clear_elem {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.link_clear_elem:hover {
+    text-decoration: none;
 }
