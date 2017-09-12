@@ -4,7 +4,7 @@ $aMenuLinks = Array(
 		"О фонде промышленности", 
 		"/fpu/", 
 		Array(), 
-		Array(), 
+		Array("VISION"=>"FALSE"), 
 		"" 
 	),
 	Array(
@@ -23,7 +23,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Экспертный совет", 
-		"/fpu/experts/",
+		"/fpu/experts/", 
 		Array(), 
 		Array(), 
 		"" 
