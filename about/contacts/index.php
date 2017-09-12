@@ -95,7 +95,7 @@ $APPLICATION->SetTitle("Контакты");
             Array("MODE" => "text")
         ); ?>
     </div>
-    <div class="map">
+    <div class="map no-show">
         <?$APPLICATION->IncludeComponent(
             "bitrix:map.yandex.view",
             ".default",
