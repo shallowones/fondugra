@@ -805,10 +805,11 @@ a:hover {
     margin: 22px 0;
 }
 .link_clear {
-    text-decoration: none;
+    text-decoration: underline;
+    font-weight: bold;
 }
 .link_clear:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 .article p {
     margin: 10px 0;
