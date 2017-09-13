@@ -1,4 +1,5 @@
 <?
+define("S_PRINT_PAGE", "N");
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Выберите меру поддержки");
 ?><?$APPLICATION->IncludeComponent(

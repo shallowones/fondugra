@@ -7,7 +7,7 @@
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
         ?>
         <a
-                class="link_clear"
+                class="link_clear_elem"
                 style="background: url('<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>') no-repeat center;"
                 href="<? echo $arItem['PROPERTIES']['link']['VALUE'] ?>" target="_blank"
                 id="<? echo $this->GetEditAreaId($arItem['ID']); ?>"

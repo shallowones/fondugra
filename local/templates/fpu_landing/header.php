@@ -20,6 +20,11 @@ $pathTplMain = '/local/templates/main';
 $manifest = json_decode(file_get_contents(Application::getDocumentRoot() . $pathTplMain . '/dist/manifest.json'),
     true);
 
+if($_REQUEST["slow_vision"] === "Y"){
+    $_SESSION["slow_vision"] = "Y";
+    LocalRedirect("/fpu/characteristic/");
+}
+
 $page = [
     'addCss' => [
         $pathTplMain . '/dist/fonts/bundle.css',

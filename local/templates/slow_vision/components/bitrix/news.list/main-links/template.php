@@ -7,7 +7,7 @@
     <?foreach ($arResult['ITEMS'] as $arGroup):?>
         <? foreach ($arGroup as $arItem): ?>
             <div class="main-news-item"">
-                <div class="main-news-item__title h4"><a href="<?= $arItem['link'] ?>" class="link_clear">
+                <div class="main-news-item__title h4"><a href="<?= $arItem['link'] ?>" class="link_clear_elem">
                         <?= $arItem['PREVIEW_TEXT'] ?></a></div>
             </div>
         <?endforeach; ?>
