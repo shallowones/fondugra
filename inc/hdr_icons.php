@@ -11,11 +11,11 @@
     <a class="head-nav__link head-nav__link_eye" href="?slow_vision=Y">
         <span class="head-nav__desc">Версия для слабовидящих</span>
     </a>
-    <?if(!defined("S_PRINT_PAGE")):?>
-    <a class="head-nav__link head-nav__link_print" href="?print=Y" target="_blank">
-        <span class="head-nav__desc">Версия для печати</span>
-    </a>
-    <?endif;?>
+    <? if (!defined('S_PRINT_PAGE')): ?>
+        <a class="head-nav__link head-nav__link_print" href="?print=Y" target="_blank">
+            <span class="head-nav__desc">Версия для печати</span>
+        </a>
+    <? endif; ?>
     <? /*$APPLICATION->IncludeComponent(
         'uw:language',
         '.default',
