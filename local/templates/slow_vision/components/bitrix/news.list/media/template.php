@@ -12,7 +12,7 @@
             <li>
             <a
                     id="<? echo $this->GetEditAreaId($item['ID']); ?>"
-                    class="link_clear"
+                    class="link_clear_elem"
                     href="<? echo $item['PROPERTIES']['LINK']['VALUE'] ?>"
                     data-fancybox
             >

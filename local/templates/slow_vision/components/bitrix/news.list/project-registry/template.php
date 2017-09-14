@@ -44,7 +44,7 @@
                 <hr>
                 <ul>
                     <? foreach ($arItem["PROPERTIES"]['links_map']['VALUE'] as $keyLink => $href): ?>
-                        <a class="link_clear" href="<?= $href ?>" target="_blank">
+                        <a class="link_clear_elem" href="<?= $href ?>" target="_blank">
                             <div class="main-news-item__title" >
                             <? if ($arItem["PROPERTIES"]['links_map']['DESCRIPTION'][$keyLink]): ?>
                                 <?= $arItem["PROPERTIES"]['links_map']['DESCRIPTION'][$keyLink] ?>
@@ -62,7 +62,7 @@
             <hr>
             <ul>
                 <? foreach ($arItem["PROPERTIES"]['links_map']['VALUE'] as $keyLink => $href): ?>
-                    <a class="link_clear" href="<?= $href ?>" target="_blank">
+                    <a class="link_clear_elem" href="<?= $href ?>" target="_blank">
                         <div class="main-news-item__title" >
                         <? if ($arItem["PROPERTIES"]['links_map']['DESCRIPTION'][$keyLink]): ?>
                             <?= $arItem["PROPERTIES"]['links_map']['DESCRIPTION'][$keyLink] ?>

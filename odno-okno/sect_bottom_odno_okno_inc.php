@@ -2,9 +2,13 @@
     <div class="video-block__line-left"></div>
     <div class="container inner-detail">
         <h2 class="h2">Как работает одно окно?</h2>
+        <?if($_SESSION["slow_vision"] == "N"):?>
         <div class="video">
-            <iframe width="850" height="480" src="https://www.youtube.com/embed/FLG34ETTBmM" frameborder="0" allowfullscreen></iframe>
+            <iframe width="850" height="480" src="https://www.youtube.com/embed/FLG34ETTBmM"  frameborder="0" allowfullscreen></iframe>
         </div>
+        <?else:?>
+            <a class="file" href="https://www.youtube.com/embed/FLG34ETTBmM">Сопровождение инвестиционных проектов по принципу Одного окна</a>
+        <?endif;?>
     </div>
     <div class="video-block__line-right"></div>
 </div>

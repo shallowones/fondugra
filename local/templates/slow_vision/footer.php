@@ -2,6 +2,17 @@
 /** @global $APPLICATION */
 /** @var bool $boolPrint */
 
+?>
+
+<? $APPLICATION->IncludeComponent("bitrix:main.include", "", Array(
+        "AREA_FILE_SHOW" => "sect",
+        "AREA_FILE_SUFFIX" => "bottom_odno_okno_inc",
+        "AREA_FILE_RECURSIVE" => "Y",
+        "EDIT_TEMPLATE" => "standard.php"
+    )
+); ?>
+
+<?
 if (stripos($curDir, '/news/') !== false): ?>
     <? $APPLICATION->IncludeComponent("uw:subscribe.form", ".default", Array(
 	

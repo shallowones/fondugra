@@ -1,4 +1,6 @@
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+<?
+define("S_PRINT_PAGE", "N");
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 /**
  * @global $APPLICATION
  * @var array $manifest

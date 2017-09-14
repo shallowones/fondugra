@@ -21,7 +21,7 @@ $this->setFrameMode(true);
 	?>
     <div  id="<? echo $this->GetEditAreaId($arItem['ID']); ?>">
 	    <li>
-            <a class="link_clear" href="<?=$arItem['DISPLAY_PROPERTIES']['LINK']['VALUE']?>" target="_blank"><?echo $arItem['NAME']?></a>
+            <a class="link_clear_elem" href="<?=$arItem['DISPLAY_PROPERTIES']['LINK']['VALUE']?>" target="_blank"><?echo $arItem['NAME']?></a>
         </li>
     </div>
 <?endforeach;?>
