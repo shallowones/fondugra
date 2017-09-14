@@ -60,3 +60,11 @@
     display: none;
 }
 
+.main-news-item__title.link {
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.main-news-item__title.link:hover {
+    text-decoration: none;
+}

@@ -45,12 +45,12 @@
                 <ul>
                     <? foreach ($arItem["PROPERTIES"]['links_map']['VALUE'] as $keyLink => $href): ?>
                         <a class="link_clear_elem" href="<?= $href ?>" target="_blank">
-                            <div class="main-news-item__title" >
+                            <div class="main-news-item__title link">
                             <? if ($arItem["PROPERTIES"]['links_map']['DESCRIPTION'][$keyLink]): ?>
                                 <?= $arItem["PROPERTIES"]['links_map']['DESCRIPTION'][$keyLink] ?>
 
                             <? else: ?>
-                            <div class="main-news-item__title"> Проект на инвестиционной карте</div>
+                            <div class="main-news-item__title link"> Проект на инвестиционной карте</div>
                             <? endif; ?>
                             </div>
                         </a>
@@ -63,12 +63,12 @@
             <ul>
                 <? foreach ($arItem["PROPERTIES"]['links_map']['VALUE'] as $keyLink => $href): ?>
                     <a class="link_clear_elem" href="<?= $href ?>" target="_blank">
-                        <div class="main-news-item__title" >
+                        <div class="main-news-item__title link">
                         <? if ($arItem["PROPERTIES"]['links_map']['DESCRIPTION'][$keyLink]): ?>
                             <?= $arItem["PROPERTIES"]['links_map']['DESCRIPTION'][$keyLink] ?>
 
                         <? else: ?>
-                           <div class="main-news-item__title">Проект на инвестиционной карте</div>
+                           <div class="main-news-item__title link">Проект на инвестиционной карте</div>
                         <? endif; ?>
                         </div>
                     </a>
