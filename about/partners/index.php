@@ -1,22 +1,20 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Партнеры");
-?>
-<div class="detail">
-    <?$APPLICATION->IncludeComponent(
-        "bitrix:main.include",
-        "",
-        Array(
-            "AREA_FILE_SHOW" => "file",
-            "AREA_FILE_SUFFIX" => "inc",
-            "EDIT_TEMPLATE" => "",
-            "PATH" => "/inc/partners_top.php"
-        )
-    );?>
-<?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"partners", 
-	array(
+?><div class="detail">
+	 <?$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
+	"",
+	Array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "/inc/partners_top.php"
+	)
+);?> <?$APPLICATION->IncludeComponent(
+	"bitrix:news.list",
+	"partners",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
@@ -29,6 +27,7 @@ $APPLICATION->SetTitle("Партнеры");
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
+		"COMPONENT_TEMPLATE" => "partners",
 		"DETAIL_URL" => "",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
@@ -36,10 +35,7 @@ $APPLICATION->SetTitle("Партнеры");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"FIELD_CODE" => array(0=>"",1=>"",),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "20",
@@ -58,10 +54,7 @@ $APPLICATION->SetTitle("Партнеры");
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "fed_structuri",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "LINK",
-			1 => "",
-		),
+		"PROPERTY_CODE" => array(0=>"LINK",1=>"",),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -73,25 +66,21 @@ $APPLICATION->SetTitle("Партнеры");
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N",
-		"COMPONENT_TEMPLATE" => "partners"
-	),
-	false
-);?>
-    <?$APPLICATION->IncludeComponent(
-        "bitrix:main.include",
-        "",
-        Array(
-            "AREA_FILE_SHOW" => "file",
-            "AREA_FILE_SUFFIX" => "inc",
-            "EDIT_TEMPLATE" => "",
-            "PATH" => "/inc/partners_middle.php"
-        )
-    );?>
-<?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"partners", 
-	array(
+		"STRICT_SECTION_CHECK" => "N"
+	)
+);?> <?$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
+	"",
+	Array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "/inc/partners_middle.php"
+	)
+);?> <?$APPLICATION->IncludeComponent(
+	"bitrix:news.list",
+	"partners",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
@@ -111,10 +100,7 @@ $APPLICATION->SetTitle("Партнеры");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"FIELD_CODE" => array("",""),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "20",
@@ -122,7 +108,7 @@ $APPLICATION->SetTitle("Партнеры");
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
-		"NEWS_COUNT" => "20",
+		"NEWS_COUNT" => "40",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -133,10 +119,7 @@ $APPLICATION->SetTitle("Партнеры");
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "prochie",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "LINK",
-			1 => "",
-		),
+		"PROPERTY_CODE" => array("LINK",""),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -145,13 +128,11 @@ $APPLICATION->SetTitle("Партнеры");
 		"SET_TITLE" => "Y",
 		"SHOW_404" => "N",
 		"SORT_BY1" => "ACTIVE_FROM",
-		"SORT_BY2" => "SORT",
+		"SORT_BY2" => "TIMESTAMP_X",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N",
-		"COMPONENT_TEMPLATE" => "partners"
-	),
-	false
+		"STRICT_SECTION_CHECK" => "N"
+	)
 );?>
 </div>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

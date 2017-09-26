@@ -1,2 +1,2 @@
-<h3 class="text-bold text-white stat-fade">Оказывает <span class="text-orange">финансовую поддержку субъектам деятельности </span>в сфере промышленности  по приоритетным направлениям развития.</h3><br><br>
+<h3 class="text-bold text-white stat-fade">Оказывает <span class="text-orange">финансовую поддержку субъектам деятельности </span>в сфере промышленности.</h3><br><br>
 <h3 class="text-bold text-white stat-fade">Предоставляет льготные займы по проектам</h3>

@@ -26,4 +26,8 @@
         инвестиционного проекта</a>
     <a class="file" href="/upload/medialibrary/77e/jpg2pdf.pdf">Порядок сопровождения инвестиционных проектов в
         Ханты-Мансийском автономном округе – Югре</a>
+<div class="detail"><p>
+    <a href="http://investugra.ru/rus/articles/rus/odno-okno-po-rabote-s-investorami/kontakty/" target="_blank">Контакты участников регламента по сопровождению инвестиционных проектов по принципу одного окна</a>
+</p></div>
+<br>
 </div>

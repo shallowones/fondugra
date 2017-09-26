@@ -97,28 +97,25 @@ $APPLICATION->SetTitle("Контакты");
     </div>
     <div class="map no-show">
         <?$APPLICATION->IncludeComponent(
-            "bitrix:map.yandex.view",
-            ".default",
-            array(
-                "CONTROLS" => array(
-                    0 => "ZOOM",
-                    1 => "MINIMAP",
-                    2 => "TYPECONTROL",
-                    3 => "SCALELINE",
-                ),
-                "INIT_MAP_TYPE" => "MAP",
-                "MAP_DATA" => "a:4:{s:10:\"yandex_lat\";d:61.008426519236615;s:10:\"yandex_lon\";d:68.99968493549325;s:12:\"yandex_scale\";i:16;s:10:\"PLACEMARKS\";a:1:{i:0;a:3:{s:3:\"LON\";d:68.997496252938;s:3:\"LAT\";d:61.008587976062;s:4:\"TEXT\";s:31:\"улица Энгельса, 45\";}}}",
-                "MAP_HEIGHT" => "320",
-                "MAP_ID" => "",
-                "MAP_WIDTH" => "960",
-                "OPTIONS" => array(
-                    0 => "ENABLE_SCROLL_ZOOM",
-                    1 => "ENABLE_DBLCLICK_ZOOM",
-                    2 => "ENABLE_DRAGGING",
-                ),
-                "COMPONENT_TEMPLATE" => ".default"
-            ),
-            false
-        );?>
+	"bitrix:map.yandex.view", 
+	".default", 
+	array(
+		"CONTROLS" => array(
+			0 => "ZOOM",
+			1 => "MINIMAP",
+		),
+		"INIT_MAP_TYPE" => "MAP",
+		"MAP_DATA" => "a:4:{s:10:\"yandex_lat\";d:61.00842651922799;s:10:\"yandex_lon\";d:68.999684935493;s:12:\"yandex_scale\";i:16;s:10:\"PLACEMARKS\";a:1:{i:0;a:3:{s:3:\"LON\";d:68.99914849369;s:3:\"LAT\";d:61.00822339431516;s:4:\"TEXT\";s:31:\"улица Энгельса, 45\";}}}",
+		"MAP_HEIGHT" => "320",
+		"MAP_ID" => "",
+		"MAP_WIDTH" => "960",
+		"OPTIONS" => array(
+			0 => "ENABLE_SCROLL_ZOOM",
+			1 => "ENABLE_DRAGGING",
+		),
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
+);?>
     </div>
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

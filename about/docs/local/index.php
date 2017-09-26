@@ -1,8 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Локальные акты, регулирующие деятельность фонда");
-?>
-<h2>Базовые документы</h2>
+?><h2>Базовые документы</h2>
 <p>
  <a href="/upload/ustav2017.pdf" target="_blank" class="file">Устав Фонда</a>
 </p>
@@ -16,7 +15,7 @@ $APPLICATION->SetTitle("Локальные акты, регулирующие д
  <a href="/upload/Инвестиционная-декларация-ФРЮ.docx" target="_blank" class="file">Инвестиционная декларация&nbsp;Фонда</a>
 </p>
 <div class="detail"><p>
- <a href="http://www.depeconom.admhmao.ru/deyatelnost/investitsionnaya-deyatelnost/">Нормативно-правовые документы, регулирующие инвестдеятельность в Югре</a>
+ <a href="http://www.depeconom.admhmao.ru/deyatelnost/investitsionnaya-deyatelnost/" target="_blank">Нормативно-правовые документы, регулирующие инвестдеятельность в Югре</a>
 </p></div><br>
 <h2>Положения, порядки, правила</h2>
 <p>
@@ -26,11 +25,7 @@ $APPLICATION->SetTitle("Локальные акты, регулирующие д
  <a href="/upload/medialibrary/3cc/Polozhenie_ob_uchastii_Fonda_v_industr.parkakh.pdf" target="_blank" class="file">Положение об участии Фонда в проектах создания и развития индустриальных (промышленных) парков, промышленных технопарков и технопарков в сфере высоких технологий</a>
 </p>
 <p>
- <a href="/upload/medialibrary/213/1._Pravila_predostavleniya_zaymov_Fonda.pdf" target="_blank" class="file">Правила предоставления займов Фонда</a>
-</p>
-<p>
- <a href="/upload/medialibrary/c52/2._Poryadok_obespecheniya_vovrata_zaymov.pdf" target="_blank" class="file">Порядок обеспечения возврата займов, предоставляемых Фондом в качестве формы финансовой поддержки проектов</a>
-</p>
+ <a href="/upload/medialibrary/a7b/Novye-Pravila-po-zaymam-ot-07.09.2017.pdf"  target="_blank" class="file">Правила предоставления займов Фонда</a></p><p><a href="/upload/medialibrary/c52/2._Poryadok_obespecheniya_vovrata_zaymov.pdf" target="_blank" class="file">Порядок обеспечения возврата займов, предоставляемых Фондом в качестве формы финансовой поддержки проектов</a></p>
 <p>
  <a href="/upload/medialibrary/6af/3._Polozhenie_o_poryadke_provedeniya_ekspertizy_proektov.pdf" target="_blank" class="file">Положение о порядке проведения экспертизы проектов в сфере промышленности, финансируемых Фондом</a>
 </p>
